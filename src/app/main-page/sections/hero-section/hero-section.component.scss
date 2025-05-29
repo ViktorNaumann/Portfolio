@@ -21,7 +21,6 @@ section {
   padding-top: 120px;
 }
 
-// Hello World Button
 .hello-button {
   background-color: transparent;
   color: #ffffff;
@@ -40,7 +39,6 @@ section {
   }
 }
 
-// Main Content Area
 .main-content {
   display: flex;
   justify-content: space-between;
@@ -49,7 +47,7 @@ section {
   margin-bottom: 60px;
 }
 
-// Title Styling
+
 .title-container {
   h1 {
     font-family: 'Bricolage Grotesque', sans-serif;
@@ -64,7 +62,6 @@ section {
   }
 }
 
-// Polaroid Image
 .polaroid {
   background-color: #ffffff;
   padding: 15px 15px 40px;
@@ -81,9 +78,9 @@ section {
   .polaroid-caption {
     text-align: center;
     color: #000000;
-    font-family: 'Kalam', cursive; // Schriftart auf Kalam geändert
-    font-weight: 700; // Fettdruck (Bold)
-    font-size: 24px; // Schriftgröße 24px
+    font-family: 'Kalam', cursive; 
+    font-weight: 700; 
+    font-size: 24px; 
     margin-top: 10px;
     margin-bottom: 0;
   }
@@ -96,13 +93,13 @@ section {
   left: 72px;
   display: flex;
   flex-direction: column;
-  gap: 8px; // Von 20px auf 8px reduziert gemäß Screenshot
+  gap: 8px;
   
   .icon {
     width: 40px;
     height: 40px;
-    border-radius: 100px; // Vollständig abgerundet
-    border: 1px solid #F8F9FA; // Weißer Rahmen
+    border-radius: 100px
+    border: 1px solid #F8F9FA; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,19 +107,18 @@ section {
     
     &:hover {
       transform: scale(1.1);
-      background-color: #3355FF; // Blau bei Hover
+      background-color: #3355FF; 
 
       
     }
     
     img {
-      width: 24px; // Größe der Icons angepasst
+      width: 24px; 
       height: 24px;
     }
   }
 }
 
-// CTA Button Container - Position unten zentriert
 .cta-button-container {
   position: absolute;
   bottom: 30%;
@@ -131,7 +127,6 @@ section {
   width: auto;
 }
 
-// Media Queries für Responsive Design
 @media (max-width: 768px) {
   .main-content {
     flex-direction: column;

@@ -11,6 +11,6 @@ import { CustomButtonComponent } from '../../../shared/components/custom-button/
 export class HeroSectionComponent {
   onClick() {
     console.log('Button clicked');
-    // Deine Logik hier
+    
   }
 }

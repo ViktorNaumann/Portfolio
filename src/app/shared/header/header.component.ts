@@ -13,8 +13,7 @@ export class HeaderComponent {
 
   toggleLanguage() {
     this.isGerman = !this.isGerman;
-    // Hier könnte später die eigentliche Sprachänderung implementiert werden
-    // z.B. mit ngx-translate oder i18n
+   
   }
 
   setLanguage(german: boolean) {
