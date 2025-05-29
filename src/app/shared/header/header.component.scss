@@ -1,0 +1,135 @@
+.navbar {
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav-logo {
+  a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  
+  .logo-image {
+    height: 80px; // Passen Sie die Höhe nach Bedarf an
+    width: auto;
+    object-fit: contain;
+  }
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+  li {
+    margin: 0 15px;
+    
+    a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 18px;          // Von 16px auf 18px geändert
+      font-weight: 700;         // Von 500 auf 700 geändert
+      transition: color 0.3s ease;
+      font-family: 'Bricolage Grotesque', sans-serif;
+      
+      &:hover {
+        color: #4169e1;
+      }
+    }
+  }
+}
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  width: 104px;
+  height: 32px;
+  justify-content: space-between;
+  padding: 0 10px;
+  
+  .language {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    
+    &.active {
+      color: #F87A55; // Bestehende Orange-Farbe beibehalten
+    }
+  }
+  
+  .toggle-switch {
+    position: relative;
+    width: 32px; // 32px breit (wie im Bild)
+    height: 16px; 
+    margin: 0 5px;
+    
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    
+    label {
+      position: absolute;
+      top: 4px; // Vertikale Zentrierung
+      left: 0;
+      width: 32px;
+      height: 8px; // 8px hoch (wie im Bild)
+      background-color: #F87A55; // Bestehende Orange-Farbe für den Balken
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 0.4s;
+      
+      &:before {
+        position: absolute;
+        content: "";
+        height: 16px; // 16px Durchmesser (wie im Bild)
+        width: 16px;
+        left: 0; // Startposition
+        top: -4px; // Vertikale Zentrierung
+        background-color: #3355FF; // Bestehende Blau-Farbe beibehalten
+        border: 1px solid #F8F9FA; // Bestehender weißer Rand
+        border-radius: 50%;
+        transition: 0.4s;
+      }
+    }
+    
+    input:checked + label:before {
+      transform: translateX(16px); // 16px Verschiebung (32px - 16px = 16px)
+    }
+  }
+}
+
+// Responsive Anpassungen
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .language-switcher {
+    margin-top: 10px;
+  }
+}

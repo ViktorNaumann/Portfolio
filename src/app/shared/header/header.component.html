@@ -1,1 +1,25 @@
-<p>header works!</p>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <a href="#hero">
+        <img src="assets/img/header/logo.png" alt="Viktor Logo" class="logo-image">
+      </a>
+    </div>
+    
+    <ul class="nav-menu">
+      <li><a href="#about">About me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    
+    <div class="language-switcher">
+      <span class="language" [class.active]="!isGerman">EN</span>
+      <div class="toggle-switch">
+        <input type="checkbox" id="language-toggle" (change)="toggleLanguage()" [checked]="isGerman">
+        <label for="language-toggle"></label>
+      </div>
+      <span class="language" [class.active]="isGerman">DE</span>
+    </div>
+  </div>
+</nav>
