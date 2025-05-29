@@ -63,14 +63,47 @@
   justify-content: space-between;
   padding: 0 10px;
   
-  .language {
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 700;
-    font-family: 'Bricolage Grotesque', sans-serif;
+  .language-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
-    &.active {
-      color: #F87A55; // Bestehende Orange-Farbe beibehalten
+    .language {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: 'Bricolage Grotesque', sans-serif;
+      position: relative;
+      z-index: 2; // Über dem Hintergrundbild
+      cursor: pointer;
+      
+      &.active {
+        color: #F87A55; // Bestehende Orange-Farbe beibehalten
+      }
+    }
+    
+    .toggle-bg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 32px; // Größe des Hintergrundkastens
+      height: 32px; // Größe des Hintergrundkastens
+      opacity: 0; // Standardmäßig unsichtbar
+      transition: opacity 0.3s ease;
+      z-index: 1;
+    }
+    
+    // Nur bei Hover UND wenn die Sprache NICHT aktiv ist, Hintergrund anzeigen
+    &:hover .language:not(.active) + .toggle-bg {
+      opacity: 1; // Bei Hover sichtbar machen
+    }
+    
+    // ODER Alternative mit anderen HTML-Struktur
+    &:hover:not(:has(.language.active)) .toggle-bg {
+      opacity: 1; 
     }
   }
   

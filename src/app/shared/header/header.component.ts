@@ -15,8 +15,13 @@ export class HeaderComponent {
     this.isGerman = !this.isGerman;
     // Hier könnte später die eigentliche Sprachänderung implementiert werden
     // z.B. mit ngx-translate oder i18n
-    
-    console.log('Sprache gewechselt zu:', this.isGerman ? 'Deutsch' : 'Englisch');
+  }
+
+  setLanguage(german: boolean) {
+    if (this.isGerman !== german) {
+      this.isGerman = german;
+      console.log('Sprache gewechselt zu:', this.isGerman ? 'Deutsch' : 'Englisch');
+    }
   }
 
 }
