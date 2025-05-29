@@ -1,0 +1,38 @@
+// Button Container für Ausrichtung
+.button-container {
+  display: flex;
+  width: 100%;
+  
+  &.align-start {
+    justify-content: flex-start;
+  }
+  
+  &.align-center {
+    justify-content: center;
+  }
+  
+  &.align-end {
+    justify-content: flex-end;
+  }
+}
+
+// CTA Button
+.cta-button {
+  background-color: transparent;
+  color: #F8F9FA;
+  border: 1px solid #F8F9FA;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 60px;
+  box-shadow: 2px 4px 0 0 #F8F9FA;
+  
+  &:hover {
+    background-color: #F8F9FA;
+    color: #000000;
+  }
+}
