@@ -53,9 +53,25 @@
       font-weight: 700;         // Von 500 auf 700 geändert
       transition: color 0.3s ease;
       font-family: 'Bricolage Grotesque', sans-serif;
+      position: relative;
+      display: flex;
+      align-items: center;
+      
+      .nav-icon {
+        position: absolute;
+        bottom: -15px; // Mehr Abstand nach unten für bessere Sichtbarkeit
+        left: 50%;
+        transform: translateX(-50%);
+        height: 52px; // Deutlich größer (von 10px auf 24px)
+        width: auto; // Breite proportional anpassen
+        opacity: 0; // Standardmäßig unsichtbar
+        transition: opacity 0.3s ease;
+      }
       
       &:hover {
-        color: #4169e1;
+        .nav-icon {
+          opacity: 1; // Bei Hover sichtbar machen
+        }
       }
     }
   }
