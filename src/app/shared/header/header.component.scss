@@ -8,11 +8,11 @@
 
 .nav-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 20px;
+  max-width: 1920px;
+  align-items: center;
+  padding-left: 72px;
+  padding-right: 72px;
 }
 
 .nav-logo {
@@ -22,23 +22,29 @@
     align-items: center;
   }
   
-  
-  
   .logo-image {
-    height: 80px; // Passen Sie die Höhe nach Bedarf an
-    width: auto;
+    height: 40px; // Passen Sie die Höhe nach Bedarf an
+    width: 40px;
     object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(25%) sepia(99%) saturate(2454%) hue-rotate(234deg) brightness(99%) contrast(101%); // #3355FF (Blau)
+    transition: filter 0.3s ease;
+  }
+  
+  &:hover .logo-image {
+    filter: brightness(0) saturate(100%) invert(73%) sepia(86%) saturate(768%) hue-rotate(358deg) brightness(102%) contrast(95%); // #F7C518 (Gelb)
   }
 }
 
 .nav-menu {
   display: flex;
-  list-style: none;
-  margin: 0;
+  flex: 1;
+  justify-content: space-around; // Geändert von center zu space-between
   padding: 0;
+  list-style: none;
+  margin: 0 48px; // Abstand zum Logo und Language-Switcher beibehalten
   
   li {
-    margin: 0 15px;
+    margin: 0; // Margin entfernt (war: 0 15px)
     
     a {
       color: #ffffff;
