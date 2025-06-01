@@ -22,6 +22,7 @@ section {
 }
 
 .hello-button {
+  position: relative;
   background-color: transparent;
   color: #ffffff;
   border: 1px solid #ffffff;
@@ -31,11 +32,55 @@ section {
   font-family: 'Bricolage Grotesque', sans-serif;
   cursor: pointer;
   align-self: flex-start;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.6s, color 0.6s;
+  
+  .default-text {
+    display: inline-block;
+    transition: opacity 5s;
+  }
+  
+  .hover-text {
+    display: none;
+    transition: opacity 5s;
+  }
+  
+  .waving-hand {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: -25px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none; /* Damit die Hand keine Hover-Events blockiert */
+  }
   
   &:hover {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #3355FF;
+    
+    .default-text {
+      display: none;
+    }
+    
+    .hover-text {
+      display: inline-block;
+    }
+    
+    .waving-hand {
+      opacity: 1;
+      animation: moveAndRotate 0.5s forwards;
+    }
+  }
+}
+
+@keyframes moveAndRotate {
+  0% {
+    transform: translateX(0) rotate(0deg);
+    left: 100px;
+  }
+  
+  100% {
+    transform: translateX(20px) rotate(360deg); /* Anpassen basierend auf Ihrer Button-Breite */
+    left: calc(100% - 40px); /* Positioniere am rechten Ende des Buttons */
   }
 }
 
@@ -75,6 +120,15 @@ section {
     display: block;
   }
   
+  .polaroid-image img {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+
+  .polaroid:hover .polaroid-image img {
+    filter: grayscale(0%);
+  }
+  
   .polaroid-caption {
     text-align: center;
     color: #000000;
@@ -83,7 +137,30 @@ section {
     font-size: 24px; 
     margin-top: 10px;
     margin-bottom: 0;
+    
+    .hover-caption {
+      display: none;
+    }
   }
+
+  .polaroid:hover .polaroid-caption {
+    animation: shake 0.1s ease-in-out 1; // 0.5s x 4 = 2 Sekunden
+    
+    .default-caption {
+      display: none;
+    }
+    
+    .hover-caption {
+      display: inline;
+    }
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-1.5px); }
+  50% { transform: translateX(1.5px); }
+  75% { transform: translateX(-0.5px); }
 }
 
 // Social Media Icons
@@ -98,7 +175,7 @@ section {
   .icon {
     width: 40px;
     height: 40px;
-    border-radius: 100px
+    border-radius: 100px;
     border: 1px solid #F8F9FA; 
     display: flex;
     align-items: center;
@@ -125,6 +202,48 @@ section {
   left: 80%;
   transform: translateX(-50%);
   width: auto;
+}
+
+.polaroid-image img {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.polaroid:hover .polaroid-image img {
+  filter: grayscale(0%);
+}
+
+.polaroid-caption {
+  text-align: center;
+  color: #000000;
+  font-family: 'Kalam', cursive; 
+  font-weight: 700; 
+  font-size: 24px; 
+  margin-top: 10px;
+  margin-bottom: 0;
+  
+  .hover-caption {
+    display: none;
+  }
+}
+
+.polaroid:hover .polaroid-caption {
+  animation: shake 0.5s ease-in-out 4; // 0.5s x 4 = 2 Sekunden
+  
+  .default-caption {
+    display: none;
+  }
+  
+  .hover-caption {
+    display: inline;
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+  75% { transform: translateX(-1px); }
 }
 
 @media (max-width: 768px) {

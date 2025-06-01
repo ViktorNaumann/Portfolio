@@ -71,10 +71,11 @@
       &:hover {
         .nav-icon {
           opacity: 1;
-      }
-    }
-  }
-}
+        } // Klammer für .nav-icon innerhalb von &:hover
+      } // Klammer für &:hover
+    } // Klammer für a
+  } // Klammer für li
+} // Klammer für .nav-menu
 
 .language-switcher {
   display: flex;
