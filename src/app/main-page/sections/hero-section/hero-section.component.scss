@@ -32,16 +32,16 @@ section {
   font-family: 'Bricolage Grotesque', sans-serif;
   cursor: pointer;
   align-self: flex-start;
-  transition: background-color 0.6s, color 0.6s;
+  transition: background-color 0.3s, color 0.3s;
   
   .default-text {
     display: inline-block;
-    transition: opacity 5s;
+    transition: opacity 0.3s;
   }
   
   .hover-text {
     display: none;
-    transition: opacity 5s;
+    transition: opacity 0.3s;
   }
   
   .waving-hand {
@@ -75,7 +75,7 @@ section {
 @keyframes moveAndRotate {
   0% {
     transform: translateX(0) rotate(0deg);
-    left: 100px;
+    left: 0;
   }
   
   100% {
@@ -90,7 +90,7 @@ section {
   justify-content: center;
   gap: 60px;
   margin: 80px 0;
-  position: relative; // Damit absolute Positionierung möglich ist
+  position: relative;
   width: 100%;
   
   .title-container {
@@ -118,15 +118,14 @@ section {
   }
   
   .polaroid {
-    position: absolute; // Absolute Positionierung innerhalb von main-content
-    top: -200px; // Anpassung: niedriger als zuvor, damit es mehr mit dem "d" von Frontend auf gleicher Höhe ist
-    right: 160px; // Anpassung: weiter nach links gerückt
+    position: absolute;
+    top: -200px;
+    right: 160px; 
     transform: rotate(8deg); 
     z-index: 2;
   }
 }
 
-// Die restliche Polaroid-Styling bleibt unverändert
 .polaroid {
   width: 203.57px;
   height: 244px;
@@ -139,21 +138,48 @@ section {
   
   .polaroid-image {
     width: 100%;
-    height: calc(100% - 40px); /* Höhe abzüglich Platz für den Caption */
+    height: calc(100% - 40px);
     overflow: hidden;
     
     .profile-photo {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
     }
   }
   
   .polaroid-caption {
-    margin: 10px 0 0;
     text-align: center;
-    font-family: 'Kalam', cursive;
-    font-size: 18px;
+    color: #000000;
+    font-family: 'Kalam', cursive; 
+    font-weight: 700; 
+    font-size: 24px; 
+    margin-top: 10px;
+    margin-bottom: 0;
+    
+    .hover-caption {
+      display: none;
+    }
+  }
+  
+  &:hover {
+    .polaroid-image .profile-photo {
+      filter: grayscale(0%);
+    }
+    
+    .polaroid-caption {
+      animation: shake 0.5s ease-in-out 4;
+      
+      .default-caption {
+        display: none;
+      }
+      
+      .hover-caption {
+        display: inline;
+      }
+    }
   }
 }
 
@@ -195,41 +221,6 @@ section {
   width: auto;
 }
 
-.polaroid-image img {
-  filter: grayscale(100%);
-  transition: filter 0.3s ease;
-}
-
-.polaroid:hover .polaroid-image img {
-  filter: grayscale(0%);
-}
-
-.polaroid-caption {
-  text-align: center;
-  color: #000000;
-  font-family: 'Kalam', cursive; 
-  font-weight: 700; 
-  font-size: 24px; 
-  margin-top: 10px;
-  margin-bottom: 0;
-  
-  .hover-caption {
-    display: none;
-  }
-}
-
-.polaroid:hover .polaroid-caption {
-  animation: shake 0.5s ease-in-out 4;
-  
-  .default-caption {
-    display: none;
-  }
-  
-  .hover-caption {
-    display: inline;
-  }
-}
-
 @keyframes shake {
   0%, 100% { transform: translateX(0); }
   25% { transform: translateX(-2px); }
@@ -241,7 +232,7 @@ section {
   .main-content {
     flex-direction: column;
     text-align: center;
-    position: static; // Entfernt relative Positionierung
+    position: static;
   }
   
   .title-container h1 {
@@ -249,7 +240,7 @@ section {
   }
   
   .polaroid {
-    position: static; // Entfernt absolute Positionierung für mobile Ansicht
+    position: static; 
     margin-top: 30px;
   }
   
