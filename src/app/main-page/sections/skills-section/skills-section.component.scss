@@ -192,6 +192,7 @@ section {
   width: 200px;
   height: 200px;
   transform: rotate(8deg);
+  overflow: hidden;
 }
 
 .peel-layer-c,
@@ -202,6 +203,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .peel-text-container {
@@ -213,6 +215,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 10;
 }
 
 .peel-arrow {
@@ -231,6 +234,27 @@ section {
   line-height: 0.9;
   text-align: center;
   white-space: nowrap;
+}
+
+.peel-checkbox {
+  display: none;
+}
+
+.peel-checkbox:checked + .pull-to-peel .peel-layer-a {
+  transform: translate(-60%, 60%) scale(0.8) rotate(-15deg);
+  opacity: 0;
+  transition: transform 0.20s ease, opacity 0.20s ease;
+}
+
+.peel-checkbox:checked + .pull-to-peel .peel-layer-b {
+  transform: translate(-70%, 70%) scale(0.7) rotate(-20deg);
+  opacity: 0;
+  transition: transform 0.1s ease 0.1s, opacity 0.1s ease 0.07s;
+}
+
+.peel-checkbox:checked + .pull-to-peel .peel-text-container {
+  opacity: 0;
+  transition: opacity 0.1s ease;
 }
 
 @media (max-width: 1200px) {
