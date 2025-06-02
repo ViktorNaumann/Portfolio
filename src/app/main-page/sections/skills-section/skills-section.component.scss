@@ -204,19 +204,35 @@ section {
   height: 100%;
 }
 
-.peel-text {
+.peel-text-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.peel-arrow {
+  width: 40px;
+  height: auto;
+  margin-bottom: 5px;
+  transform: rotate(-8deg);
+}
+
+.peel-text {
   font-family: 'Kalam', cursive;
   font-weight: 400;
   font-size: 40px;
   color: #F8F9FA;
+  margin: 0;
+  line-height: 0.9;
+  text-align: center;
+  white-space: nowrap;
 }
 
-// Konsolidierte Media Queries
 @media (max-width: 1200px) {
   .skills-content {
     flex-direction: column;
