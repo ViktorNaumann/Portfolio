@@ -1,88 +1,37 @@
 <section id="skills">
   <div class="skills-container">
-    <div class="main-wrapper">
-      <div class="header-content-wrapper">
-        <div class="header-container">
-          <h3 class="skills-subtitle">MY STACK</h3>
-          <div class="skills-title-container">
-            <h2 class="skills-title">Skill set</h2>
-          </div>
-        </div>
+    <div class="vertical-layout">
 
-        <div class="skills-content">
-          <div class="skills-description">
-            <img src="assets/img/skills/1.Skills description.png" alt="Beschreibung Hintergrund" class="paper-background">
-            <p class="description-text">
-              A short introduction of your skills. Highlight your experience of using different front-end technologies and emphasise your openness to learning and adapting to new technologies.
-            </p>
+      <div class="column header-column">
+        <h3 class="skills-subtitle">MY STACK</h3>
+        <div class="skills-title-container">
+          <h2 class="skills-title">Skill set</h2>
+          <div class="title-highlight-container">
+            <img src="assets/img/skills/Color option 3.png" alt="Highlight" class="title-highlight">
           </div>
         </div>
       </div>
 
-      <div class="skills-grid-container">
-        <div class="skills-grid">
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img src="assets/img/skills/skill.icons/Property 1=HTML.png" alt="HTML">
-            </div>
-            <p class="skill-name">HTML</p>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img src="assets/img/skills/skill.icons/Property 1=CSS.png" alt="CSS">
-            </div>
-            <p class="skill-name">CSS</p>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img src="/assets/img/skills/skill.icons/Property 1=Js.png" alt="JavaScript">
-            </div>
-            <p class="skill-name">JavaScript</p>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img src="/assets/img/skills/skill.icons/Property 1=Ts.png" alt="TypeScript">
-            </div>
-            <p class="skill-name">TypeScript</p>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img src="assets/img/skills/skill.icons/Property 1=Angular.png" alt="Angular">
-            </div>
-            <p class="skill-name">Angular</p>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img src="assets/img/skills/skill.icons/Property 1=Firebase.png" alt="Firebase">
-            </div>
-            <p class="skill-name">Firebase</p>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img src="assets/img/skills/skill.icons/Property 1=Git.png" alt="Git">
-            </div>
-            <p class="skill-name">Git</p>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img src="assets/img/skills/skill.icons/Property 1=Rest-Api.png" alt="Rest-Api">
-            </div>
-            <p class="skill-name">Rest-Api</p>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img src="assets/img/skills/skill.icons/Property 1=Scrum.png" alt="Scrum">
-            </div>
-            <p class="skill-name">Scrum</p>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon">
-              <img src="assets/img/skills/skill.icons/Property 1=Material Design.png" alt="Material Design">
-            </div>
-            <p class="skill-name">Material<br>Design</p>
-          </div>
+      <div class="column content-column">
+      
+        <div class="skills-content">
+          <img src="assets/img/skills/1.Skills description.png" alt="Beschreibung Hintergrund" class="paper-background">
+          <p class="description-text">
+            A short introduction of your skills. Highlight your experience of using different front-end technologies and emphasise your openness to learning and adapting to new technologies.
+          </p>
         </div>
 
+        <div class="skills-grid">
+          <div class="skill-item" *ngFor="let skill of skills">
+            <div class="skill-icon">
+              <img [src]="'assets/img/skills/skill.icons/Property 1=' + skill.icon + '.png'" [alt]="skill.name">
+            </div>
+            <p class="skill-name" [innerHTML]="skill.name"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column peel-column">
         <div class="pull-to-peel">
           <div class="peel-container">
             <img src="assets/img/skills/Color option 3/C.png" alt="Hintergrund Layer" class="peel-layer-c">

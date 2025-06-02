@@ -10,4 +10,17 @@ import { Component } from '@angular/core';
 })
 export class SkillsSectionComponent {
 
+   skills = [
+    { name: 'HTML', icon: 'HTML' },
+    { name: 'CSS', icon: 'CSS' },
+    { name: 'JavaScript', icon: 'Js' },
+    { name: 'TypeScript', icon: 'Ts' },
+    { name: 'Angular', icon: 'Angular' },
+    { name: 'Firebase', icon: 'Firebase' },
+    { name: 'Git', icon: 'Git' },
+    { name: 'Rest-Api', icon: 'Rest-Api' },
+    { name: 'Scrum', icon: 'Scrum' },
+    { name: 'Material<br>Design', icon: 'Material Design' }
+  ];
+
 }
