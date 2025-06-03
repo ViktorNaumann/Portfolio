@@ -56,7 +56,7 @@ section {
 .title-highlight {
   position: absolute;
   top: 40%;
-  left: 15%;
+  left: 9%;
   transform: translate(-25%, -50%); 
   width: 100%; 
   height: auto;
@@ -241,20 +241,42 @@ section {
 }
 
 .peel-checkbox:checked + .pull-to-peel .peel-layer-a {
-  transform: translate(-60%, 60%) scale(0.8) rotate(-15deg);
-  opacity: 0;
-  transition: transform 0.20s ease, opacity 0.20s ease;
+  animation: peelLayerA 0.2s ease forwards;
 }
 
 .peel-checkbox:checked + .pull-to-peel .peel-layer-b {
-  transform: translate(-70%, 70%) scale(0.7) rotate(-20deg);
-  opacity: 0;
-  transition: transform 0.1s ease 0.1s, opacity 0.1s ease 0.07s;
+  animation: peelLayerB 0.1s ease 0.1s forwards;
 }
 
 .peel-checkbox:checked + .pull-to-peel .peel-text-container {
-  opacity: 0;
-  transition: opacity 0.1s ease;
+  animation: peelTextFade 0.1s ease forwards;
+}
+
+@keyframes peelLayerA {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-60%, 60%) scale(0.8) rotate(-15deg);
+    opacity: 0;
+  }
+}
+
+@keyframes peelLayerB {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-70%, 70%) scale(0.7) rotate(-20deg);
+    opacity: 0;
+  }
+}
+
+@keyframes peelTextFade {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 @media (max-width: 1200px) {
