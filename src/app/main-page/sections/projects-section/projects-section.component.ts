@@ -23,13 +23,13 @@ export class ProjectsSectionComponent {
       imageUrl: '/assets/img/projects/Laptop.png'
     },
     {
-      title: 'Project 2',
-      description: 'Beschreibung des zweiten Projekts.',
+      title: 'El Pollo Loco',
+      description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       imageUrl: '/assets/img/projects/28_Project thumbnails.png'
     },
     {
       title: 'Project 3',
-      description: 'Beschreibung des dritten Projekts.',
+      description: 'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
       imageUrl: '/assets/img/projects/DABubble.png'
     }
   ];
