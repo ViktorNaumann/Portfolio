@@ -1,5 +1,28 @@
 <section id="projects">
-    <!-- Ihr About-Inhalt hier -->
-    <h2>Projects</h2>
-    <!-- Weitere Inhalte -->
+  <div class="projects-container">
+    <div class="row">
+      <ng-container *ngFor="let item of projectsWithHeader; let i = index">
+
+        <div *ngIf="item.type === 'header'" class="header-item">
+          <p class="subtitle">MY CRAFT</p>
+          <h2>Projects</h2>
+          <p class="description">
+            Encourage people to take a look and interact with your projects.
+            Highlight your approach to creating responsive, user-friendly
+            projects with efficient code.
+          </p>
+        </div>
+        
+        <div *ngIf="item.type === 'project'" class="project-card">
+          <div class="project-image">
+            <img [src]="item.imageUrl" [alt]="item.title">
+          </div>
+          <div class="project-info">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
 </section>
