@@ -22,7 +22,7 @@ export class TestimonialsSectionComponent {
   testimonials: Testimonial[] = [
     {
       id: 1,
-      text: 'This is a fantastic product! Highly recommend it to everyone.',
+      text: 'Working with you was an absolute pleasure. Your attention to detail, clean code, and ability to translate complex UI/UX designs into seamless, responsive interfaces made a huge impact on our product. You always met deadlines, communicated clearly, and collaborated effectively across teams. Any frontend team would be lucky to have you.',
       authorName: 'John Doe',
       authorTitle: 'CEO, Example Corp',
       profileLink: 'https://www.linkedin.com/in/johndoe',
@@ -31,7 +31,7 @@ export class TestimonialsSectionComponent {
     },
     {
       id: 2,
-      text: 'Amazing service and support. Will definitely use again.',
+      text: 'You made our designs come to life exactly how we envisioned them—and often even better. Your deep understanding of CSS, animations, and accessibility took the user experience to the next level. I always felt like my work was in good hands with you on the frontend. Thank you for bringing such care and precision to every pixel.',
       authorName: 'Jane Smith',
       authorTitle: 'CTO, Another Example',
       profileLink: 'https://www.linkedin.com/in/janesmith',
@@ -40,7 +40,7 @@ export class TestimonialsSectionComponent {
     },
     {
       id: 3,
-      text: 'A game changer in the industry. Five stars!',
+      text: 'You are one of the most reliable frontend developers I\'ve worked with. You not only write scalable and maintainable code, but also think ahead—anticipating edge cases and improving performance where it counts. I appreciated your initiative, especially when you introduced improvements to our component library.',
       authorName: 'Alice Johnson',
       authorTitle: 'Product Manager, Tech Co.',
       profileLink: 'https://www.linkedin.com/in/alicejohnson',

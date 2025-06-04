@@ -1,5 +1,4 @@
 <section class="testimonials-section">
-  <!-- Header Div -->
   <div class="header-div">
     <div class="header-text">
       <div class="subtitle">
@@ -8,23 +7,18 @@
       <h2 class="main-title">Colleagues' Thoughts</h2>
     </div>
   </div>
-  
-  <!-- Cards Div -->
   <div class="cards-div">
     <div 
       *ngFor="let testimonial of testimonials" 
       class="testimonial-card"
-      [ngClass]="[testimonial.cardClass, testimonial.imageVariant]"
-    >
+      [ngClass]="[testimonial.cardClass, testimonial.imageVariant]">
       <div class="card-content">
         <p class="testimonial-text">{{ testimonial.text }}</p>
-        
         <div class="author-info">
           <div class="author-details">
             <div class="author-name">{{ testimonial.authorName }}</div>
             <div class="author-title">{{ testimonial.authorTitle }}</div>
           </div>
-          
           <img src="/assets/img/colleagues/Property 1=Default.svg" alt="LinkedIn" class="linkedin-icon">
         </div>
       </div>
