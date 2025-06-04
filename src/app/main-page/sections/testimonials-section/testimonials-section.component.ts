@@ -8,6 +8,7 @@ interface Testimonial {
   authorTitle: string;
   profileLink: string;
   cardClass: string;
+  imageVariant: string;
 }
 
 @Component({
@@ -25,7 +26,8 @@ export class TestimonialsSectionComponent {
       authorName: 'John Doe',
       authorTitle: 'CEO, Example Corp',
       profileLink: 'https://www.linkedin.com/in/johndoe',
-      cardClass: 'card-1'
+      cardClass: 'card-1',
+      imageVariant: 'variant-a'
     },
     {
       id: 2,
@@ -33,7 +35,8 @@ export class TestimonialsSectionComponent {
       authorName: 'Jane Smith',
       authorTitle: 'CTO, Another Example',
       profileLink: 'https://www.linkedin.com/in/janesmith',
-      cardClass: 'card-2'
+      cardClass: 'card-2',
+      imageVariant: 'variant-b'
     },
     {
       id: 3,
@@ -41,7 +44,8 @@ export class TestimonialsSectionComponent {
       authorName: 'Alice Johnson',
       authorTitle: 'Product Manager, Tech Co.',
       profileLink: 'https://www.linkedin.com/in/alicejohnson',
-      cardClass: 'card-3'
+      cardClass: 'card-3',
+      imageVariant: 'variant-a'
     }
   ];
 }
