@@ -4,7 +4,8 @@ import { AboutSectionComponent } from './sections/about-section/about-section.co
 import { SkillsSectionComponent } from './sections/skills-section/skills-section.component';
 import { ProjectsSectionComponent } from './sections/projects-section/projects-section.component';
 import { ContactSectionComponent } from './sections/contact-section/contact-section.component';
-import { TestimonialCardComponent } from '../shared/components/testimonial-card/testimonial-card.component';
+import { TestimonialsSectionComponent } from './sections/testimonials-section/testimonials-section.component';
+
 
 @Component({
   selector: 'app-main-page',
@@ -14,7 +15,7 @@ import { TestimonialCardComponent } from '../shared/components/testimonial-card/
     AboutSectionComponent,
     SkillsSectionComponent,
     ProjectsSectionComponent,
-    TestimonialCardComponent,
+    TestimonialsSectionComponent,
     ContactSectionComponent
   ],
   templateUrl: './main-page.component.html',

@@ -1,5 +1,38 @@
-<section id="contact">
-    <!-- Ihr About-Inhalt hier -->
-    <h2>Contact</h2>
-    <!-- Weitere Inhalte -->
+<section class="testimonials-section">
+  <!-- Header Div -->
+  <div class="header-div">
+    <div class="header-text">
+      <p class="subtitle">IN THEIR WORDS:</p>
+      <h2 class="main-title">Colleagues' Thoughts</h2>
+    </div>
+    <!-- Hier können Sie Ihr Pfeil-Image einfügen -->
+    <img src="assets/images/arrow.svg" alt="Arrow" class="arrow-image">
+  </div>
+  
+  <!-- Cards Div -->
+  <div class="cards-div">
+    <div 
+      *ngFor="let testimonial of testimonials" 
+      class="testimonial-card"
+      [ngClass]="testimonial.cardClass"
+    >
+      <div class="card-content">
+        <p class="testimonial-text">{{ testimonial.text }}</p>
+        
+        <div class="author-info">
+          <div class="author-details">
+            <div class="author-name">{{ testimonial.authorName }}</div>
+            <div class="author-title">{{ testimonial.authorTitle }}</div>
+          </div>
+          
+          <a [href]="testimonial.profileLink" class="profile-link" target="_blank">
+            <!-- Hier können Sie das LinkedIn Icon einfügen -->
+            <img src="assets/images/linkedin-icon.svg" alt="LinkedIn" class="linkedin-icon">
+            Profile
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+

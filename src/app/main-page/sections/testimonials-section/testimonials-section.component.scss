@@ -1,0 +1,158 @@
+.testimonials-section {
+  padding: 80px 20px;
+  background-color: #e8e8e8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+  .header-div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 60px;
+    gap: 15px;
+    
+    .header-text {
+      text-align: right;
+      
+      .subtitle {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 5px;
+        font-weight: 500;
+      }
+      
+      .main-title {
+        font-size: 48px;
+        font-weight: bold;
+        color: #333;
+        margin: 0;
+      }
+    }
+    
+    .arrow-image {
+      width: 80px;
+      height: auto;
+      // Platz für Ihr Pfeil-Image
+    }
+  }
+  
+  .cards-div {
+    position: relative;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .testimonial-card {
+      position: absolute;
+      width: 300px;
+      height: 200px;
+      background: linear-gradient(135deg, #ff7b5a, #ff9478);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      color: white;
+      
+      &.card-1 {
+        transform: rotate(-15deg) translate(-150px, -50px);
+        z-index: 3;
+      }
+      
+      &.card-2 {
+        transform: rotate(0deg) translate(0px, 50px);
+        z-index: 2;
+      }
+      
+      &.card-3 {
+        transform: rotate(12deg) translate(150px, -30px);
+        z-index: 1;
+      }
+      
+      .card-content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        
+        .testimonial-text {
+          font-size: 14px;
+          line-height: 1.4;
+          margin-bottom: 20px;
+          flex-grow: 1;
+        }
+        
+        .author-info {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          
+          .author-details {
+            .author-name {
+              font-weight: bold;
+              font-size: 16px;
+              margin-bottom: 2px;
+            }
+            
+            .author-title {
+              font-size: 12px;
+              opacity: 0.9;
+            }
+          }
+          
+          .profile-link {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            
+            &:hover {
+              background: rgba(255, 255, 255, 0.3);
+            }
+            
+            .linkedin-icon {
+              width: 16px;
+              height: 16px;
+              // Platz für LinkedIn Icon
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-section {
+    .header-div {
+      justify-content: center;
+      text-align: center;
+      
+      .main-title {
+        font-size: 36px;
+      }
+    }
+    
+    .cards-div {
+      .testimonial-card {
+        width: 280px;
+        
+        &.card-1 {
+          transform: rotate(-10deg) translate(-50px, -30px);
+        }
+        
+        &.card-2 {
+          transform: rotate(0deg) translate(0px, 30px);
+        }
+        
+        &.card-3 {
+          transform: rotate(8deg) translate(50px, -20px);
+        }
+      }
+    }
+  }
+}

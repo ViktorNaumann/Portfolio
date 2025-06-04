@@ -21,6 +21,9 @@
         <div *ngIf="item.type === 'project'" class="project-card">
           <div class="project-image">
             <img [src]="item.imageUrl" [alt]="item.title">
+            <div class="featured-sticker" *ngIf="item.featured">
+                <img src="assets/img/projects/Sticker.png" alt="Featured Project">
+            </div>
           </div>
           <div class="project-info">
             <h3>{{ item.title }}</h3>
