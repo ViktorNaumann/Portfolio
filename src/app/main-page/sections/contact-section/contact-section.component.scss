@@ -2,4 +2,178 @@ section {
     height: 100dvh;
     width: 100%;
     background-image: url('/assets/img/footer/Footer.png');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-wrapper {
+    display: flex;
+    gap: 40px;
+    
+    @media (max-width: 992px) {
+        flex-direction: column;
+    }
+}
+
+// Linke Spalte
+.contact-info {
+    flex: 1;
+    padding-right: 20px;
+    
+    .sub-heading {
+        font-size: 20px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        color: #F8F9FA;
+        font-family: 'Bricolage Grotesque', sans-serif;
+    }
+    
+    .main-heading {
+        font-size: 64px;
+        font-weight: 700;
+        margin-bottom: 24px;
+        line-height: 1.2;
+        color: #F8F9FA;
+        font-family: 'Bricolage Grotesque', sans-serif;
+    }
+    
+    p {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        font-size: 18px;
+        font-weight: 400;
+        color: #F8F9FA;
+        font-family: 'Bricolage Grotesque', sans-serif;
+    }
+    
+    .arrow-image {
+        max-width: 150px;
+        margin-top: 30px;
+    }
+}
+
+// Rechte Spalte - Formular
+.contact-form {
+    flex: 1;
+    position: relative;
+    
+    .logo-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        
+        .logo {
+            width: 90px;
+            height: 90px;
+        }
+    }
+    
+    form {
+        margin-top: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+        
+        label {
+            display: block;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #ff7f50;
+            font-family: 'Bricolage Grotesque', sans-serif;
+        }
+        
+        input, textarea {
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #333;
+            padding: 10px 2px;
+            font-size: 16px;
+            color: #fff;
+            transition: border-color 0.3s;
+            font-family: 'Bricolage Grotesque', sans-serif;
+            
+            &:focus {
+                outline: none;
+                border-color: #ff7f50;
+            }
+            
+            &::placeholder {
+                color: #555;
+            }
+        }
+    }
+    
+    .form-check {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        
+        .form-check-input {
+            margin-right: 10px;
+            margin-top: 4px;
+        }
+        
+        .form-check-label {
+            font-size: 14px;
+            line-height: 1.4;
+            color: #ccc;
+            font-family: 'Bricolage Grotesque', sans-serif;
+        }
+        
+        .privacy-link {
+            color: #ff7f50;
+            text-decoration: none;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    .error-message {
+        color: #ff4d4d;
+        font-size: 14px;
+        margin-top: 5px;
+        font-family: 'Bricolage Grotesque', sans-serif;
+    }
+    
+    .form-submit {
+        text-align: right;
+        margin-top: 30px;
+        
+        button {
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid #333;
+            padding: 10px 40px;
+            font-size: 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Bricolage Grotesque', sans-serif;
+            
+            &:hover:not(.disabled) {
+                background-color: rgba(255, 127, 80, 0.1);
+                border-color: #ff7f50;
+            }
+            
+            &.disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
+        }
+    }
 }

@@ -1,5 +1,90 @@
-<section id="contact">
-    <!-- Ihr About-Inhalt hier -->
-    <h2>Contact</h2>
-    <!-- Weitere Inhalte -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="contact-wrapper">
+
+      <div class="contact-info">
+        <h3 class="sub-heading">CONTACT ME</h3>
+        <h2 class="main-heading">Ready to work together?</h2>
+        <p>
+          Encourage people to contact you and describe what role you are
+          interested in. Express confidence in your ability to make a
+          meaningful contribution to a team through your expertise and
+          enthusiasm for improving your skills.
+        </p>
+        <p>
+          Show interest in contributing to a new project, while
+          highlighting the value and skills you can bring to the table.
+        </p>
+        <img src="assets/img/contact/Color option 3.png" alt="Arrow decoration" class="arrow-image">
+      </div>
+
+      <div class="contact-form">
+        <div class="logo-container">
+          <img src="assets/img/contact/08_ Color option 3 - C.png" alt="Logo" class="logo">
+        </div>
+
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+          <div class="form-group">
+            <label for="name">What's your name?</label>
+            <input 
+              type="text" 
+              id="name" 
+              formControlName="name" 
+              placeholder="Your name goes here">
+            <div *ngIf="formSubmitted && contactForm.get('name')?.errors" class="error-message">
+              Oops! it seems your name is missing
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">What's your email?</label>
+            <input 
+              type="email" 
+              id="email" 
+              formControlName="email" 
+              placeholder="youremail@email.com">
+            <div *ngIf="formSubmitted && contactForm.get('email')?.errors" class="error-message">
+              Hoppla! your email is required
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">How can I help you?</label>
+            <textarea 
+              id="message" 
+              formControlName="message" 
+              placeholder="Hello Viktor, I am interested in..."
+              rows="4"></textarea>
+            <div *ngIf="formSubmitted && contactForm.get('message')?.errors" class="error-message">
+              What do you need to develop?
+            </div>
+          </div>
+
+          <div class="form-check">
+            <input 
+              type="checkbox" 
+              id="privacyPolicy" 
+              formControlName="privacyPolicy" 
+              class="form-check-input">
+            <label for="privacyPolicy" class="form-check-label">
+              I've read the <a href="#" class="privacy-link">privacy policy</a> and agree to the processing of my data as outlined.
+            </label>
+          </div>
+          <div *ngIf="formSubmitted && contactForm.get('privacyPolicy')?.errors" class="error-message">
+            Please accept the privacy policy.
+          </div>
+
+          <div class="form-submit">
+            <button 
+              type="submit" 
+              [disabled]="!contactForm.valid" 
+              [ngClass]="{'disabled': !contactForm.valid}">
+              Send
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>
