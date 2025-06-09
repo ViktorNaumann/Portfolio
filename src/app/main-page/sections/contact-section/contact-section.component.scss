@@ -3,8 +3,8 @@ $primary-text-color: #F8F9FA;
 $accent-color: #F7C518;
 $link-color: #3355FF;
 $hover-color: #F87A55;
+$error-color: #FF3A00;
 
-// EINE Definition für die Contact-Section
 .contact-section {
   height: 100vh;
   width: 100%;
@@ -15,7 +15,6 @@ $hover-color: #F87A55;
   color: $primary-text-color;
 }
 
-// Content-Wrapper für Flexbox
 .contact-content {
   flex: 1;
   display: flex;
@@ -24,7 +23,6 @@ $hover-color: #F87A55;
   padding-bottom: 0rem;
 }
 
-// Container
 .container {
   max-width: 1440px;
   width: 100%;
@@ -41,10 +39,10 @@ $hover-color: #F87A55;
   }
 }
 
-// Linke Spalte
 .contact-info {
   flex: 1;
   padding-right: 20px;
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   
@@ -77,7 +75,6 @@ $hover-color: #F87A55;
   }
 }
 
-// Rechte Spalte - Formular
 .contact-form {
   flex: 1;
   position: relative;
@@ -203,29 +200,19 @@ $hover-color: #F87A55;
   }
   
   .error-message {
-    color: #FF3A00 !important;
+    color: $error-color !important;
     font-size: 14px;
     margin-top: 5px;
   }
   
-  .error-input::placeholder {
-    color: #FF3A00 !important;
-  }
-  
-  .error-input::-webkit-input-placeholder {
-    color: #FF3A00 !important;
-  }
-  
-  .error-input::-moz-placeholder {
-    color: #FF3A00 !important;
-  }
-  
-  .error-input:-ms-input-placeholder {
-    color: #FF3A00 !important;
-  }
-  
-  .error-input:-moz-placeholder {
-    color: #FF3A00 !important;
+  .error-input {
+    &::placeholder,
+    &::-webkit-input-placeholder,
+    &::-moz-placeholder,
+    &:-ms-input-placeholder,
+    &:-moz-placeholder {
+      color: $error-color !important;
+    }
   }
   
   .form-submit {
@@ -265,7 +252,6 @@ $hover-color: #F87A55;
   }
 }
 
-// Footer
 app-footer {
   width: 100%;
   margin: 0;
@@ -273,7 +259,6 @@ app-footer {
   flex-shrink: 0;
 }
 
-// Responsive Design
 @media (max-width: 768px) {
   .contact-wrapper {
     gap: 50px;
