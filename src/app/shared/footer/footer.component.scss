@@ -13,7 +13,7 @@
 .footer-content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  align-items: end;
+  align-items: end; 
   gap: 4rem;
   width: 100%;
 }
@@ -38,11 +38,6 @@
   width: auto;
   margin-bottom: 0.5rem;
   filter: brightness(0) saturate(100%) invert(27%) sepia(99%) saturate(2234%) hue-rotate(231deg) brightness(99%) contrast(102%);
-  transition: filter 0.3s ease;
-  
-  &:hover {
-    filter: brightness(0) saturate(100%) invert(85%) sepia(77%) saturate(424%) hue-rotate(6deg) brightness(101%) contrast(93%);
-  }
 }
 
 .copyright {
@@ -62,12 +57,35 @@
   font-family: 'Bricolage Grotesque', sans-serif;
   font-weight: 700;
   font-size: 18px;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   padding: 8px 16px;
-  border-radius: 18px;
+  border-radius: 20px;
   
-  &:hover {
+  &:hover:not(.legal-notice) {
+    border: 2px solid #3355FF;
     background-color: #3355FF;
+  }
+}
+
+.footer-link.legal-notice {
+  position: relative;
+  padding: 0;
+  
+  &:hover::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 100px;
+    background-image: url('/assets/img/header/3.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 10;
+    margin-top: -65px;
+    pointer-events: none;
   }
 }
 

@@ -200,18 +200,47 @@ $error-color: #FF3A00;
   }
   
   .error-message {
-    color: $error-color !important;
+    color: #ff0000;
     font-size: 14px;
     margin-top: 5px;
+    min-height: 20px;
+    
+    &.hidden {
+      visibility: hidden;
+    }
+    
+    &.visible {
+      visibility: visible;
+    }
   }
   
   .error-input {
-    &::placeholder,
-    &::-webkit-input-placeholder,
-    &::-moz-placeholder,
-    &:-ms-input-placeholder,
+    border-bottom-color: $error-color !important;
+    
+    &::placeholder {
+      color: $error-color !important;
+    }
+    
+    &::-webkit-input-placeholder {
+      color: $error-color !important;
+    }
+    
+    &::-moz-placeholder {
+      color: $error-color !important;
+      opacity: 1;
+    }
+    
+    &:-ms-input-placeholder {
+      color: $error-color !important;
+    }
+    
     &:-moz-placeholder {
       color: $error-color !important;
+      opacity: 1;
+    }
+    
+    &.textarea-error {
+      border-top: 1px solid $error-color !important;
     }
   }
   

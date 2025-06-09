@@ -65,7 +65,9 @@
                 I've read the <a href="#" class="privacy-link">privacy policy</a> and agree to the processing of my data as outlined.
               </label>
             </div>
-            <div *ngIf="formSubmitted && contactForm.get('privacyPolicy')?.errors" class="error-message">
+
+            <div class="error-message" 
+                 [ngClass]="{'visible': formSubmitted && contactForm.get('privacyPolicy')?.errors, 'hidden': !(formSubmitted && contactForm.get('privacyPolicy')?.errors)}">
               Please accept the privacy policy.
             </div>
 

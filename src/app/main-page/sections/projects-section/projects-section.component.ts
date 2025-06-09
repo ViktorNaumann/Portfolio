@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { CustomButtonComponent } from '../../../shared/components/custom-button/custom-button.component';
 
 interface ProjectItem {
   type: 'header' | 'project';
@@ -13,7 +12,7 @@ interface ProjectItem {
 @Component({
   selector: 'app-projects-section',
   standalone: true,
-  imports: [CommonModule, CustomButtonComponent],
+  imports: [CommonModule],
   templateUrl: './projects-section.component.html',
   styleUrls: ['./projects-section.component.scss']
 })
@@ -47,5 +46,11 @@ export class ProjectsSectionComponent {
     }));
     
     return [headerItem, ...projectItems];
+  }
+
+  openProjectDetails(project: any) {
+   
+    console.log('Opening details for:', project.title);
+
   }
 }

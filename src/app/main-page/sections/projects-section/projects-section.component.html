@@ -24,6 +24,9 @@
             <div class="featured-sticker" *ngIf="item.featured">
                 <img src="assets/img/projects/Sticker.png" alt="Featured Project">
             </div>
+            <div class="project-details-button">
+              <button (click)="openProjectDetails(item)">Project details</button>
+            </div>
           </div>
           <div class="project-info">
             <h3>{{ item.title }}</h3>
