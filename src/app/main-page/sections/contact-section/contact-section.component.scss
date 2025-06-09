@@ -4,253 +4,291 @@ $accent-color: #F7C518;
 $link-color: #3355FF;
 $hover-color: #F87A55;
 
-section {
-    height: 100dvh;
-    width: 100%;
-    background-image: url('/assets/img/footer/Footer.png');
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: $main-font;
-    color: $primary-text-color;
+// EINE Definition für die Contact-Section
+.contact-section {
+  height: 100vh;
+  width: 100%;
+  background-image: url('/assets/img/footer/Footer.png');
+  display: flex;
+  flex-direction: column;
+  font-family: $main-font;
+  color: $primary-text-color;
 }
 
+// Content-Wrapper für Flexbox
+.contact-content {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 0rem;
+}
+
+// Container
 .container {
-    max-width: 1440px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .contact-wrapper {
-    display: flex;
-    gap: 150px;
-    margin-top: 100px;
-    
-    @media (max-width: 992px) {
-        flex-direction: column;
-    }
+  display: flex;
+  gap: 150px;
+  
+  @media (max-width: 992px) {
+    flex-direction: column;
+  }
 }
 
 // Linke Spalte
 .contact-info {
-    flex: 1;
-    padding-right: 20px;
-    display: flex;
-    flex-direction: column;
-    
-    .sub-heading {
-        font-size: 20px;
-        font-weight: 500;
-        text-transform: uppercase;
-        margin-bottom: 12px;
-    }
-    
-    .main-heading {
-        font-size: 64px;
-        font-weight: 700;
-        margin-bottom: 24px;
-        line-height: 1.2;
-    }
-    
-    p {
-        margin-bottom: 20px;
-        line-height: 1.6;
-        font-size: 18px;
-        font-weight: 400;
-    }
-    
-    .arrow-image {
-        height: 44px;
-        width: 280px;
-        margin-top: 20px;
-        align-self: flex-end;
-    }
+  flex: 1;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  
+  .sub-heading {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  
+  .main-heading {
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1.2;
+  }
+  
+  p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  .arrow-image {
+    height: 44px;
+    width: 280px;
+    margin-top: 20px;
+    align-self: flex-end;
+  }
 }
 
 // Rechte Spalte - Formular
 .contact-form {
-    flex: 1;
-    position: relative;
+  flex: 1;
+  position: relative;
+  
+  .logo-container {
+    text-align: end;
+    margin-bottom: -30px;
     
-    .logo-container {
-        text-align: end;
-        margin-bottom: -30px;
-        
-        .logo {
-            width: 168px;
-            height: 168px;
-        }
+    .logo {
+      width: 168px;
+      height: 168px;
+    }
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  %form-field {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 10px 2px;
+    font-size: 18px;
+    font-weight: 400;
+    color: $primary-text-color;
+    transition: border-color 0.3s;
+    font-family: $main-font;
+    
+    &:focus {
+      outline: none;
     }
     
-    form {
-        margin-top: 20px;
+    &::placeholder {
+      color: $primary-text-color;
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    
+    label {
+      display: block;
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: $hover-color;
+      }
     }
     
-    %form-field {
-        width: 100%;
-        background-color: transparent;
-        border: none;
-        padding: 10px 2px;
-        font-size: 18px;
-        font-weight: 400;
-        color: $primary-text-color;
-        transition: border-color 0.3s;
-        font-family: $main-font;
-        
-        &:focus {
-            outline: none;
-        }
-        
-        &::placeholder {
-            color: $primary-text-color;
-            font-size: 18px;
-            font-weight: 400;
-        }
+    input {
+      @extend %form-field;
+      border-bottom: 1px solid $accent-color;
+      
+      &:focus {
+        border-color: $accent-color;
+      }
     }
     
-    .form-group {
-        margin-bottom: 20px;
-        
-        label {
-            display: block;
-            font-size: 24px;
-            font-weight: 500;
-            margin-bottom: 8px;
-            cursor: pointer;
-            transition: color 0.3s ease;
-            
-            &:hover {
-                color: $hover-color;
-            }
-        }
-        
-        input {
-            @extend %form-field;
-            border-bottom: 1px solid $accent-color;
-            
-            &:focus {
-                border-color: $accent-color;
-            }
-        }
-        
-        textarea {
-            @extend %form-field;
-            resize: vertical;
-        }
+    textarea {
+      @extend %form-field;
+      resize: vertical;
+    }
+  }
+  
+  .form-check {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    margin-top: -10px;
+    padding-top: 20px;
+    border-top: 1px solid $accent-color;
+    
+    .form-check-input {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $link-color;
+      border-radius: 3px;
+      background-color: transparent;
+      margin-right: 10px;
+      margin-top: 4px;
+      cursor: pointer;
+      position: relative;
+      
+      &:checked {
+        background-image: url('/assets/img/contact/Check 1.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 14px;
+      }
+      
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(247, 197, 24, 0.3);
+      }
     }
     
-    .form-check {
-        display: flex;
-        align-items: flex-start;
-        margin-bottom: 20px;
-        margin-top: -10px;
-        padding-top: 20px;
-        border-top: 1px solid $accent-color;
-        
-        .form-check-input {
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            width: 20px;
-            height: 20px;
-            border: 1px solid $link-color;
-            border-radius: 3px;
-            background-color: transparent;
-            margin-right: 10px;
-            margin-top: 4px;
-            cursor: pointer;
-            position: relative;
-            
-            &:checked {
-                background-image: url('/assets/img/contact/Check 1.svg');
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: 14px;
-            }
-            
-            &:focus {
-                outline: none;
-                box-shadow: 0 0 0 2px rgba(247, 197, 24, 0.3);
-            }
-        }
-        
-        .form-check-label {
-            font-size: 15px;
-            font-weight: 400;
-            line-height: 1.4;
-        }
-        
-        .privacy-link {
-            color: $link-color;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 400;
-            
-            &:hover {
-                text-decoration: underline;
-            }
-        }
+    .form-check-label {
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.4;
     }
     
-    .error-message {
-        color: #FF3A00 !important;
-        font-size: 14px;
-        margin-top: 5px;
+    .privacy-link {
+      color: $link-color;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      
+      &:hover {
+        text-decoration: underline;
+      }
     }
+  }
+  
+  .error-message {
+    color: #FF3A00 !important;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .error-input::placeholder {
+    color: #FF3A00 !important;
+  }
+  
+  .error-input::-webkit-input-placeholder {
+    color: #FF3A00 !important;
+  }
+  
+  .error-input::-moz-placeholder {
+    color: #FF3A00 !important;
+  }
+  
+  .error-input:-ms-input-placeholder {
+    color: #FF3A00 !important;
+  }
+  
+  .error-input:-moz-placeholder {
+    color: #FF3A00 !important;
+  }
+  
+  .form-submit {
+    text-align: right;
+    margin-top: 30px;
     
-    .error-input::placeholder {
-        color: #FF3A00 !important;
+    button {
+      background-color: transparent;
+      color: $primary-text-color;
+      border: 1px solid $primary-text-color;
+      border-radius: 25px;
+      padding: 12px 30px;
+      font-size: 18px;
+      font-weight: 500;
+      font-family: $main-font;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 2px 4px 0 0 $primary-text-color;
+      
+      &:hover:not(.disabled) {
+        background-color: $hover-color;
+        transform: translateY(2px);
+        box-shadow: 1px 2px 0 0 $primary-text-color;
+      }
+      
+      &:active:not(.disabled) {
+        transform: translateY(4px);
+        box-shadow: 0px 0px 0 0 $primary-text-color;
+      }
+      
+      &.disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
     }
-    
-    .error-input::-webkit-input-placeholder {
-        color: #FF3A00 !important;
+  }
+}
+
+// Footer
+app-footer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .contact-wrapper {
+    gap: 50px;
+  }
+  
+  .contact-info {
+    .main-heading {
+      font-size: 48px;
     }
-    
-    .error-input::-moz-placeholder {
-        color: #FF3A00 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info {
+    .main-heading {
+      font-size: 36px;
     }
-    
-    .error-input:-ms-input-placeholder {
-        color: #FF3A00 !important;
-    }
-    
-    .error-input:-moz-placeholder {
-        color: #FF3A00 !important;
-    }
-    
-    .form-submit {
-        text-align: right;
-        margin-top: 30px;
-        
-        button {
-            background-color: transparent;
-            color: $primary-text-color;
-            border: 1px solid $primary-text-color;
-            border-radius: 25px;
-            padding: 12px 30px;
-            font-size: 18px;
-            font-weight: 500;
-            font-family: $main-font;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            box-shadow: 2px 4px 0 0 $primary-text-color;
-            
-            &:hover:not(.disabled) {
-                background-color: $hover-color;
-                transform: translateY(2px);
-                box-shadow: 1px 2px 0 0 $primary-text-color;
-            }
-            
-            &:active:not(.disabled) {
-                transform: translateY(4px);
-                box-shadow: 0px 0px 0 0 $primary-text-color;
-            }
-            
-            &.disabled {
-                opacity: 0.7;
-                cursor: not-allowed;
-            }
-        }
-    }
+  }
 }
