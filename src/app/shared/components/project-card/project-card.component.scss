@@ -6,7 +6,7 @@ $hover-color: #F87A55;
 $white: #FFFFFF;
 
 .project-detail-container {
-  min-height: 100vh;
+  height: 100vh; // Zurück zu 100vh ohne Abzug
   background-image: url('/assets/img/projects-card/Note book paper.png');
   background-color: #1d1d1d;
   background-size: cover;
@@ -18,41 +18,130 @@ $white: #FFFFFF;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 60px 20px;
+  padding: 0; // Kein Padding
+  overflow: hidden;
+  position: relative; // Für absolute Positionierung des Go Back Buttons
 }
 
 .project-main {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  padding: 20px; // Padding hier statt im Container
   
   .go-back-btn {
-    background: none;
-    border: none;
-    color: $hover-color;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
+    position: fixed; // Fixed statt absolute, damit er über der Navbar ist
+    top: 100px; // Unterhalb der Navbar (anpassen je nach Navbar-Höhe)
+    left: 40px;
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-bottom: 40px;
+    background: none;
+    border: none;
+    color: #0E1013;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
     transition: color 0.3s ease;
+    z-index: 1000; // Hoher z-index, damit er über allem ist
+    
+    .arrow-icon {
+      width: 24px;
+      height: 24px;
+    }
     
     &:hover {
-      color: darken($hover-color, 10%);
+      color: #F87A55;
     }
   }
   
-  .project-content {
+  .main-content {
     display: flex;
-    gap: 60px;
-    margin-bottom: 40px;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     
-    @media (max-width: 768px) {
-      flex-direction: column;
-      gap: 30px;
+    .project-content {
+      display: flex;
+      gap: 250px;
+      align-items: flex-start;
+      margin-bottom: 40px;
+      
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+    
+    .project-actions {
+      display: flex;
+      gap: 20px;
+      justify-content: flex-end;
+      width: 100%;
+      margin-bottom: 20px;
+      
+      .action-btn {
+        width: 107px;
+        height: 40px;
+        border-radius: 100px;
+        font-family: 'Bricolage Grotesque', sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border: 1px solid #F8F9FA;
+        color: #F8F9FA;
+        box-shadow: 2px 4px 0px 0px #F8F9FA;
+        
+        &:hover {
+          background-color: #F87A55;
+          transform: translateY(4px);
+          box-shadow: 0px 0px 0 0 #F8F9FA;
+        }
+        
+        &:active {
+          transform: translateY(4px);
+          box-shadow: 0px 0px 0 0 #F8F9FA;
+        }
+      }
+    }
+    
+    .next-project-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      align-self: flex-end;
+      padding: 12px 0;
+      background: none;
+      border: none;
+      color: #F8F9FA;
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: fit-content;
+      
+      .arrow-icon {
+        width: 24px;
+        height: 24px;
+      }
+      
+      &:hover {
+        color: #F7C518;
+      }
     }
   }
   
@@ -60,38 +149,38 @@ $white: #FFFFFF;
     flex: 1;
     
     .project-title {
-      font-size: 48px;
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: 48px; // Reduziert von 64px
       font-weight: 700;
-      margin-bottom: 30px;
-      color: $primary-text-color;
-      text-decoration: underline;
-      text-decoration-color: $link-color;
-      text-decoration-thickness: 3px;
-      text-underline-offset: 8px;
+      margin-bottom: 20px; // Reduziert von 30px
+      color: #0E1013;
     }
     
     section {
-      margin-bottom: 30px;
+      margin-bottom: 20px; // Reduziert von 30px
       
       h2 {
-        font-size: 24px;
-        font-weight: 600;
-        margin-bottom: 12px;
-        color: $primary-text-color;
+        font-family: 'Bricolage Grotesque', sans-serif;
+        font-size: 22px; // Reduziert von 24px
+        font-weight: 700;
+        margin-bottom: 8px; // Reduziert von 12px
+        color: #0E1013;
       }
       
       p {
-        font-size: 16px;
-        line-height: 1.6;
-        color: $primary-text-color;
+        font-family: 'Bricolage Grotesque', sans-serif;
+        font-size: 16px; // Reduziert von 18px
+        font-weight: 400;
+        line-height: 1.4; // Reduziert von 1.6
+        color: #0E1013;
         text-align: justify;
-        margin-bottom: 15px;
+        margin-bottom: 10px; // Reduziert von 15px
       }
     }
     
     .project-duration {
-      margin-top: 15px;
-      font-size: 16px;
+      margin-top: 10px; // Reduziert von 15px
+      font-size: 14px; // Reduziert von 16px
       
       strong {
         font-weight: 600;
@@ -101,13 +190,13 @@ $white: #FFFFFF;
     .project-technologies {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 20px;
+      gap: 8px; // Reduziert von 12px
+      margin-top: 15px; // Reduziert von 20px
       
       .tech-badge {
-        padding: 8px 16px;
+        padding: 6px 12px; // Reduziert von 8px 16px
         border-radius: 20px;
-        font-size: 14px;
+        font-size: 12px; // Reduziert von 14px
         font-weight: 500;
         
         &.tech-javascript {
@@ -177,73 +266,11 @@ $white: #FFFFFF;
       }
     }
   }
-  
-  .project-actions {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-bottom: 40px;
-    
-    .action-btn {
-      padding: 12px 30px;
-      border: 2px solid;
-      border-radius: 25px;
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      display: inline-block;
-      
-      &.github-btn {
-        background-color: transparent;
-        border-color: $primary-text-color;
-        color: $primary-text-color;
-        
-        &:hover {
-          background-color: $primary-text-color;
-          color: $white;
-        }
-      }
-      
-      &.live-test-btn {
-        background-color: $accent-color;
-        border-color: $accent-color;
-        color: $primary-text-color;
-        
-        &:hover {
-          background-color: darken($accent-color, 10%);
-          border-color: darken($accent-color, 10%);
-        }
-      }
-    }
-  }
-  
-  .next-project-btn {
-    display: block;
-    margin-left: auto;
-    margin-right: 0;
-    padding: 12px 30px;
-    background: none;
-    border: 2px solid $hover-color;
-    border-radius: 25px;
-    color: $hover-color;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: fit-content;
-    
-    &:hover {
-      background-color: $hover-color;
-      color: $white;
-    }
-  }
 }
 
 @media (max-width: 768px) {
   .project-detail-container {
-    padding: 40px 15px;
+    padding: 15px;
   }
   
   .project-main {
@@ -255,11 +282,11 @@ $white: #FFFFFF;
     
     .project-actions {
       flex-direction: column;
-      align-items: center;
+      align-items: flex-end;
       
       .action-btn {
-        width: 200px;
-        text-align: center;
+        width: 107px;
+        height: 40px;
       }
     }
   }

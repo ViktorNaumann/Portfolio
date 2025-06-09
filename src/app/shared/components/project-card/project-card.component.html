@@ -1,56 +1,60 @@
 <div class="project-detail-container" *ngIf="project">
   <main class="project-main">
     <button class="go-back-btn" (click)="goBack()">
-      <span>← Go Back</span>
+      <img src="assets/img/projects-card/Breadcrumb arrow 3.png" alt="Back Arrow" class="arrow-icon">
+      Go Back
     </button>
     
-    <div class="project-content">
-      <div class="project-info">
-        <h1 class="project-title">{{ project.title }}</h1>
-        
-        <section class="project-description">
-          <h2>Description</h2>
-          <p>{{ project.description }}</p>
-        </section>
-
-        <section class="implementation-details">
-          <h2>Implementation Details</h2>
-          <p>{{ project.implementationDetails }}</p>
+    <div class="main-content">
+      <div class="project-content">
+        <div class="project-info">
+          <h1 class="project-title">{{ project.title }}</h1>
           
-          <div class="project-duration">
-            <strong>Duration:</strong> {{ project.duration }}
+          <section class="project-description">
+            <h2>Description</h2>
+            <p>{{ project.description }}</p>
+          </section>
+
+          <section class="implementation-details">
+            <h2>Implementation Details</h2>
+            <p>{{ project.implementationDetails }}</p>
+            
+            <div class="project-duration">
+              <strong>Duration:</strong> {{ project.duration }}
+            </div>
+          </section>
+
+          <div class="project-technologies">
+            <span 
+              *ngFor="let tech of project.technologies" 
+              class="tech-badge"
+              [ngClass]="'tech-' + tech.toLowerCase()">
+              {{ tech }}
+            </span>
           </div>
-        </section>
+        </div>
 
-        <div class="project-technologies">
-          <span 
-            *ngFor="let tech of project.technologies" 
-            class="tech-badge"
-            [ngClass]="'tech-' + tech.toLowerCase()">
-            {{ tech }}
-          </span>
+        <div class="project-image">
+          <img [src]="project.imageUrl" [alt]="project.title">
+          <div class="project-logo-overlay">
+            <div class="project-logo">VN</div>
+          </div>
         </div>
       </div>
 
-      <div class="project-image">
-        <img [src]="project.imageUrl" [alt]="project.title">
-        <div class="project-logo-overlay">
-          <div class="project-logo">HK</div>
-        </div>
+      <div class="project-actions">
+        <button class="action-btn" (click)="openGithub()">
+          GitHub
+        </button>
+        <button class="action-btn live-test-btn" (click)="openLiveTest()">
+          Live Test
+        </button>
       </div>
-    </div>
 
-    <div class="project-actions">
-      <button class="action-btn github-btn" (click)="openGithub()">
-        GitHub
-      </button>
-      <button class="action-btn live-test-btn" (click)="openLiveTest()">
-        Live Test
+      <button class="next-project-btn" (click)="goToNextProject()" *ngIf="nextProject">
+        Next Project
+        <img src="assets/img/projects-card/Next project arrow 3.png" alt="Arrow" class="arrow-icon">
       </button>
     </div>
-
-    <button class="next-project-btn" (click)="goToNextProject()" *ngIf="nextProject">
-      Next Project →
-    </button>
   </main>
 </div>
