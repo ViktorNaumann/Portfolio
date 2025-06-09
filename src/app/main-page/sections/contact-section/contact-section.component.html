@@ -30,10 +30,8 @@
               type="text" 
               id="name" 
               formControlName="name" 
-              placeholder="Your name goes here">
-            <div *ngIf="formSubmitted && contactForm.get('name')?.errors" class="error-message">
-              Oops! it seems your name is missing
-            </div>
+              [ngClass]="{'error-input': formSubmitted && contactForm.get('name')?.errors}"
+              [placeholder]="formSubmitted && contactForm.get('name')?.errors ? 'Oops! it seems your name is missing' : 'Your name goes here'">
           </div>
 
           <div class="form-group">
@@ -42,10 +40,8 @@
               type="email" 
               id="email" 
               formControlName="email" 
-              placeholder="youremail@email.com">
-            <div *ngIf="formSubmitted && contactForm.get('email')?.errors" class="error-message">
-              Hoppla! your email is required
-            </div>
+              [ngClass]="{'error-input': formSubmitted && contactForm.get('email')?.errors}"
+              [placeholder]="formSubmitted && contactForm.get('email')?.errors ? 'Hoppla! your email is required' : 'youremail@email.com'">
           </div>
 
           <div class="form-group">
@@ -53,11 +49,9 @@
             <textarea 
               id="message" 
               formControlName="message" 
-              placeholder="Hello Viktor, I am interested in..."
+              [ngClass]="{'error-input': formSubmitted && contactForm.get('message')?.errors}"
+              [placeholder]="formSubmitted && contactForm.get('message')?.errors ? 'What do you need to develop?' : 'Hello Viktor, I am interested in...'"
               rows="4"></textarea>
-            <div *ngIf="formSubmitted && contactForm.get('message')?.errors" class="error-message">
-              What do you need to develop?
-            </div>
           </div>
 
           <div class="form-check">
@@ -77,8 +71,8 @@
           <div class="form-submit">
             <button 
               type="submit" 
-              [disabled]="!contactForm.valid" 
-              [ngClass]="{'disabled': !contactForm.valid}">
+              [disabled]="!contactForm.get('privacyPolicy')?.value"
+              [ngClass]="{'disabled': !contactForm.get('privacyPolicy')?.value}">
               Send
             </button>
           </div>
