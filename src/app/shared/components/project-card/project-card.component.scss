@@ -1,0 +1,266 @@
+$main-font: 'Bricolage Grotesque', sans-serif;
+$primary-text-color: #2C2C2C;
+$accent-color: #F7C518;
+$link-color: #3355FF;
+$hover-color: #F87A55;
+$white: #FFFFFF;
+
+.project-detail-container {
+  min-height: 100vh;
+  background-image: url('/assets/img/projects-card/Note book paper.png');
+  background-color: #1d1d1d;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: $main-font;
+  color: $primary-text-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.project-main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  .go-back-btn {
+    background: none;
+    border: none;
+    color: $hover-color;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 40px;
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: darken($hover-color, 10%);
+    }
+  }
+  
+  .project-content {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 40px;
+    align-items: flex-start;
+    
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+  
+  .project-info {
+    flex: 1;
+    
+    .project-title {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: $primary-text-color;
+      text-decoration: underline;
+      text-decoration-color: $link-color;
+      text-decoration-thickness: 3px;
+      text-underline-offset: 8px;
+    }
+    
+    section {
+      margin-bottom: 30px;
+      
+      h2 {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: $primary-text-color;
+      }
+      
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: $primary-text-color;
+        text-align: justify;
+        margin-bottom: 15px;
+      }
+    }
+    
+    .project-duration {
+      margin-top: 15px;
+      font-size: 16px;
+      
+      strong {
+        font-weight: 600;
+      }
+    }
+    
+    .project-technologies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+      
+      .tech-badge {
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        
+        &.tech-javascript {
+          background-color: #F7DF1E;
+          color: #000;
+        }
+        
+        &.tech-html {
+          background-color: #E34F26;
+          color: $white;
+        }
+        
+        &.tech-css {
+          background-color: #1572B6;
+          color: $white;
+        }
+        
+        &.tech-angular {
+          background-color: #DD0031;
+          color: $white;
+        }
+        
+        &.tech-typescript {
+          background-color: #3178C6;
+          color: $white;
+        }
+        
+        &.tech-firebase {
+          background-color: #FFCA28;
+          color: #000;
+        }
+      }
+    }
+  }
+  
+  .project-image {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+    
+    .project-logo-overlay {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      
+      .project-logo {
+        width: 60px;
+        height: 60px;
+        background-color: $accent-color;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: 700;
+        color: $primary-text-color;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+  
+  .project-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+    
+    .action-btn {
+      padding: 12px 30px;
+      border: 2px solid;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      
+      &.github-btn {
+        background-color: transparent;
+        border-color: $primary-text-color;
+        color: $primary-text-color;
+        
+        &:hover {
+          background-color: $primary-text-color;
+          color: $white;
+        }
+      }
+      
+      &.live-test-btn {
+        background-color: $accent-color;
+        border-color: $accent-color;
+        color: $primary-text-color;
+        
+        &:hover {
+          background-color: darken($accent-color, 10%);
+          border-color: darken($accent-color, 10%);
+        }
+      }
+    }
+  }
+  
+  .next-project-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 12px 30px;
+    background: none;
+    border: 2px solid $hover-color;
+    border-radius: 25px;
+    color: $hover-color;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
+    
+    &:hover {
+      background-color: $hover-color;
+      color: $white;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .project-detail-container {
+    padding: 40px 15px;
+  }
+  
+  .project-main {
+    .project-info {
+      .project-title {
+        font-size: 36px;
+      }
+    }
+    
+    .project-actions {
+      flex-direction: column;
+      align-items: center;
+      
+      .action-btn {
+        width: 200px;
+        text-align: center;
+      }
+    }
+  }
+}
