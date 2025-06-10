@@ -263,3 +263,53 @@ section {
     margin-top: 20px;
   }
 }
+
+.title-first, .title-second {
+  .letter {
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: baseline;
+    transform-origin: center bottom;
+    width: auto;
+    min-height: 1em;
+    transition: text-transform 1s ease;
+  }
+}
+
+.title-first .letter {
+  text-transform: lowercase;
+  
+  &:first-child {
+    text-transform: uppercase;
+    
+    &:hover {
+      color: #F7C518;
+    }
+    
+    &.hovered {
+      text-transform: lowercase;
+    }
+  }
+  
+  &:not(:first-child) {
+    &:hover {
+      color: #F7C518;
+    }
+    
+    &.hovered {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.title-second .letter {
+  text-transform: uppercase;
+  
+  &:hover {
+    color: #F7C518;
+  }
+  
+  &.hovered {
+    text-transform: lowercase;
+  }
+}
