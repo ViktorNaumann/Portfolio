@@ -25,7 +25,7 @@ export class ProjectDataService {
       title: 'Join',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       imageUrl: '/assets/img/projects/Laptop.svg',
-      detailImageUrl: '/assets/img/projects-card/Component 30.svg',
+      detailImageUrl: '/assets/img/projects-card/join.png',
       featured: true,
       duration: '4 weeks',
       technologies: ['JavaScript', 'HTML', 'CSS', 'Firebase'],

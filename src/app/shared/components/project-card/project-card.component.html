@@ -35,8 +35,14 @@
           </div>
         </div>
 
-        <div class="project-image">
+        <div class="project-image" *ngIf="project">
           <img [src]="project.detailImageUrl || project.imageUrl" [alt]="project.title">
+          
+          <!-- Featured Sticker hinzufügen -->
+          <div class="featured-sticker" *ngIf="project.featured">
+            <img src="/assets/img/projects/Sticker.png" alt="Featured Project">
+          </div>
+          
           <div class="project-logo-overlay">
             <div class="project-logo">VN</div>
           </div>

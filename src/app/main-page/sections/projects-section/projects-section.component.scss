@@ -220,6 +220,23 @@ section {
   100% { clip-path: inset(0 100% 0 0); }
 }
 
+.featured-sticker {
+  position: absolute;
+  top: 200px;
+  left: 80px;
+  z-index: 999;
+  width: 80px;
+  height: 80px;
+  background: transparent;
+  
+  img {
+    width: 168px;
+    height: 168px;
+    display: block;
+    object-fit: contain;
+  }
+}
+
 @media (max-width: 768px) {
     .header-item {
         flex: 0 0 100%;

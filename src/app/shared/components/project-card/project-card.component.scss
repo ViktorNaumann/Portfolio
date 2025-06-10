@@ -203,6 +203,10 @@ $light-gray: #F8F9FA;
       }
     }
   }
+
+  img {
+    border-radius: 20px;
+  }
   
   .project-image {
     flex: 1;
@@ -210,27 +214,18 @@ $light-gray: #F8F9FA;
     @include flex-center;
     justify-content: center;
     
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    }
-    
-    .project-logo-overlay {
+    .featured-sticker {
       position: absolute;
-      bottom: 20px;
-      right: 20px;
+      top: 140px;
+      left: 510px;
+      z-index: 999;
+      background: transparent;
       
-      .project-logo {
-        width: 60px;
-        height: 60px;
-        background-color: $accent-color;
-        border-radius: 50%;
-        @include flex-center;
-        justify-content: center;
-        @include text-style(24px, 700, $primary-text-color);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      img {
+        width: 120px;
+        height: 120px;
+        display: block;
+        object-fit: contain;
       }
     }
   }
