@@ -6,6 +6,7 @@ export interface Project {
   title: string;
   description: string;
   imageUrl: string;
+  detailImageUrl?: string;
   featured: boolean;
   duration?: string;
   technologies: string[];
@@ -24,6 +25,7 @@ export class ProjectDataService {
       title: 'Join',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       imageUrl: '/assets/img/projects/Laptop.svg',
+      detailImageUrl: '/assets/img/projects-card/Component 30.svg',
       featured: true,
       duration: '4 weeks',
       technologies: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
