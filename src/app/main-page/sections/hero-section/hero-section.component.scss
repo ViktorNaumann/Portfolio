@@ -109,10 +109,14 @@ section {
     
     .title-first {
       margin-bottom: 20px;
+      margin-left: -210px;
+      position: relative;
+      display: inline-block;
     }
     
     .title-second {
-      display: block;
+      display: inline-block;
+      position: relative;
     }
   }
   
@@ -264,19 +268,11 @@ section {
   }
 }
 
-.title-first, .title-second {
-  .letter {
-    display: inline-block;
-    cursor: pointer;
-    vertical-align: baseline;
-    transform-origin: center bottom;
-    width: auto;
-    min-height: 1em;
-    transition: text-transform 1s ease;
-  }
-}
-
 .title-first .letter {
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: baseline;
+  transition: color 0.3s ease;
   text-transform: lowercase;
   
   &:first-child {
@@ -303,6 +299,10 @@ section {
 }
 
 .title-second .letter {
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: baseline;
+  transition: color 0.3s ease;
   text-transform: uppercase;
   
   &:hover {
