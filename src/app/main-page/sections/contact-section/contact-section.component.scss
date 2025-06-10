@@ -97,7 +97,6 @@ $error-color: #FF3A00;
     justify-content: center;
     align-items: center;
     
-    /* Statisches Hintergrundbild */
     .background-circle {
       position: absolute;
       width: 100%;
@@ -111,7 +110,6 @@ $error-color: #FF3A00;
       object-fit: contain;
     }
     
-    /* Rotierender Text */
     .rotating-text {
       position: absolute;
       width: 100%;
@@ -134,7 +132,6 @@ $error-color: #FF3A00;
       text-transform: uppercase;
     }
     
-    /* Logo in der Mitte */
     .logo-center {
       position: relative;
       z-index: 3;
