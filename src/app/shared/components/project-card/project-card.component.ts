@@ -40,7 +40,6 @@ export class ProjectCardComponent implements OnInit, OnDestroy {
       return;
     }
 
-    // Nächstes Projekt finden
     this.nextProject = this.projectDataService.getNextProject(projectId);
   }
 
@@ -64,5 +63,18 @@ export class ProjectCardComponent implements OnInit, OnDestroy {
     if (this.project?.liveTestUrl) {
       window.open(this.project.liveTestUrl, '_blank');
     }
+  }
+
+  getTechIconPath(technology: string): string {
+    const techMap: { [key: string]: string } = {
+      'JavaScript': 'assets/img/skills/skill.icons/Property 1=Js.svg',
+      'HTML': 'assets/img/skills/skill.icons/Property 1=HTML.svg',
+      'CSS': 'assets/img/skills/skill.icons/Property 1=CSS.svg',
+      'Angular': 'assets/img/skills/skill.icons/Property 1=Angular.svg',
+      'TypeScript': 'assets/img/skills/skill.icons/Property 1=Ts.svg',
+      'Firebase': 'assets/img/skills/skill.icons/Property 1=Firebase.svg'
+    };
+    
+    return techMap[technology] || 'assets/img/skills/skill.icons/Property 1=Default.svg';
   }
 }

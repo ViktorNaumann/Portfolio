@@ -1,55 +1,65 @@
 $main-font: 'Bricolage Grotesque', sans-serif;
 $primary-text-color: #2C2C2C;
+$dark-text-color: #0E1013;
 $accent-color: #F7C518;
-$link-color: #3355FF;
 $hover-color: #F87A55;
 $white: #FFFFFF;
+$light-gray: #F8F9FA;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin button-style {
+  font-family: $main-font;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  background: none;
+}
+
+@mixin text-style($size: 16px, $weight: 400, $color: $dark-text-color) {
+  font-family: $main-font;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
 
 .project-detail-container {
-  height: 100vh; // Zurück zu 100vh ohne Abzug
+  height: 100vh;
   background-image: url('/assets/img/projects-card/Note book paper.png');
-  background-color: #1d1d1d;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  font-family: $main-font;
-  color: $primary-text-color;
-  display: flex;
+  background: #1d1d1d url('/assets/img/projects-card/Note book paper.png') center/cover no-repeat;
+  @include flex-center;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 0; // Kein Padding
+  font-family: $main-font;
+  color: $primary-text-color;
+  padding: 0;
   overflow: hidden;
-  position: relative; // Für absolute Positionierung des Go Back Buttons
+  position: relative;
 }
 
 .project-main {
   width: 100%;
   max-width: 1440px;
-  margin: 0 auto;
   height: 100%;
-  display: flex;
+  @include flex-center;
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  padding: 20px; // Padding hier statt im Container
+  margin: 0 auto;
+  padding: 20px;
   
   .go-back-btn {
-    position: fixed; // Fixed statt absolute, damit er über der Navbar ist
-    top: 100px; // Unterhalb der Navbar (anpassen je nach Navbar-Höhe)
+    position: fixed;
+    top: 100px;
     left: 40px;
-    display: flex;
-    align-items: center;
+    @include flex-center;
+    @include button-style;
+    @include text-style(18px, 700, $dark-text-color);
     gap: 8px;
-    background: none;
-    border: none;
-    color: #0E1013;
-    font-family: 'Bricolage Grotesque', sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    z-index: 1000; // Hoher z-index, damit er über allem ist
+    z-index: 1000;
     
     .arrow-icon {
       width: 24px;
@@ -57,15 +67,14 @@ $white: #FFFFFF;
     }
     
     &:hover {
-      color: #F87A55;
+      color: $hover-color;
     }
   }
   
   .main-content {
-    display: flex;
+    @include flex-center;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     height: 100%;
     
     .project-content {
@@ -91,47 +100,37 @@ $white: #FFFFFF;
         width: 107px;
         height: 40px;
         border-radius: 100px;
-        font-family: 'Bricolage Grotesque', sans-serif;
-        font-size: 18px;
-        font-weight: 500;
+        @include text-style(18px, 500, $light-gray);
+        @include flex-center;
+        justify-content: center;
+        background-color: transparent;
+        border: 1px solid $light-gray;
+        box-shadow: 2px 4px 0px 0px $light-gray;
         cursor: pointer;
         transition: all 0.2s ease;
         text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        background-color: transparent;
-        border: 1px solid #F8F9FA;
-        color: #F8F9FA;
-        box-shadow: 2px 4px 0px 0px #F8F9FA;
         
-        &:hover {
-          background-color: #F87A55;
-          transform: translateY(4px);
-          box-shadow: 0px 0px 0 0 #F8F9FA;
-        }
-        
+        &:hover,
         &:active {
+          background-color: $hover-color;
           transform: translateY(4px);
-          box-shadow: 0px 0px 0 0 #F8F9FA;
+          box-shadow: 0px 0px 0 0 $light-gray;
         }
+      }
+      
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-end;
       }
     }
     
     .next-project-btn {
-      display: flex;
-      align-items: center;
+      @include flex-center;
+      @include button-style;
+      @include text-style(18px, 700, $light-gray);
       gap: 12px;
       align-self: flex-end;
       padding: 12px 0;
-      background: none;
-      border: none;
-      color: #F8F9FA;
-      font-family: 'Bricolage Grotesque', sans-serif;
-      font-size: 18px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.3s ease;
       width: fit-content;
       
       .arrow-icon {
@@ -140,7 +139,7 @@ $white: #FFFFFF;
       }
       
       &:hover {
-        color: #F7C518;
+        color: $accent-color;
       }
     }
   }
@@ -149,38 +148,33 @@ $white: #FFFFFF;
     flex: 1;
     
     .project-title {
-      font-family: 'Bricolage Grotesque', sans-serif;
-      font-size: 48px; // Reduziert von 64px
-      font-weight: 700;
-      margin-bottom: 20px; // Reduziert von 30px
-      color: #0E1013;
+      @include text-style(48px, 700, $dark-text-color);
+      margin-bottom: 20px;
+      
+      @media (max-width: 768px) {
+        font-size: 36px;
+      }
     }
     
     section {
-      margin-bottom: 20px; // Reduziert von 30px
+      margin-bottom: 20px;
       
       h2 {
-        font-family: 'Bricolage Grotesque', sans-serif;
-        font-size: 22px; // Reduziert von 24px
-        font-weight: 700;
-        margin-bottom: 8px; // Reduziert von 12px
-        color: #0E1013;
+        @include text-style(22px, 700, $dark-text-color);
+        margin-bottom: 8px;
       }
       
       p {
-        font-family: 'Bricolage Grotesque', sans-serif;
-        font-size: 16px; // Reduziert von 18px
-        font-weight: 400;
-        line-height: 1.4; // Reduziert von 1.6
-        color: #0E1013;
+        @include text-style(16px, 400, $dark-text-color);
+        line-height: 1.4;
         text-align: justify;
-        margin-bottom: 10px; // Reduziert von 15px
+        margin-bottom: 10px;
       }
     }
     
     .project-duration {
-      margin-top: 10px; // Reduziert von 15px
-      font-size: 14px; // Reduziert von 16px
+      margin-top: 10px;
+      font-size: 14px;
       
       strong {
         font-weight: 600;
@@ -190,43 +184,21 @@ $white: #FFFFFF;
     .project-technologies {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px; // Reduziert von 12px
-      margin-top: 15px; // Reduziert von 20px
+      gap: 12px;
+      margin-top: 15px;
       
       .tech-badge {
-        padding: 6px 12px; // Reduziert von 8px 16px
-        border-radius: 20px;
-        font-size: 12px; // Reduziert von 14px
-        font-weight: 500;
+        @include flex-center;
+        gap: 8px;
         
-        &.tech-javascript {
-          background-color: #F7DF1E;
-          color: #000;
+        .tech-icon {
+          width: 24px;
+          height: 24px;
+          object-fit: contain;
         }
         
-        &.tech-html {
-          background-color: #E34F26;
-          color: $white;
-        }
-        
-        &.tech-css {
-          background-color: #1572B6;
-          color: $white;
-        }
-        
-        &.tech-angular {
-          background-color: #DD0031;
-          color: $white;
-        }
-        
-        &.tech-typescript {
-          background-color: #3178C6;
-          color: $white;
-        }
-        
-        &.tech-firebase {
-          background-color: #FFCA28;
-          color: #000;
+        .tech-text {
+          @include text-style(16px, 400, $dark-text-color);
         }
       }
     }
@@ -235,9 +207,8 @@ $white: #FFFFFF;
   .project-image {
     flex: 1;
     position: relative;
-    display: flex;
+    @include flex-center;
     justify-content: center;
-    align-items: center;
     
     img {
       max-width: 100%;
@@ -256,12 +227,9 @@ $white: #FFFFFF;
         height: 60px;
         background-color: $accent-color;
         border-radius: 50%;
-        display: flex;
-        align-items: center;
+        @include flex-center;
         justify-content: center;
-        font-size: 24px;
-        font-weight: 700;
-        color: $primary-text-color;
+        @include text-style(24px, 700, $primary-text-color);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
       }
     }
@@ -271,23 +239,5 @@ $white: #FFFFFF;
 @media (max-width: 768px) {
   .project-detail-container {
     padding: 15px;
-  }
-  
-  .project-main {
-    .project-info {
-      .project-title {
-        font-size: 36px;
-      }
-    }
-    
-    .project-actions {
-      flex-direction: column;
-      align-items: flex-end;
-      
-      .action-btn {
-        width: 107px;
-        height: 40px;
-      }
-    }
   }
 }
