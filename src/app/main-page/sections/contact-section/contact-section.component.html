@@ -22,7 +22,31 @@
         <div class="contact-form">
           <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
             <div class="logo-container">
-              <img src="assets/img/contact/08_ Color option 3 - C.png" alt="Logo" class="logo">
+              <div class="circular-logo">
+                <!-- Statisches Hintergrundbild -->
+                <div class="background-circle">
+                  <img src="assets/img/contact/08_ Color option 3 - C.png" alt="Background circle" class="circle-image">
+                </div>
+                
+                <!-- Rotierender Text -->
+                <div class="rotating-text">
+                  <svg class="circular-text" viewBox="0 0 200 200">
+                    <defs>
+                      <path id="circle" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"/>
+                    </defs>
+                    <text class="rotating-text-path">
+                      <textPath href="#circle">
+                        Viktor Naumann • Frontend Developer • Viktor Naumann • Frontend Developer • 
+                      </textPath>
+                    </text>
+                  </svg>
+                </div>
+                
+                <!-- Logo in der Mitte -->
+                <div class="logo-center">
+                  <img src="assets/img/header/logo.png" alt="Viktor Naumann Logo" class="logo">
+                </div>
+              </div>
             </div>
 
             <div class="form-group">
