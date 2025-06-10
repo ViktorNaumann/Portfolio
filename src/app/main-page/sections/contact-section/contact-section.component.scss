@@ -72,6 +72,9 @@ $error-color: #FF3A00;
     width: 280px;
     margin-top: 20px;
     align-self: flex-end;
+    opacity: 1;
+    clip-path: inset(0 100% 0 0);
+    animation: draw-line 10s ease infinite;
   }
 }
 
@@ -306,4 +309,23 @@ app-footer {
       font-size: 36px;
     }
   }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes draw-line {
+  0% { clip-path: inset(0 100% 0 0); }
+  20% { clip-path: inset(0 0% 0 0); }
+  70% { clip-path: inset(0 0% 0 0); }
+  90% { clip-path: inset(0 100% 0 0); }
+  100% { clip-path: inset(0 100% 0 0); }
 }
