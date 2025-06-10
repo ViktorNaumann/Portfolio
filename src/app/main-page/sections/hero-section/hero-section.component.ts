@@ -1,10 +1,9 @@
 import { Component, AfterViewInit, ElementRef } from '@angular/core';
-import { CustomButtonComponent } from '../../../shared/components/custom-button/custom-button.component';
 
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [CustomButtonComponent],
+  imports: [],
   templateUrl: './hero-section.component.html',
   styleUrls: ['./hero-section.component.scss']
 })
