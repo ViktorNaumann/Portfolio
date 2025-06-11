@@ -5,7 +5,7 @@ import { TranslatePipe, TranslateDirective, TranslateService } from "@ngx-transl
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule, TranslatePipe, TranslateDirective],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { TranslatePipe, TranslateDirective, TranslateService } from "@ngx-translate/core";
+import { TranslatePipe, TranslateService } from "@ngx-translate/core";
 import { ProjectDataService, Project } from '../../../shared/services/project-data.service';
 
 interface ProjectItem {
@@ -16,7 +16,7 @@ interface ProjectItem {
 @Component({
   selector: 'app-projects-section',
   standalone: true,
-  imports: [CommonModule, TranslatePipe, TranslateDirective],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './projects-section.component.html',
   styleUrl: './projects-section.component.scss'
 })

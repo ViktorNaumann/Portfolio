@@ -51,6 +51,14 @@
       "DESCRIPTION": "Diese App ist ein Slack-Klon. Sie revolutioniert die Teamkommunikation und Zusammenarbeit mit ihrer intuitiven Benutzeroberfläche, Echtzeit-Messaging und robuster Kanalorganisation."
     }
   },
+  "PROJECT_CARD": {
+    "GO_BACK": "Zurück",
+    "DESCRIPTION": "Beschreibung",
+    "IMPLEMENTATION_DETAILS": "Implementierungsdetails",
+    "DURATION": "Dauer",
+    "LIVE_TEST": "Live Test",
+    "NEXT_PROJECT": "Nächstes Projekt"
+  },
   "TESTIMONIALS": {
     "IN_THEIR_WORDS": "IN IHREN WORTEN:",
     "COLLEAGUES_THOUGHTS": "Gedanken der Kollegen",
@@ -87,5 +95,8 @@
     "PRIVACY_POLICY_AGREE": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
     "PRIVACY_POLICY_ERROR": "Bitte akzeptiere die Datenschutzerklärung.",
     "SEND": "Senden"
+  },
+  "FOOTER": {
+    "LEGAL_NOTICE": "Impressum"
   }
 }

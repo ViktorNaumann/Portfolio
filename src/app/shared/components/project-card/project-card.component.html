@@ -2,7 +2,7 @@
   <main class="project-main">
     <button class="go-back-btn" (click)="goBack()">
       <img src="assets/img/projects-card/Breadcrumb arrow 3.png" alt="Back Arrow" class="arrow-icon">
-      Go Back
+      {{ 'PROJECT_CARD.GO_BACK' | translate }}
     </button>
     
     <div class="main-content">
@@ -11,16 +11,16 @@
           <h1 class="project-title">{{ project.title }}</h1>
           
           <section class="project-description">
-            <h2>Description</h2>
+            <h2>{{ 'PROJECT_CARD.DESCRIPTION' | translate }}</h2>
             <p>{{ project.description }}</p>
           </section>
 
           <section class="implementation-details">
-            <h2>Implementation Details</h2>
+            <h2>{{ 'PROJECT_CARD.IMPLEMENTATION_DETAILS' | translate }}</h2>
             <p>{{ project.implementationDetails }}</p>
             
             <div class="project-duration">
-              <strong>Duration:</strong> {{ project.duration }}
+              <strong>{{ 'PROJECT_CARD.DURATION' | translate }}:</strong> {{ project.duration }}
             </div>
           </section>
 
@@ -38,7 +38,6 @@
         <div class="project-image" *ngIf="project">
           <img [src]="project.detailImageUrl || project.imageUrl" [alt]="project.title">
           
-          <!-- Featured Sticker hinzufügen -->
           <div class="featured-sticker" *ngIf="project.featured">
             <img src="/assets/img/projects/Sticker.png" alt="Featured Project">
           </div>
@@ -54,12 +53,12 @@
           GitHub
         </button>
         <button class="action-btn live-test-btn" (click)="openLiveTest()">
-          Live Test
+          {{ 'PROJECT_CARD.LIVE_TEST' | translate }}
         </button>
       </div>
 
       <button class="next-project-btn" (click)="goToNextProject()" *ngIf="nextProject">
-        Next Project
+        {{ 'PROJECT_CARD.NEXT_PROJECT' | translate }}
         <img src="assets/img/projects-card/Next project arrow 3.png" alt="Arrow" class="arrow-icon">
       </button>
     </div>

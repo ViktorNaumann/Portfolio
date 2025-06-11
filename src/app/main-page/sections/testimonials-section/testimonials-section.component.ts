@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslatePipe, TranslateDirective, TranslateService } from "@ngx-translate/core";
+import { TranslatePipe, TranslateService } from "@ngx-translate/core";
 
 interface Testimonial {
   id: number;
@@ -15,7 +15,7 @@ interface Testimonial {
 @Component({
   selector: 'app-testimonials-section',
   standalone: true,
-  imports: [CommonModule, TranslatePipe, TranslateDirective],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './testimonials-section.component.html',
   styleUrl: './testimonials-section.component.scss'
 })

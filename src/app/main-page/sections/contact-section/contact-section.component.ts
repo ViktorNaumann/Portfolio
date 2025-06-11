@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { TranslatePipe, TranslateDirective, TranslateService } from "@ngx-translate/core";
+import { TranslatePipe, TranslateService } from "@ngx-translate/core";
 import { FooterComponent } from '../../../shared/footer/footer.component';
 
 @Component({
   selector: 'app-contact-section',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, TranslatePipe, TranslateDirective, FooterComponent],
+  imports: [CommonModule, ReactiveFormsModule, TranslatePipe, FooterComponent],
   templateUrl: './contact-section.component.html',
   styleUrl: './contact-section.component.scss'
 })

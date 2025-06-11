@@ -6,7 +6,7 @@ import { TranslatePipe, TranslateDirective, TranslateService } from "@ngx-transl
 @Component({
   selector: 'app-about-section',
   standalone: true,
-  imports: [CommonModule, RouterModule, TranslatePipe, TranslateDirective],
+  imports: [CommonModule, RouterModule, TranslatePipe],
   templateUrl: './about-section.component.html',
   styleUrl: './about-section.component.scss'
 })

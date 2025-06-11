@@ -8,7 +8,7 @@ import { TranslatePipe, TranslateDirective, TranslateService } from "@ngx-transl
 @Component({
   selector: 'app-project-card',
   standalone: true,
-  imports: [CommonModule, TranslatePipe, TranslateDirective],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './project-card.component.html',
   styleUrl: './project-card.component.scss'
 })

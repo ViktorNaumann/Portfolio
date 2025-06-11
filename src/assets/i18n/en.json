@@ -51,6 +51,14 @@
       "DESCRIPTION": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
     }
   },
+  "PROJECT_CARD": {
+    "GO_BACK": "Go Back",
+    "DESCRIPTION": "Description",
+    "IMPLEMENTATION_DETAILS": "Implementation Details",
+    "DURATION": "Duration",
+    "LIVE_TEST": "Live Test",
+    "NEXT_PROJECT": "Next Project"
+  },
   "TESTIMONIALS": {
     "IN_THEIR_WORDS": "IN THEIR WORDS:",
     "COLLEAGUES_THOUGHTS": "Colleagues' Thoughts",
@@ -87,5 +95,8 @@
     "PRIVACY_POLICY_AGREE": "and agree to the processing of my data as outlined.",
     "PRIVACY_POLICY_ERROR": "Please accept the privacy policy.",
     "SEND": "Send"
+  },
+  "FOOTER": {
+    "LEGAL_NOTICE": "Legal Notice"
   }
 }
