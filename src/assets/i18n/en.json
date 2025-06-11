@@ -1,0 +1,91 @@
+{
+  "HEADER": {
+    "ABOUT_ME": "About me",
+    "SKILLS": "Skills",
+    "PROJECTS": "Projects",
+    "CONTACT": "Contact"
+  },
+  "HERO": {
+    "HELLO_WORLD": "Hello world",
+    "IM_VIKTOR": "I'M VIKTOR NAUMANN",
+    "GET_IN_TOUCH": "Get in Touch"
+  },
+  "ABOUT": {
+    "BASED_IN_HAMBURG": "Based in Hamburg",
+    "OPEN_TO_RELOCATE": "Open to relocate",
+    "OPEN_TO_WORK_REMOTE": "Open to work remote",
+    "WHOS_VIKTOR": "WHO'S VIKTOR?",
+    "TITLE": "About me",
+    "DESCRIPTION_PARAGRAPH_1": "Hi, I’m Viktor – a passionate programmer with a focus on efficient and elegant solutions. I’m inspired by the way IT offers creative approaches to solving complex problems. I see challenges as opportunities to learn and grow. My motivation comes from a constant drive to improve and explore new technologies. By adopting best practices and embracing continuous learning, I strive to deliver high‑quality solutions in every project.",
+    "DESCRIPTION_PARAGRAPH_2": "Let's collaborate and build something remarkable together!",
+    "GET_IN_TOUCH": "Get in Touch",
+    "BASED_IN_HAMBURG_ALT": "Based in Hamburg",
+    "OPEN_TO_RELOCATE_ALT": "Open to relocate",
+    "OPEN_TO_WORK_REMOTE_ALT": "Open to work remote",
+    "LOCATION_ICON_ALT": "Location icon",
+    "RELOCATE_ICON_ALT": "Relocate icon",
+    "REMOTE_WORK_ICON_ALT": "Remote work icon"
+  },
+  "SKILLS": {
+    "MY_STACK": "MY STACK",
+    "SKILL_SET": "Skill set",
+    "DESCRIPTION_TEXT": "A short introduction of your skills. Highlight your experience of using different front-end technologies and emphasise your openness to learning and adapting to new technologies.",
+    "PULL_TO": "Pull to",
+    "PEEL": "peel"
+  },
+  "PROJECTS": {
+    "MY_CRAFT": "MY CRAFT",
+    "TITLE": "Projects",
+    "DESCRIPTION": "Encourage people to take a look and interact with your projects. Highlight your approach to creating responsive, user-friendly projects with efficient code.",
+    "PROJECT_DETAILS": "Project details",
+    "JOIN": {
+      "TITLE": "Join",
+      "DESCRIPTION": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+    },
+    "ELPOLLOLOCOGAME": {
+      "TITLE": "El Pollo Loco",
+      "DESCRIPTION": "A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+    },
+    "DABUBBLE": {
+      "TITLE": "DaBubble",
+      "DESCRIPTION": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
+    }
+  },
+  "TESTIMONIALS": {
+    "IN_THEIR_WORDS": "IN THEIR WORDS:",
+    "COLLEAGUES_THOUGHTS": "Colleagues' Thoughts",
+    "TESTIMONIAL_1": {
+      "TEXT": "Viktor is a highly skilled developer with great attention to detail. His problem-solving abilities and collaborative approach make him an excellent team member.",
+      "AUTHOR_TITLE": "Frontend Developer"
+    },
+    "TESTIMONIAL_2": {
+      "TEXT": "Working with Viktor has been a pleasure. He consistently delivers high-quality code and is always willing to help others learn and grow.",
+      "AUTHOR_TITLE": "Project Manager"
+    },
+    "TESTIMONIAL_3": {
+      "TEXT": "Viktor's technical expertise and dedication to clean code are impressive. He brings innovative solutions to complex challenges and mentors junior developers effectively.",
+      "AUTHOR_TITLE": "Senior Software Engineer"
+    }
+  },
+  "CONTACT": {
+    "CONTACT_ME": "CONTACT ME",
+    "READY_TO_WORK": "Ready to work together?",
+    "DESCRIPTION_PARAGRAPH_1": "Encourage people to contact you and describe what role you are interested in. Express confidence in your ability to make a meaningful contribution to a team through your expertise and enthusiasm for improving your skills.",
+    "DESCRIPTION_PARAGRAPH_2": "Show interest in contributing to a new project, while highlighting the value and skills you can bring to the table.",
+    "ROTATING_TEXT": "Viktor Naumann • Frontend Developer •",
+    "WHATS_YOUR_NAME": "What's your name?",
+    "WHATS_YOUR_EMAIL": "What's your email?",
+    "HOW_CAN_I_HELP": "How can I help you?",
+    "NAME_PLACEHOLDER": "Your name goes here",
+    "NAME_ERROR_PLACEHOLDER": "Oops! it seems your name is missing",
+    "EMAIL_PLACEHOLDER": "youremail@email.com",
+    "EMAIL_ERROR_PLACEHOLDER": "Hoppla! your email is required",
+    "MESSAGE_PLACEHOLDER": "Hello Viktor, I am interested in...",
+    "MESSAGE_ERROR_PLACEHOLDER": "What do you need to develop?",
+    "PRIVACY_POLICY_TEXT": "I've read the",
+    "PRIVACY_POLICY_LINK": "privacy policy",
+    "PRIVACY_POLICY_AGREE": "and agree to the processing of my data as outlined.",
+    "PRIVACY_POLICY_ERROR": "Please accept the privacy policy.",
+    "SEND": "Send"
+  }
+}

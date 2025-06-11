@@ -4,18 +4,10 @@
       <div class="contact-wrapper">
 
         <div class="contact-info">
-          <h3 class="sub-heading">CONTACT ME</h3>
-          <h2 class="main-heading">Ready to work together?</h2>
-          <p>
-            Encourage people to contact you and describe what role you are
-            interested in. Express confidence in your ability to make a
-            meaningful contribution to a team through your expertise and
-            enthusiasm for improving your skills.
-          </p>
-          <p>
-            Show interest in contributing to a new project, while
-            highlighting the value and skills you can bring to the table.
-          </p>
+          <h3 class="sub-heading">{{ 'CONTACT.CONTACT_ME' | translate }}</h3>
+          <h2 class="main-heading">{{ 'CONTACT.READY_TO_WORK' | translate }}</h2>
+          <p>{{ 'CONTACT.DESCRIPTION_PARAGRAPH_1' | translate }}</p>
+          <p>{{ 'CONTACT.DESCRIPTION_PARAGRAPH_2' | translate }}</p>
           <img src="assets/img/contact/Color option 3.png" alt="Arrow decoration" class="arrow-image">
         </div>
 
@@ -34,7 +26,7 @@
                     </defs>
                     <text class="rotating-text-path">
                       <textPath href="#circle">
-                        Viktor Naumann • Frontend Developer •
+                        {{ 'CONTACT.ROTATING_TEXT' | translate }}
                       </textPath>
                     </text>
                   </svg>
@@ -47,32 +39,32 @@
             </div>
 
             <div class="form-group">
-              <label for="name">What's your name?</label>
+              <label for="name">{{ 'CONTACT.WHATS_YOUR_NAME' | translate }}</label>
               <input 
                 type="text" 
                 id="name" 
                 formControlName="name" 
                 [ngClass]="{'error-input': formSubmitted && contactForm.get('name')?.errors}"
-                [placeholder]="formSubmitted && contactForm.get('name')?.errors ? 'Oops! it seems your name is missing' : 'Your name goes here'">
+                [placeholder]="getNamePlaceholder()">
             </div>
 
             <div class="form-group">
-              <label for="email">What's your email?</label>
+              <label for="email">{{ 'CONTACT.WHATS_YOUR_EMAIL' | translate }}</label>
               <input 
                 type="email" 
                 id="email" 
                 formControlName="email" 
                 [ngClass]="{'error-input': formSubmitted && contactForm.get('email')?.errors}"
-                [placeholder]="formSubmitted && contactForm.get('email')?.errors ? 'Hoppla! your email is required' : 'youremail@email.com'">
+                [placeholder]="getEmailPlaceholder()">
             </div>
 
             <div class="form-group">
-              <label for="message">How can I help you?</label>
+              <label for="message">{{ 'CONTACT.HOW_CAN_I_HELP' | translate }}</label>
               <textarea 
                 id="message" 
                 formControlName="message" 
                 [ngClass]="{'error-input': formSubmitted && contactForm.get('message')?.errors}"
-                [placeholder]="formSubmitted && contactForm.get('message')?.errors ? 'What do you need to develop?' : 'Hello Viktor, I am interested in...'">
+                [placeholder]="getMessagePlaceholder()">
               </textarea>
             </div>
 
@@ -83,13 +75,13 @@
                 formControlName="privacyPolicy" 
                 class="form-check-input">
               <label for="privacyPolicy" class="form-check-label">
-                I've read the <a href="#" class="privacy-link">privacy policy</a> and agree to the processing of my data as outlined.
+                {{ 'CONTACT.PRIVACY_POLICY_TEXT' | translate }} <a href="#" class="privacy-link">{{ 'CONTACT.PRIVACY_POLICY_LINK' | translate }}</a> {{ 'CONTACT.PRIVACY_POLICY_AGREE' | translate }}
               </label>
             </div>
 
             <div class="error-message" 
                  [ngClass]="{'visible': formSubmitted && contactForm.get('privacyPolicy')?.errors, 'hidden': !(formSubmitted && contactForm.get('privacyPolicy')?.errors)}">
-              Please accept the privacy policy.
+              {{ 'CONTACT.PRIVACY_POLICY_ERROR' | translate }}
             </div>
 
             <div class="form-submit">
@@ -97,7 +89,7 @@
                 type="submit" 
                 [disabled]="!contactForm.get('privacyPolicy')?.value"
                 [ngClass]="{'disabled': !contactForm.get('privacyPolicy')?.value}">
-                Send
+                {{ 'CONTACT.SEND' | translate }}
               </button>
             </div>
           </form>

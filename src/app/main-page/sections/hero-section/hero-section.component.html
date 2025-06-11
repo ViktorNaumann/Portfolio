@@ -3,8 +3,8 @@
     
     <div class="main-content">
       <button class="hello-button">
-        <span class="default-text">Hello world</span>
-        <span class="hover-text">I'M VIKTOR NAUMANN</span>
+        <span class="default-text">{{ 'HERO.HELLO_WORLD' | translate }}</span>
+        <span class="hover-text">{{ 'HERO.IM_VIKTOR' | translate }}</span>
         <img src="assets/img/hero/waving_hand.png" alt="Waving Hand" class="waving-hand">
       </button>
       
@@ -19,7 +19,7 @@
       
       <img src="/assets/img/hero/Viktor.png" alt="Viktor Polaroid" class="polaroid">
       
-      <button class="cta-button">Get in Touch</button>
+      <button class="cta-button" [routerLink]="['/']" fragment="contact">{{ 'HERO.GET_IN_TOUCH' | translate }}</button>
     </div>
     
     <div class="social-icons">

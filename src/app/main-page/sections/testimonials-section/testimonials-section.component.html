@@ -2,22 +2,23 @@
   <div class="header-div">
     <div class="header-text">
       <div class="subtitle">
-        <img class="arrow-image" src="/assets/img/colleagues/Color option 1.png" alt="Arrow pointing down"> IN THEIR WORDS:
+        <img class="arrow-image" src="/assets/img/colleagues/Color option 1.png" alt="Arrow pointing down"> 
+        {{ 'TESTIMONIALS.IN_THEIR_WORDS' | translate }}
       </div>
-      <h2 class="main-title">Colleagues' Thoughts</h2>
+      <h2 class="main-title">{{ 'TESTIMONIALS.COLLEAGUES_THOUGHTS' | translate }}</h2>
     </div>
   </div>
   <div class="cards-div">
     <div 
-      *ngFor="let testimonial of testimonials" 
+      *ngFor="let testimonial of testimonials; let i = index" 
       class="testimonial-card"
       [ngClass]="[testimonial.cardClass, testimonial.imageVariant]">
       <div class="card-content">
-        <p class="testimonial-text">{{ testimonial.text }}</p>
+        <p class="testimonial-text">{{ 'TESTIMONIALS.TESTIMONIAL_' + (i + 1) + '.TEXT' | translate }}</p>
         <div class="author-info">
           <div class="author-details">
             <div class="author-name">{{ testimonial.authorName }}</div>
-            <div class="author-title">{{ testimonial.authorTitle }}</div>
+            <div class="author-title">{{ 'TESTIMONIALS.TESTIMONIAL_' + (i + 1) + '.AUTHOR_TITLE' | translate }}</div>
           </div>
           <img src="/assets/img/colleagues/Property 1=Default.svg" alt="LinkedIn" class="linkedin-icon">
         </div>

@@ -1,23 +1,26 @@
 import { Component, AfterViewInit, ElementRef } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { TranslatePipe, TranslateDirective, TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, RouterModule, TranslatePipe, TranslateDirective],
   templateUrl: './hero-section.component.html',
-  styleUrls: ['./hero-section.component.scss']
+  styleUrl: './hero-section.component.scss'
 })
 export class HeroSectionComponent implements AfterViewInit {
   private hoverTimeouts: Map<HTMLElement, number> = new Map();
 
-  constructor(private elementRef: ElementRef) {}
+  constructor(private elementRef: ElementRef, private translate: TranslateService) {}
 
   ngAfterViewInit() {
     const letters = this.elementRef.nativeElement.querySelectorAll('.letter');
     
     letters.forEach((letter: HTMLElement) => {
       letter.addEventListener('mouseenter', () => {
-        // Vorherigen Timeout löschen falls vorhanden
+
         if (this.hoverTimeouts.has(letter)) {
           clearTimeout(this.hoverTimeouts.get(letter)!);
         }
@@ -39,5 +42,9 @@ export class HeroSectionComponent implements AfterViewInit {
 
   onClick() {
     console.log('Button clicked');
+  }
+
+  changeLanguage(language: string) {
+    this.translate.use(language);
   }
 }

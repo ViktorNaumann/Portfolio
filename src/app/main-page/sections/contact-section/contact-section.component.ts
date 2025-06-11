@@ -1,31 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { TranslatePipe, TranslateDirective, TranslateService } from "@ngx-translate/core";
 import { FooterComponent } from '../../../shared/footer/footer.component';
 
 @Component({
   selector: 'app-contact-section',
   standalone: true,
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    FooterComponent
-  ],
+  imports: [CommonModule, ReactiveFormsModule, TranslatePipe, TranslateDirective, FooterComponent],
   templateUrl: './contact-section.component.html',
-  styleUrls: ['./contact-section.component.scss']
+  styleUrl: './contact-section.component.scss'
 })
-export class ContactSectionComponent implements OnInit {
-  contactForm!: FormGroup;
-
+export class ContactSectionComponent {
+  contactForm: FormGroup;
   formSubmitted = false;
 
-  constructor(private fb: FormBuilder) {}
-
-  ngOnInit(): void {
-    this.initForm();
-  }
-
-  initForm(): void {
+  constructor(
+    private fb: FormBuilder,
+    private translate: TranslateService
+  ) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -34,14 +27,36 @@ export class ContactSectionComponent implements OnInit {
     });
   }
 
-  onSubmit(): void {
+  changeLanguage(language: string) {
+    this.translate.use(language);
+  }
+
+  getNamePlaceholder(): string {
+    if (this.formSubmitted && this.contactForm.get('name')?.errors) {
+      return this.translate.instant('CONTACT.NAME_ERROR_PLACEHOLDER');
+    }
+    return this.translate.instant('CONTACT.NAME_PLACEHOLDER');
+  }
+
+  getEmailPlaceholder(): string {
+    if (this.formSubmitted && this.contactForm.get('email')?.errors) {
+      return this.translate.instant('CONTACT.EMAIL_ERROR_PLACEHOLDER');
+    }
+    return this.translate.instant('CONTACT.EMAIL_PLACEHOLDER');
+  }
+
+  getMessagePlaceholder(): string {
+    if (this.formSubmitted && this.contactForm.get('message')?.errors) {
+      return this.translate.instant('CONTACT.MESSAGE_ERROR_PLACEHOLDER');
+    }
+    return this.translate.instant('CONTACT.MESSAGE_PLACEHOLDER');
+  }
+
+  onSubmit() {
     this.formSubmitted = true;
-    
     if (this.contactForm.valid) {
-      console.log('Form submitted:', this.contactForm.value);
-     
-      this.contactForm.reset();
-      this.formSubmitted = false;
+      // Form submission logic
+      console.log(this.contactForm.value);
     }
   }
 }

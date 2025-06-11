@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslatePipe, TranslateDirective, TranslateService } from "@ngx-translate/core";
 import { ProjectDataService, Project } from '../../../shared/services/project-data.service';
 
 interface ProjectItem {
@@ -15,7 +16,7 @@ interface ProjectItem {
 @Component({
   selector: 'app-projects-section',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe, TranslateDirective],
   templateUrl: './projects-section.component.html',
   styleUrl: './projects-section.component.scss'
 })
@@ -24,7 +25,8 @@ export class ProjectsSectionComponent implements OnInit {
 
   constructor(
     private projectDataService: ProjectDataService,
-    private router: Router
+    private router: Router,
+    private translate: TranslateService
   ) {}
 
   ngOnInit() {
@@ -45,10 +47,35 @@ export class ProjectsSectionComponent implements OnInit {
     return [headerItem, ...projectItems];
   }
 
+  getProjectTitle(project: Project | undefined): string {
+    if (!project) return '';
+    return `PROJECTS.${this.getProjectKey(project.id)}.TITLE`;
+  }
+
+  getProjectDescription(project: Project | undefined): string {
+    if (!project) return '';
+    return `PROJECTS.${this.getProjectKey(project.id)}.DESCRIPTION`;
+  }
+
+  private getProjectKey(projectId: number): string {
+    // Mapping von Project-ID zu JSON-Key
+    const projectKeyMap: { [key: number]: string } = {
+      1: 'JOIN',
+      2: 'ELPOLLOLOCOGAME',
+      3: 'DABUBBLE',
+    };
+    
+    return projectKeyMap[projectId] || `PROJECT_${projectId}`;
+  }
+
   openProjectDetails(item: ProjectItem) {
     if (item.project) {
       this.projectDataService.setCurrentProject(item.project);
       this.router.navigate(['/project', item.project.id]);
     }
+  }
+
+  changeLanguage(language: string) {
+    this.translate.use(language);
   }
 }

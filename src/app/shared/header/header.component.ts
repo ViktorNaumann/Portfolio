@@ -1,29 +1,34 @@
-import { CommonModule } from '@angular/common';
-import { compileNgModule } from '@angular/compiler';
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { TranslatePipe, TranslateDirective, TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterModule, CommonModule],
+  imports: [CommonModule, RouterModule, TranslatePipe, TranslateDirective],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-
+  
   isGerman = false;
+
+  constructor(private translate: TranslateService) {}
+
+  changeLanguage(language: string) {
+    this.translate.use(language);
+  }
 
   toggleLanguage() {
     this.isGerman = !this.isGerman;
-   
+    const language = this.isGerman ? 'de' : 'en';
+    this.changeLanguage(language);
   }
 
-  setLanguage(german: boolean) {
-    if (this.isGerman !== german) {
-      this.isGerman = german;
-      console.log('Sprache gewechselt zu:', this.isGerman ? 'Deutsch' : 'Englisch');
-    }
+  setLanguage(isGerman: boolean) {
+    this.isGerman = isGerman;
+    const language = isGerman ? 'de' : 'en';
+    this.changeLanguage(language);
   }
-
 }

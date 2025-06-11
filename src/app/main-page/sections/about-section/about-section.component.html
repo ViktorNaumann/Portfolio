@@ -4,24 +4,24 @@
     <div class="about-images">
       <div class="about-image-stack">
         <div class="about-image-item about-image-1">
-          <img src="/assets/img/about-me/1.png" alt="Based in Hamburg" />
+          <img src="/assets/img/about-me/1.png" alt="{{ 'ABOUT.BASED_IN_HAMBURG_ALT' | translate }}" />
           <div class="about-image-label">
-            <img src="/assets/img/about-me/Property 1=State Location.png" alt="Location icon" class="about-icon" />
-            <span>Based in Hamburg</span>
+            <img src="/assets/img/about-me/Property 1=State Location.png" alt="{{ 'ABOUT.LOCATION_ICON_ALT' | translate }}" class="about-icon" />
+            <span>{{ 'ABOUT.BASED_IN_HAMBURG' | translate }}</span>
           </div>
         </div>
         <div class="about-image-item about-image-2">
-          <img src="/assets/img/about-me/2.png" alt="Open to relocate" />
+          <img src="/assets/img/about-me/2.png" alt="{{ 'ABOUT.OPEN_TO_RELOCATE_ALT' | translate }}" />
           <div class="about-image-label">
-            <img src="/assets/img/about-me/Group.png" alt="Relocate icon" class="about-icon" />
-            <span>Open to relocate</span>
+            <img src="/assets/img/about-me/Group.png" alt="{{ 'ABOUT.RELOCATE_ICON_ALT' | translate }}" class="about-icon" />
+            <span>{{ 'ABOUT.OPEN_TO_RELOCATE' | translate }}</span>
           </div>
         </div>
         <div class="about-image-item about-image-3">
-          <img src="/assets/img/about-me/3.png" alt="Open to work remote" />
+          <img src="/assets/img/about-me/3.png" alt="{{ 'ABOUT.OPEN_TO_WORK_REMOTE_ALT' | translate }}" />
           <div class="about-image-label">
-            <img src="/assets/img/about-me/Group 60.png" alt="Remote work icon" class="about-icon" />
-            <span>Open to work remote</span>
+            <img src="/assets/img/about-me/Group 60.png" alt="{{ 'ABOUT.REMOTE_WORK_ICON_ALT' | translate }}" class="about-icon" />
+            <span>{{ 'ABOUT.OPEN_TO_WORK_REMOTE' | translate }}</span>
           </div>
         </div>
       </div>
@@ -29,9 +29,9 @@
 
     <div class="about-content">
       <div class="about-header">
-        <span class="about-subtitle">WHO'S VIKTOR?</span>
+        <span class="about-subtitle">{{ 'ABOUT.WHOS_VIKTOR' | translate }}</span>
         <h2 class="about-title">
-          About me
+          {{ 'ABOUT.TITLE' | translate }}
           <span class="about-underline">
             <img src="/assets/img/about-me/Blue line.png" alt="Underline" />
             <span class="underline-wipe"></span>
@@ -40,13 +40,13 @@
       </div>
       
       <div class="about-text">
-        <p>Hey there, I'm Viktor. Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills? Do you learn from each challenge as you search for the most efficient or elegant solution?</p>
+        <p>{{ 'ABOUT.DESCRIPTION_PARAGRAPH_1' | translate }}</p>
         
-        <p>Let's collaborate and build something remarkable together!</p>
+        <p>{{ 'ABOUT.DESCRIPTION_PARAGRAPH_2' | translate }}</p>
       </div>
       
       <div class="about-button-container align-end">
-        <button class="about-cta-button">Get in Touch</button>
+        <button class="about-cta-button" [routerLink]="['/']" fragment="contact">{{ 'ABOUT.GET_IN_TOUCH' | translate }}</button>
       </div>
     </div>
   </div>

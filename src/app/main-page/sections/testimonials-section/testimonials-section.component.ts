@@ -1,5 +1,6 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TranslatePipe, TranslateDirective, TranslateService } from "@ngx-translate/core";
 
 interface Testimonial {
   id: number;
@@ -14,7 +15,7 @@ interface Testimonial {
 @Component({
   selector: 'app-testimonials-section',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe, TranslateDirective],
   templateUrl: './testimonials-section.component.html',
   styleUrl: './testimonials-section.component.scss'
 })
@@ -48,4 +49,10 @@ export class TestimonialsSectionComponent {
       imageVariant: 'variant-a'
     }
   ];
+
+  constructor(private translate: TranslateService) {}
+
+  changeLanguage(language: string) {
+    this.translate.use(language);
+  }
 }

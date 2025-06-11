@@ -1,0 +1,91 @@
+{
+  "HEADER": {
+    "ABOUT_ME": "Über mich",
+    "SKILLS": "Fähigkeiten",
+    "PROJECTS": "Projekte",
+    "CONTACT": "Kontakt"
+  },
+  "HERO": {
+    "HELLO_WORLD": "Hallo Welt",
+    "IM_VIKTOR": "ICH BIN VIKTOR NAUMANN",
+    "GET_IN_TOUCH": "Kontakt aufnehmen"
+  },
+  "ABOUT": {
+    "BASED_IN_HAMBURG": "Ansässig in Hamburg",
+    "OPEN_TO_RELOCATE": "Offen für Umzug",
+    "OPEN_TO_WORK_REMOTE": "Offen für Remote-Arbeit",
+    "WHOS_VIKTOR": "WER IST VIKTOR?",
+    "TITLE": "Über mich",
+    "DESCRIPTION_PARAGRAPH_1": "Hallo, ich bin Viktor – ein leidenschaftlicher Programmierer mit dem Fokus auf effiziente und elegante Lösungen. Die IT begeistert mich, weil sie kreative Wege bietet, komplexe Probleme zu lösen. Herausforderungen betrachte ich als Chancen, um zu lernen und zu wachsen. Meine Motivation ziehe ich aus dem ständigen Wunsch, mich weiterzuentwickeln und neue Technologien zu entdecken. Durch die Anwendung bewährter Methoden und kontinuierliches Lernen strebe ich danach, in jedem Projekt hochwertige Lösungen zu liefern.",
+    "DESCRIPTION_PARAGRAPH_2": "Lass uns zusammenarbeiten und etwas Bemerkenswertes erschaffen!",
+    "GET_IN_TOUCH": "Kontakt aufnehmen",
+    "BASED_IN_HAMBURG_ALT": "Ansässig in Hamburg",
+    "OPEN_TO_RELOCATE_ALT": "Offen für Umzug",
+    "OPEN_TO_WORK_REMOTE_ALT": "Offen für Remote-Arbeit",
+    "LOCATION_ICON_ALT": "Standort-Symbol",
+    "RELOCATE_ICON_ALT": "Umzugs-Symbol",
+    "REMOTE_WORK_ICON_ALT": "Remote-Arbeit-Symbol"
+  },
+  "SKILLS": {
+    "MY_STACK": "MEIN STACK",
+    "SKILL_SET": "Fähigkeiten",
+    "DESCRIPTION_TEXT": "Eine kurze Einführung in deine Fähigkeiten. Hebe deine Erfahrung mit verschiedenen Frontend-Technologien hervor und betone deine Offenheit für das Erlernen und Anpassen an neue Technologien.",
+    "PULL_TO": "Klick zum",
+    "PEEL": "Abschälen"
+  },
+  "PROJECTS": {
+    "MY_CRAFT": "MEINE ARBEIT",
+    "TITLE": "Projekte",
+    "DESCRIPTION": "Ermutige die Leute, deine Projekte anzuschauen und mit ihnen zu interagieren. Hebe deinen Ansatz zur Erstellung responsiver, benutzerfreundlicher Projekte mit effizientem Code hervor.",
+    "PROJECT_DETAILS": "Projektdetails",
+    "JOIN": {
+      "TITLE": "Join",
+      "DESCRIPTION": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu."
+    },
+    "ELPOLLOLOCOGAME": {
+      "TITLE": "El Pollo Loco",
+      "DESCRIPTION": "Ein einfaches Jump-and-Run-Spiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen."
+    },
+    "DABUBBLE": {
+      "TITLE": "DaBubble",
+      "DESCRIPTION": "Diese App ist ein Slack-Klon. Sie revolutioniert die Teamkommunikation und Zusammenarbeit mit ihrer intuitiven Benutzeroberfläche, Echtzeit-Messaging und robuster Kanalorganisation."
+    }
+  },
+  "TESTIMONIALS": {
+    "IN_THEIR_WORDS": "IN IHREN WORTEN:",
+    "COLLEAGUES_THOUGHTS": "Gedanken der Kollegen",
+    "TESTIMONIAL_1": {
+      "TEXT": "Viktor ist ein hochqualifizierter Entwickler mit großer Aufmerksamkeit für Details. Seine Problemlösungsfähigkeiten und sein kooperativer Ansatz machen ihn zu einem ausgezeichneten Teammitglied.",
+      "AUTHOR_TITLE": "Frontend-Entwickler"
+    },
+    "TESTIMONIAL_2": {
+      "TEXT": "Die Zusammenarbeit mit Viktor war ein Vergnügen. Er liefert durchweg hochwertigen Code und ist immer bereit, anderen beim Lernen und Wachsen zu helfen.",
+      "AUTHOR_TITLE": "Projektmanager"
+    },
+    "TESTIMONIAL_3": {
+      "TEXT": "Viktors technische Expertise und sein Engagement für sauberen Code sind beeindruckend. Er bringt innovative Lösungen für komplexe Herausforderungen und betreut Junior-Entwickler effektiv.",
+      "AUTHOR_TITLE": "Senior Software Engineer"
+    }
+  },
+  "CONTACT": {
+    "CONTACT_ME": "KONTAKT",
+    "READY_TO_WORK": "Bereit zusammenzuarbeiten?",
+    "DESCRIPTION_PARAGRAPH_1": "Ermutige die Leute, dich zu kontaktieren und beschreibe, an welcher Rolle du interessiert bist. Zeige Vertrauen in deine Fähigkeit, durch deine Expertise und Begeisterung für die Verbesserung deiner Fähigkeiten einen sinnvollen Beitrag zu einem Team zu leisten.",
+    "DESCRIPTION_PARAGRAPH_2": "Zeige Interesse daran, zu einem neuen Projekt beizutragen, während du den Wert und die Fähigkeiten hervorhebst, die du einbringen kannst.",
+    "ROTATING_TEXT": "Viktor Naumann • Frontend-Entwickler •",
+    "WHATS_YOUR_NAME": "Wie ist dein Name?",
+    "WHATS_YOUR_EMAIL": "Wie ist deine E-Mail?",
+    "HOW_CAN_I_HELP": "Wie kann ich dir helfen?",
+    "NAME_PLACEHOLDER": "Dein Name kommt hier hin",
+    "NAME_ERROR_PLACEHOLDER": "Ups! Es scheint, als würde dein Name fehlen",
+    "EMAIL_PLACEHOLDER": "deineemail@email.de",
+    "EMAIL_ERROR_PLACEHOLDER": "Hoppla! Deine E-Mail wird benötigt",
+    "MESSAGE_PLACEHOLDER": "Hallo Viktor, ich bin interessiert an...",
+    "MESSAGE_ERROR_PLACEHOLDER": "Was möchtest du entwickeln lassen?",
+    "PRIVACY_POLICY_TEXT": "Ich habe die",
+    "PRIVACY_POLICY_LINK": "Datenschutzerklärung",
+    "PRIVACY_POLICY_AGREE": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+    "PRIVACY_POLICY_ERROR": "Bitte akzeptiere die Datenschutzerklärung.",
+    "SEND": "Senden"
+  }
+}

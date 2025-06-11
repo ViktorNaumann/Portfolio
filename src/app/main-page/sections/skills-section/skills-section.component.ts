@@ -1,14 +1,21 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TranslatePipe, TranslateDirective, TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-skills-section',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe, TranslateDirective],
   templateUrl: './skills-section.component.html',
   styleUrl: './skills-section.component.scss'
 })
 export class SkillsSectionComponent {
+  
+  constructor(private translate: TranslateService) {}
+
+  changeLanguage(language: string) {
+    this.translate.use(language);
+  }
 
    skills = [
     { name: 'HTML', icon: 'HTML' },

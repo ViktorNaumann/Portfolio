@@ -3,11 +3,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ProjectDataService, Project } from '../../services/project-data.service';
 import { Subscription } from 'rxjs';
+import { TranslatePipe, TranslateDirective, TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-project-card',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe, TranslateDirective],
   templateUrl: './project-card.component.html',
   styleUrl: './project-card.component.scss'
 })
@@ -19,7 +20,8 @@ export class ProjectCardComponent implements OnInit, OnDestroy {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private projectDataService: ProjectDataService
+    private projectDataService: ProjectDataService,
+    private translate: TranslateService
   ) {}
 
   ngOnInit() {
@@ -76,5 +78,9 @@ export class ProjectCardComponent implements OnInit, OnDestroy {
     };
     
     return techMap[technology] || 'assets/img/skills/skill.icons/Property 1=Default.svg';
+  }
+
+  changeLanguage(language: string) {
+    this.translate.use(language);
   }
 }

@@ -9,25 +9,25 @@
     <ul class="nav-menu">
       <li>
         <a [routerLink]="['/']" fragment="about" class="nav-link">
-          About me
+          {{ 'HEADER.ABOUT_ME' | translate }}
           <img src="assets/img/header/1.png" alt="About me icon" class="nav-icon">
         </a>
       </li>
       <li>
         <a [routerLink]="['/']" fragment="skills">
-          Skills
+          {{ 'HEADER.SKILLS' | translate }}
           <img src="assets/img/header/2.png" alt="Skills icon" class="nav-icon">
         </a>
       </li>
       <li>
         <a [routerLink]="['/']" fragment="projects">
-          Projects
+          {{ 'HEADER.PROJECTS' | translate }}
           <img src="assets/img/header/4.png" alt="Projects icon" class="nav-icon">
         </a>
       </li>
       <li>
         <a [routerLink]="['/']" fragment="contact">
-          Contact
+          {{ 'HEADER.CONTACT' | translate }}
           <img src="assets/img/header/3.png" alt="Contact icon" class="nav-icon">
         </a>
       </li>
