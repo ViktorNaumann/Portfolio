@@ -8,6 +8,8 @@ $error-color: #FF3A00;
 .contact-section {
   height: 100vh;
   width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
   background-image: url('/assets/img/footer/Footer.png');
   display: flex;
   flex-direction: column;
@@ -24,10 +26,8 @@ $error-color: #FF3A00;
 }
 
 .container {
-  max-width: 1440px;
   width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 235px;
 }
 
 .contact-wrapper {
