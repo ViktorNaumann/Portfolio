@@ -136,11 +136,9 @@ section {
   object-fit: cover;
   transition: filter 0.3s ease, transform 0.3s ease;
   filter: grayscale(100%);
-  flex-shrink: 0;
   
   &:hover {
     filter: grayscale(0%);
-    transform: rotate(8deg) scale(1.05);
   }
 }
 
