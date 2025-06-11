@@ -1,1 +1,62 @@
-<p>legal-notice works!</p>
+<app-header></app-header>
+<div class="legal-notice-container">
+  <div class="legal-content">
+    <button class="back-button" [routerLink]="['/']">
+      <img src="assets/img/projects-card/Breadcrumb arrow 3.png" alt="Back Arrow" class="arrow-icon">
+      {{ 'LEGAL_NOTICE.BACK_TO_HOME' | translate }}
+    </button>
+
+    <div class="content-wrapper">
+      <h1>{{ 'LEGAL_NOTICE.TITLE' | translate }}</h1>
+      
+      <section>
+        <h2>{{ 'LEGAL_NOTICE.CONTACT_INFO.TITLE' | translate }}</h2>
+        <p>{{ 'LEGAL_NOTICE.CONTACT_INFO.NAME' | translate }}</p>
+        <p>{{ 'LEGAL_NOTICE.CONTACT_INFO.ADDRESS' | translate }}</p>
+        <p>{{ 'LEGAL_NOTICE.CONTACT_INFO.EMAIL' | translate }}</p>
+      </section>
+
+      <section>
+        <h2>{{ 'LEGAL_NOTICE.DISCLAIMER.TITLE' | translate }}</h2>
+        <p>{{ 'LEGAL_NOTICE.DISCLAIMER.CONTENT' | translate }}</p>
+      </section>
+
+      <section>
+        <h2>{{ 'LEGAL_NOTICE.LIABILITY.TITLE' | translate }}</h2>
+        <p>{{ 'LEGAL_NOTICE.LIABILITY.CONTENT' | translate }}</p>
+      </section>
+
+      <section>
+        <h2>{{ 'LEGAL_NOTICE.COPYRIGHT.TITLE' | translate }}</h2>
+        <p>{{ 'LEGAL_NOTICE.COPYRIGHT.CONTENT' | translate }}</p>
+      </section>
+    </div>
+  </div>
+
+  <!-- Integrierter Footer -->
+  <footer class="integrated-footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="logo-and-legal-section">
+          <div class="logo">
+            <img src="/assets/img/header/logo.png" alt="Viktor Naumann Logo" class="logo-img">
+            <p class="copyright">© Viktor Naumann 2024</p>
+          </div>
+          <a [routerLink]="['/privacy-policy']" class="footer-link legal-notice">{{ 'FOOTER.PRIVACY_POLICY' | translate }}</a>
+        </div>
+        
+        <div class="footer-link-item">
+          <a href="https://github.com/dein-username" target="_blank" class="footer-link">GitHub</a>
+        </div>
+        
+        <div class="footer-link-item">
+          <a href="https://linkedin.com/in/dein-username" target="_blank" class="footer-link">LinkedIn</a>
+        </div>
+        
+        <div class="footer-link-item">
+          <a href="mailto:deine-email@example.com" class="footer-link">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>

@@ -58,7 +58,6 @@ export class ProjectsSectionComponent implements OnInit {
   }
 
   private getProjectKey(projectId: number): string {
-    // Mapping von Project-ID zu JSON-Key
     const projectKeyMap: { [key: number]: string } = {
       1: 'JOIN',
       2: 'ELPOLLOLOCOGAME',

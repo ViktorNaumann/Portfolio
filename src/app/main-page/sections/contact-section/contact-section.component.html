@@ -75,7 +75,9 @@
                 formControlName="privacyPolicy" 
                 class="form-check-input">
               <label for="privacyPolicy" class="form-check-label">
-                {{ 'CONTACT.PRIVACY_POLICY_TEXT' | translate }} <a href="#" class="privacy-link">{{ 'CONTACT.PRIVACY_POLICY_LINK' | translate }}</a> {{ 'CONTACT.PRIVACY_POLICY_AGREE' | translate }}
+                {{ 'CONTACT.PRIVACY_POLICY_TEXT' | translate }} 
+                <a [routerLink]="['/privacy-policy']" class="privacy-link">{{ 'CONTACT.PRIVACY_POLICY_LINK' | translate }}</a> 
+                {{ 'CONTACT.PRIVACY_POLICY_AGREE' | translate }}
               </label>
             </div>
 
@@ -97,6 +99,5 @@
       </div>
     </div>
   </div>
-  <app-footer></app-footer>
 </section>
 

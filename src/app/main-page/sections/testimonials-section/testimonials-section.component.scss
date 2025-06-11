@@ -160,9 +160,9 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
           }
           
           .linkedin-icon {
-            width: 64px; // Größe reduziert von 84px auf 64px
-            height: 18px; // Größe reduziert von 24px auf 18px
-            flex-shrink: 0; // Verhindert, dass das Icon schrumpft
+            width: 64px;
+            height: 18px;
+            flex-shrink: 0;
           }
         }
       }

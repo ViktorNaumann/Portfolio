@@ -93,7 +93,7 @@ section {
   gap: 40px;
   position: relative;
   width: 100%;
-  transform: translateX(170px); // Nach rechts verschieben
+  transform: translateX(170px);
   
   .title-container {
     text-align: left;
@@ -206,7 +206,6 @@ section {
   }
 }
 
-// Letter hover effects
 .title-first .letter,
 .title-second .letter {
   display: inline-block;
@@ -243,7 +242,6 @@ section {
   }
 }
 
-// Animations
 @keyframes moveAndRotate {
   0% {
     transform: translateX(0) rotate(0deg);
@@ -256,7 +254,6 @@ section {
   }
 }
 
-// Media Queries
 @media (max-width: 768px) {
   .hero-container {
     max-width: 100%;

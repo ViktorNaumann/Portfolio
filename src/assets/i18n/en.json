@@ -97,6 +97,61 @@
     "SEND": "Send"
   },
   "FOOTER": {
-    "LEGAL_NOTICE": "Legal Notice"
+    "LEGAL_NOTICE": "Legal Notice",
+    "PRIVACY_POLICY": "Privacy Policy"
+  },
+  "PRIVACY_POLICY": {
+    "TITLE": "Privacy Policy",
+    "BACK_TO_HOME": "Back to Home",
+    "DATA_CONTROLLER": {
+      "TITLE": "Data Controller",
+      "CONTENT": "Viktor Naumann\nSample Street 123\n12345 Hamburg\nE-Mail: viktor@example.com"
+    },
+    "DATA_COLLECTION": {
+      "TITLE": "Data Collection",
+      "CONTENT": "This website collects personal data that you voluntarily provide through the contact form, including your name, email address, and message."
+    },
+    "CONTACT_FORM": {
+      "TITLE": "Contact Form",
+      "CONTENT": "When you use the contact form, the data you enter is used exclusively to process your request."
+    },
+    "DATA_USAGE": {
+      "TITLE": "Data Usage",
+      "CONTENT": "Your data is used exclusively to respond to your inquiries and is not shared with third parties."
+    },
+    "DATA_STORAGE": {
+      "TITLE": "Data Storage",
+      "CONTENT": "Your data is stored only as long as necessary to process your request."
+    },
+    "YOUR_RIGHTS": {
+      "TITLE": "Your Rights",
+      "CONTENT": "You have the right to access, correct, delete, and restrict the processing of your personal data."
+    },
+    "CHANGES": {
+      "TITLE": "Changes to Privacy Policy",
+      "CONTENT": "This privacy policy may be updated occasionally. Please check this page regularly."
+    }
+  },
+  "LEGAL_NOTICE": {
+    "TITLE": "Legal Notice",
+    "BACK_TO_HOME": "Back to Home",
+    "CONTACT_INFO": {
+      "TITLE": "Information according to § 5 TMG",
+      "NAME": "Viktor Naumann",
+      "ADDRESS": "Sample Street 123\n12345 Hamburg",
+      "EMAIL": "E-Mail: viktor@example.com"
+    },
+    "DISCLAIMER": {
+      "TITLE": "Disclaimer",
+      "CONTENT": "The contents of these pages have been created with the utmost care. However, we cannot guarantee the accuracy, completeness and timeliness of the content."
+    },
+    "LIABILITY": {
+      "TITLE": "Liability for Links",
+      "CONTENT": "Our offer contains links to external websites of third parties, on whose contents we have no influence. Therefore, we cannot assume any liability for these external contents."
+    },
+    "COPYRIGHT": {
+      "TITLE": "Copyright",
+      "CONTENT": "The content and works created by the site operators on these pages are subject to German copyright law."
+    }
   }
 }

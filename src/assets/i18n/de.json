@@ -97,6 +97,61 @@
     "SEND": "Senden"
   },
   "FOOTER": {
-    "LEGAL_NOTICE": "Impressum"
+    "LEGAL_NOTICE": "Impressum",
+    "PRIVACY_POLICY": "Datenschutzerklärung"
+  },
+  "PRIVACY_POLICY": {
+    "TITLE": "Datenschutzerklärung",
+    "BACK_TO_HOME": "Zurück zur Startseite",
+    "DATA_CONTROLLER": {
+      "TITLE": "Verantwortlicher",
+      "CONTENT": "Viktor Naumann\nMusterstraße 123\n12345 Hamburg\nE-Mail: viktor@example.com"
+    },
+    "DATA_COLLECTION": {
+      "TITLE": "Art der gesammelten Daten",
+      "CONTENT": "Diese Website sammelt personenbezogene Daten, die Sie freiwillig über das Kontaktformular bereitstellen, einschließlich Ihres Namens, Ihrer E-Mail-Adresse und Ihrer Nachricht."
+    },
+    "CONTACT_FORM": {
+      "TITLE": "Kontaktformular",
+      "CONTENT": "Wenn Sie das Kontaktformular verwenden, werden die von Ihnen eingegebenen Daten ausschließlich zur Bearbeitung Ihrer Anfrage verwendet."
+    },
+    "DATA_USAGE": {
+      "TITLE": "Verwendung der Daten",
+      "CONTENT": "Ihre Daten werden ausschließlich zur Beantwortung Ihrer Anfragen verwendet und nicht an Dritte weitergegeben."
+    },
+    "DATA_STORAGE": {
+      "TITLE": "Datenspeicherung",
+      "CONTENT": "Ihre Daten werden nur so lange gespeichert, wie es für die Bearbeitung Ihrer Anfrage erforderlich ist."
+    },
+    "YOUR_RIGHTS": {
+      "TITLE": "Ihre Rechte",
+      "CONTENT": "Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten."
+    },
+    "CHANGES": {
+      "TITLE": "Änderungen der Datenschutzerklärung",
+      "CONTENT": "Diese Datenschutzerklärung kann gelegentlich aktualisiert werden. Bitte überprüfen Sie diese Seite regelmäßig."
+    }
+  },
+  "LEGAL_NOTICE": {
+    "TITLE": "Impressum",
+    "BACK_TO_HOME": "Zurück zur Startseite",
+    "CONTACT_INFO": {
+      "TITLE": "Angaben gemäß § 5 TMG",
+      "NAME": "Viktor Naumann",
+      "ADDRESS": "Musterstraße 123\n12345 Hamburg",
+      "EMAIL": "E-Mail: viktor@example.com"
+    },
+    "DISCLAIMER": {
+      "TITLE": "Haftungsausschluss",
+      "CONTENT": "Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen."
+    },
+    "LIABILITY": {
+      "TITLE": "Haftung für Links",
+      "CONTENT": "Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen."
+    },
+    "COPYRIGHT": {
+      "TITLE": "Urheberrecht",
+      "CONTENT": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht."
+    }
   }
 }
