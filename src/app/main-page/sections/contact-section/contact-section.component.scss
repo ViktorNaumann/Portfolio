@@ -10,7 +10,7 @@ $error-color: #FF3A00;
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  background-image: url('/assets/img/footer/Footer.png');
+  background-image: url('./../../../../assets/img/footer/Footer.png');
   display: flex;
   flex-direction: column;
   font-family: $main-font;
@@ -232,7 +232,7 @@ $error-color: #FF3A00;
       position: relative;
       
       &:checked {
-        background-image: url('/assets/img/contact/Check 1.svg');
+        background-image: url('./../../../../assets/img/contact/Check\ 1.svg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: 14px;

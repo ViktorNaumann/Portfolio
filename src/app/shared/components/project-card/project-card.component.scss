@@ -28,8 +28,8 @@ $light-gray: #F8F9FA;
 
 .project-detail-container {
   height: 100vh;
-  background-image: url('/assets/img/projects-card/Note book paper.png');
-  background: #1d1d1d url('/assets/img/projects-card/Note book paper.png') center/cover no-repeat;
+  background-image: url('./../../../../assets/img/projects-card/Note book paper.png');
+  background: #1d1d1d url('./../../../../assets/img/projects-card/Note book paper.png') center/cover no-repeat;
   @include flex-center;
   flex-direction: column;
   justify-content: center;
