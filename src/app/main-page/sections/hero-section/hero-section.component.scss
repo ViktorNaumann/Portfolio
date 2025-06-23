@@ -1,8 +1,15 @@
-section {
-    height: 100vh;
+$primary-color: #F8F9FA;
+$accent-color: #3355FF;
+$hover-color: #F87A55;
+$yellow-color: #F7C518;
+$border-radius: 20px;
+$transition-base: 0.3s ease;
+
+.hero-section {
+    height: 100dvh;
     width: 100%;
     position: relative;
-    color: #F8F9FA;
+    color: $primary-color;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,36 +33,33 @@ section {
     }
 }
 
-.hero-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
+%button-base {
+  background-color: transparent;
+  color: $primary-color;
+  border: 1px solid $primary-color;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .hello-button {
+  @extend %button-base;
   position: absolute;
   top: -80px;
   left: 0;
-  background-color: transparent;
-  color: #F8F9FA;
-  border: 1px solid #F8F9FA;
-  border-radius: 20px;
+  border-radius: $border-radius;
   padding: 8px 20px;
   font-size: 16px;
-  font-family: 'Bricolage Grotesque', sans-serif;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color $transition-base, color $transition-base;
   
-  .default-text {
+  .default-text,
+  .hover-text {
     display: inline-block;
-    transition: opacity 0.3s;
+    transition: opacity $transition-base;
   }
   
   .hover-text {
     display: none;
-    transition: opacity 0.3s;
   }
   
   .waving-hand {
@@ -64,12 +68,12 @@ section {
     height: 24px;
     top: -25px;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity $transition-base;
     pointer-events: none;
   }
   
   &:hover {
-    background-color: #3355FF;
+    background-color: $accent-color;
     
     .default-text {
       display: none;
@@ -89,52 +93,58 @@ section {
 .main-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 40px;
   position: relative;
   width: 100%;
-  transform: translateX(170px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
   
   .title-container {
+    width: 70%;
+    display: flex;
+    flex-shrink: 1;
+    flex-direction: column;
+    position: relative;
     text-align: left;
     z-index: 1;
-    position: relative;
-    flex: 1;
     
     h1 {
       font-family: 'Bricolage Grotesque', sans-serif;
       font-weight: 700;
-      font-size: clamp(48px, 8vw, 96px);
+      font-size: clamp(42px, 8vw, 96px);
       line-height: 0.9;
       margin: 0;
       padding-bottom: 40px;
-      color: #F8F9FA;
+      color: $primary-color;
     }
     
     .title-first {
       margin-bottom: 10px;
       position: relative;
       display: inline-block;
+      align-self: flex-start;
     }
     
     .title-second {
       display: inline-block;
       position: relative;
-      padding-left: 200px;
+      align-self: flex-end;
     }
   }
 }
 
 .polaroid {
-  position: relative;
-  top: -150px;
-  left: -420px;
-  transform: rotate(8deg); 
+  position: absolute;
+  right: clamp(20px, 12vw, 200px);
+  top: -40px;
+  transform: translateY(-50%) rotate(8deg);
   z-index: 2;
-  width: 204px;
-  height: 244px;
+  width: clamp(150px, 22vw, 204px);
+  height: clamp(180px, 26vw, 244px);
   object-fit: cover;
-  transition: filter 0.3s ease, transform 0.3s ease;
+  transition: filter $transition-base, transform $transition-base, width $transition-base, height $transition-base;
   filter: grayscale(100%);
   
   &:hover {
@@ -143,35 +153,25 @@ section {
 }
 
 .cta-button {
+  @extend %button-base;
   position: absolute;
-  left: 650px;
-  bottom: -60px;
   right: 0;
-  background-color: transparent;
-  color: #F8F9FA;
-  border: 1px solid #F8F9FA;
+  bottom: -60px;
   border-radius: 100px;
   width: 154px;
   height: 40px;
   font-size: 18px;
   font-weight: 500;
-  font-family: 'Bricolage Grotesque', sans-serif;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 2px 4px 0 0 #F8F9FA;
+  box-shadow: 2px 4px 0 0 $primary-color;
   display: flex;
   align-items: center;
   justify-content: center;
   
-  &:hover {
-    background-color: #F87A55;
-    transform: translateY(4px);
-    box-shadow: 0px 0px 0 0 #F8F9FA;
-  }
-  
+  &:hover,
   &:active {
+    background-color: $hover-color;
     transform: translateY(4px);
-    box-shadow: 0px 0px 0 0 #F8F9FA;
+    box-shadow: 0px 0px 0 0 $primary-color;
   }
 }
 
@@ -188,15 +188,15 @@ section {
     width: 40px;
     height: 40px;
     border-radius: 100px;
-    border: 1px solid #F8F9FA; 
+    border: 1px solid $primary-color; 
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s, background-color 0.3s;
+    transition: transform $transition-base, background-color $transition-base;
     
     &:hover {
       transform: scale(1.1);
-      background-color: #3355FF; 
+      background-color: $accent-color; 
     }
     
     img {
@@ -211,10 +211,10 @@ section {
   display: inline-block;
   cursor: pointer;
   vertical-align: baseline;
-  transition: color 0.3s ease;
+  transition: color $transition-base;
   
   &:hover {
-    color: #F7C518;
+    color: $yellow-color;
   }
 }
 
@@ -243,58 +243,78 @@ section {
 }
 
 @keyframes moveAndRotate {
-  0% {
+  from {
     transform: translateX(0) rotate(0deg);
     left: 0;
   }
   
-  100% {
+  to {
     transform: translateX(20px) rotate(360deg);
     left: calc(100% - 40px);
   }
 }
 
-@media (max-width: 768px) {
-  .hero-container {
-    max-width: 100%;
-    padding: 0 20px;
+@keyframes moveAndRotateMobile {
+  from {
+    transform: translateX(0) rotate(0deg);
   }
   
-  .content-wrapper {
-    position: static;
-    max-width: 100%;
+  to {
+    transform: translateX(10px) rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .social-icons {
+    display: none;
+  }
+  
+  .main-content {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .hero-section {
+    padding: 0 20px;
   }
   
   .main-content {
     flex-direction: column;
     text-align: center;
     gap: 20px;
+    
+    .title-container {
+      width: 100%;
+      
+      h1 {
+        font-size: clamp(42px, 12vw, 72px);
+      }
+    }
   }
   
   .hello-button {
     position: static;
     margin-bottom: 20px;
-    align-self: center;
+    align-self: flex-start;
+    
+    &:hover .waving-hand {
+      animation: moveAndRotateMobile 0.5s forwards;
+    }
   }
   
   .cta-button {
     position: static;
     margin-top: 20px;
-    align-self: center;
+    align-self: flex-end;
   }
   
   .polaroid {
-    transform: none;
-    width: 150px;
-    height: 180px;
-  }
-  
-  .social-icons {
     position: static;
-    flex-direction: row;
-    justify-content: center;
+    transform: rotate(8deg);
+    width: 200px;
+    height: 240px;
+    align-self: center; 
     margin-top: 20px;
-    transform: none;
-    left: 0;
   }
 }
