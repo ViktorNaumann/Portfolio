@@ -1,48 +1,43 @@
 section {
-    background-color: white;
-    height: calc(100vh - 80px); 
-    padding-top: 100px;
-    scroll-margin-top: 80px;
-    margin-top: -200px;
-    margin-bottom: -100px;
+  background-color: white;
+  min-height: 100vh;
+  padding: clamp(150px, 8vh, 100px) 0;
+  margin-top: clamp(-150px, -15vw, -200px);
+  margin-bottom: clamp(-50px, -8vw, -100px);
 }
 
 .about-container {
   max-width: 1920px;
   margin: 0 auto;
-  padding: 0 200px;
+  padding: 0 clamp(20px, 5vw, 40px);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 120px; 
-  height: calc(100% - 70px);
-  justify-content: space-between;
+  gap: clamp(40px, 8vw, 120px);
+  min-height: calc(100vh - 140px);
+  justify-content: center;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-    gap: 60px;
-    justify-content: center;
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    align-items: center;
   }
 }
 
 .about-images {
-  flex: 1.3;
   position: relative;
-  height: 400px;
-  max-width: 550px;
-  margin-left: 40px;
+  width: clamp(320px, 90vw, 550px);
+  height: clamp(350px, 60vw, 400px);
   display: flex;
-  align-items: center;
   justify-content: center;
-
-  .about-image-stack {
-    position: relative;
-    width: 100%;
-    height: 360px;
+  align-items: center;
+  order: 2;
+  
+  @media (min-width: 1024px) {
+    order: 1;
   }
 
   .about-image-item {
     position: absolute;
-    left: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -64,9 +59,9 @@ section {
       transform: translate(-50%, -50%);
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: clamp(8px, 2vw, 16px);
       color: white;
-      font-size: 1.5rem;
+      font-size: clamp(14px, 3.5vw, 24px);
       font-weight: 500;
       text-shadow: 0 2px 8px rgba(0,0,0,0.18);
       width: 80%;
@@ -76,8 +71,8 @@ section {
     }
 
     .about-icon {
-      width: 36px;
-      height: 36px;
+      width: clamp(24px, 6vw, 36px);
+      height: clamp(24px, 6vw, 36px);
       filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
     }
   }
@@ -87,31 +82,38 @@ section {
     top: 0;
     transform: rotate(-2deg);
   }
+  
   .about-image-2 {
     z-index: 2;
-    top: 70px;
+    top: clamp(50px, 12vw, 70px);
     transform: rotate(1.5deg);
   }
+  
   .about-image-3 {
     z-index: 1;
-    top: 140px;
+    top: clamp(100px, 24vw, 140px);
     transform: rotate(-1deg);
   }
 }
 
 .about-content {
-  flex: 1.5; 
-  max-width: 650px; 
-  margin-right: 20px; 
+  width: 100%;
+  max-width: clamp(320px, 90vw, 650px);
+  text-align: left;
+  order: 1;
+
+  @media (min-width: 1024px) {
+    order: 2;
+  }
 }
 
 .about-header {
-  margin-bottom: 30px;
+  margin-bottom: clamp(20px, 5vw, 30px);
 
   .about-subtitle {
     color: #0E1013;
     font-family: 'Bricolage Grotesque', sans-serif;
-    font-size: 20px;
+    font-size: clamp(16px, 4vw, 20px);
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -121,27 +123,25 @@ section {
 
   .about-title {
     font-family: 'Bricolage Grotesque', sans-serif;
-    font-size: 64px;
+    font-size: clamp(32px, 8vw, 64px);
     font-weight: 700;
     color: #0E1013;
     margin: 0;
     position: relative;
     display: inline-block;
-
-    @media (max-width: 768px) {
-      font-size: 48px;
-    }
+    line-height: 1.2;
 
     .about-underline {
       position: relative;
       display: block;
       width: 100%;
-      height: 16px;
+      height: clamp(8px, 2vw, 16px);
       overflow: hidden;
+      margin-top: clamp(4px, 1vw, 8px);
 
       img {
         width: 100%;
-        height: 16px;
+        height: clamp(8px, 2vw, 16px);
         display: block;
         position: relative;
         z-index: 1;
@@ -150,7 +150,7 @@ section {
       .underline-wipe {
         position: absolute;
         top: 0;
-        right: 0; 
+        right: 0;
         left: auto;
         width: 100%;
         height: 100%;
@@ -163,31 +163,24 @@ section {
 }
 
 .about-text {
-  margin-bottom: 40px;
+  margin-bottom: clamp(30px, 6vw, 40px);
 
   p {
     font-family: 'Bricolage Grotesque', sans-serif;
-    font-size: 20px;
+    font-size: clamp(16px, 4vw, 20px);
     font-weight: 400;
     line-height: 1.6;
     color: #0E1013;
-    margin-bottom: 20px;
+    margin-bottom: clamp(15px, 3vw, 20px);
   }
 }
 
 .about-button-container {
   display: flex;
   width: 100%;
-  
-  &.align-start {
-    justify-content: flex-start;
-  }
-  
-  &.align-center {
-    justify-content: center;
-  }
-  
-  &.align-end {
+  justify-content: flex-end;
+
+  @media (min-width: 1024px) {
     justify-content: flex-end;
   }
 }
@@ -197,13 +190,13 @@ section {
   color: #0E1013;
   border: 1px solid #0E1013;
   border-radius: 25px;
-  padding: 12px 30px;
-  font-size: 18px;
+  padding: clamp(10px, 2.5vw, 12px) clamp(20px, 5vw, 30px);
+  font-size: clamp(16px, 4vw, 18px);
   font-weight: 500;
   font-family: 'Bricolage Grotesque', sans-serif;
   cursor: pointer;
   transition: all 0.2s ease;
-  margin-bottom: 60px;
+  margin-bottom: clamp(40px, 8vw, 60px);
   box-shadow: 2px 4px 0 0 #0E1013;
   
   &:hover {

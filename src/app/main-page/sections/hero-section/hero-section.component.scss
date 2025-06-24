@@ -268,16 +268,9 @@ $transition-base: 0.3s ease;
   .social-icons {
     display: none;
   }
-  
-  .main-content {
-    padding: 0 20px;
-  }
 }
 
 @media (max-width: 550px) {
-  .hero-section {
-    padding: 0 20px;
-  }
   
   .main-content {
     flex-direction: column;
