@@ -40,18 +40,17 @@ $light-gray: #F8F9FA;
   position: relative;
 }
 
-.project-main {
-  width: 100%;
-  max-width: 1440px;
-  height: 100%;
-  @include flex-center;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-  margin: 0 auto;
-  padding: 20px;
-  
-  .go-back-btn {
+  .project-main {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    @include flex-center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;  .go-back-btn {
     position: fixed;
     top: clamp(60px, 10vh, 100px);
     left: clamp(20px, 5vw, 40px);
@@ -95,7 +94,7 @@ $light-gray: #F8F9FA;
       align-items: flex-start;
       margin-bottom: clamp(20px, 5vh, 40px);
       
-      @media (max-width: 768px) {
+      @media (max-width: 900px) {
         flex-direction: column;
         gap: 20px;
       }
@@ -118,6 +117,8 @@ $light-gray: #F8F9FA;
       justify-content: flex-end;
       width: 100%;
       margin-bottom: clamp(10px, 3vh, 20px);
+      padding-right: clamp(10px, 3vw, 20px);
+      box-sizing: border-box;
       
       .action-btn {
         width: clamp(80px, 20vw, 107px);
@@ -141,20 +142,23 @@ $light-gray: #F8F9FA;
         }
       }
       
-      @media (max-width: 768px) {
+      @media (max-width: 900px) {
         flex-direction: column;
         align-items: flex-end;
+        padding-right: 15px;
       }
       
       @media (max-width: 480px) {
         flex-direction: row;
         justify-content: center;
         gap: 15px;
+        padding-right: 10px;
       }
       
       @media (max-width: 320px) {
         gap: 8px;
         margin-bottom: 15px;
+        padding-right: 8px;
         
         .action-btn {
           width: 70px;
@@ -207,7 +211,7 @@ $light-gray: #F8F9FA;
       margin-bottom: clamp(10px, 3vh, 20px);
       line-height: 1.2;
       
-      @media (max-width: 768px) {
+      @media (max-width: 900px) {
         font-size: 36px;
       }
       
@@ -332,7 +336,7 @@ $light-gray: #F8F9FA;
         object-fit: contain;
       }
       
-      @media (max-width: 768px) {
+      @media (max-width: 900px) {
         top: 40px;
         right: 20px;
         left: auto;
@@ -372,7 +376,7 @@ $light-gray: #F8F9FA;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .project-detail-container {
     padding: 15px;
     background: #1d1d1d;
