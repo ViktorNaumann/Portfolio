@@ -30,6 +30,11 @@
             <h3>{{ getProjectTitle(item.project) | translate }}</h3>
             <p>{{ getProjectDescription(item.project) | translate }}</p>
           </div>
+          <div class="project-button-container">
+            <button class="project-details-btn" (click)="openProjectDetails(item)">
+              {{ 'PROJECTS.PROJECT_DETAILS' | translate }}
+            </button>
+          </div>
         </div>
       </ng-container>
     </div>
