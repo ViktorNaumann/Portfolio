@@ -69,6 +69,10 @@ $light-gray: #F8F9FA;
       color: $hover-color;
     }
     
+    @media (max-width: 900px) {
+      display: none;
+    }
+    
     @media (max-width: 320px) {
       top: 40px;
       left: 15px;
@@ -157,7 +161,7 @@ $light-gray: #F8F9FA;
         padding-right: 10px;
       }
       
-      @media (max-width: 320px) {
+      @media (max-width: 310px) {
         gap: 8px;
         margin-bottom: 15px;
         padding-right: 8px;
@@ -171,35 +175,81 @@ $light-gray: #F8F9FA;
       }
     }
     
-    .next-project-btn {
-      @include flex-center;
-      @include button-style;
-      @include text-style(clamp(14px, 4vw, 18px), 700, $light-gray);
-      gap: clamp(6px, 2vw, 12px);
-      align-self: flex-end;
-      padding: clamp(8px, 2vh, 12px) 0;
-      width: fit-content;
+    .navigation-buttons {
+      display: flex;
+      align-items: center;
+      width: 100%;
       
-      .arrow-icon {
-        width: clamp(18px, 5vw, 24px);
-        height: clamp(18px, 5vw, 24px);
+      // Über 900px: nur Next Project Button rechts
+      justify-content: flex-end;
+      
+      // Unter 900px: beide Buttons mit space-between
+      @media (max-width: 900px) {
+        justify-content: space-between;
       }
       
-      &:hover {
-        color: $accent-color;
-      }
-      
-      @media (max-width: 480px) {
-        align-self: center;
-      }
-      
-      @media (max-width: 320px) {
-        font-size: 14px;
-        gap: 6px;
+      .go-back-mobile-btn {
+        @include flex-center;
+        @include button-style;
+        @include text-style(clamp(14px, 4vw, 18px), 700, $light-gray);
+        gap: clamp(6px, 2vw, 12px);
+        padding: clamp(8px, 2vh, 12px) 0;
+        width: fit-content;
+        display: none;
         
         .arrow-icon {
-          width: 16px;
-          height: 16px;
+          width: clamp(18px, 5vw, 24px);
+          height: clamp(18px, 5vw, 24px);
+        }
+        
+        &:hover {
+          color: $accent-color;
+        }
+        
+        @media (max-width: 900px) {
+          display: flex;
+        }
+        
+        @media (max-width: 320px) {
+          font-size: 14px;
+          gap: 6px;
+          
+          .arrow-icon {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+      
+      .next-project-btn {
+        @include flex-center;
+        @include button-style;
+        @include text-style(clamp(14px, 4vw, 18px), 700, $light-gray);
+        gap: clamp(6px, 2vw, 12px);
+        padding: clamp(8px, 2vh, 12px) 0;
+        width: fit-content;
+        
+        .arrow-icon {
+          width: clamp(18px, 5vw, 24px);
+          height: clamp(18px, 5vw, 24px);
+        }
+        
+        &:hover {
+          color: $accent-color;
+        }
+        
+        @media (max-width: 480px) {
+          align-self: center;
+        }
+        
+        @media (max-width: 320px) {
+          font-size: 14px;
+          gap: 6px;
+          
+          .arrow-icon {
+            width: 16px;
+            height: 16px;
+          }
         }
       }
     }
@@ -387,7 +437,6 @@ $light-gray: #F8F9FA;
 
 @media (max-width: 900px) {
   .project-detail-container {
-    padding: 15px;
     background: #1d1d1d;
     background-image: url('./../../../../assets/img/projects-card/Note book paper.png');
     background-size: cover;

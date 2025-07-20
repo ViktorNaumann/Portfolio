@@ -55,10 +55,17 @@
         </button>
       </div>
 
-      <button class="next-project-btn" (click)="goToNextProject()" *ngIf="nextProject">
-        {{ 'PROJECT_CARD.NEXT_PROJECT' | translate }}
-        <img src="assets/img/projects-card/Next project arrow 3.png" alt="Arrow" class="arrow-icon">
-      </button>
+      <div class="navigation-buttons">
+        <button class="go-back-mobile-btn" (click)="goBack()">
+          <img src="assets/img/projects-card/Breadcrumb arrow 3.png" alt="Back Arrow" class="arrow-icon">
+          {{ 'PROJECT_CARD.GO_BACK' | translate }}
+        </button>
+        
+        <button class="next-project-btn" (click)="goToNextProject()" *ngIf="nextProject">
+          {{ 'PROJECT_CARD.NEXT_PROJECT' | translate }}
+          <img src="assets/img/projects-card/Next project arrow 3.png" alt="Arrow" class="arrow-icon">
+        </button>
+      </div>
     </div>
   </main>
 </div>
