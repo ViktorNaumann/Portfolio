@@ -53,21 +53,33 @@ $light-gray: #F8F9FA;
   
   .go-back-btn {
     position: fixed;
-    top: 100px;
-    left: 40px;
+    top: clamp(60px, 10vh, 100px);
+    left: clamp(20px, 5vw, 40px);
     @include flex-center;
     @include button-style;
-    @include text-style(18px, 700, $dark-text-color);
-    gap: 8px;
+    @include text-style(clamp(14px, 4vw, 18px), 700, $dark-text-color);
+    gap: clamp(4px, 1vw, 8px);
     z-index: 1000;
     
     .arrow-icon {
-      width: 24px;
-      height: 24px;
+      width: clamp(18px, 5vw, 24px);
+      height: clamp(18px, 5vw, 24px);
     }
     
     &:hover {
       color: $hover-color;
+    }
+    
+    @media (max-width: 320px) {
+      top: 40px;
+      left: 15px;
+      font-size: 14px;
+      gap: 4px;
+      
+      .arrow-icon {
+        width: 16px;
+        height: 16px;
+      }
     }
   }
   
@@ -79,28 +91,39 @@ $light-gray: #F8F9FA;
     
     .project-content {
       display: flex;
-      gap: 250px;
+      gap: clamp(20px, 15vw, 250px);
       align-items: flex-start;
-      margin-bottom: 40px;
+      margin-bottom: clamp(20px, 5vh, 40px);
       
       @media (max-width: 768px) {
         flex-direction: column;
         gap: 20px;
       }
+      
+      @media (max-width: 480px) {
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+      
+      @media (max-width: 320px) {
+        gap: 10px;
+        margin-bottom: 15px;
+        padding: 0 10px;
+      }
     }
     
     .project-actions {
       display: flex;
-      gap: 20px;
+      gap: clamp(10px, 3vw, 20px);
       justify-content: flex-end;
       width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: clamp(10px, 3vh, 20px);
       
       .action-btn {
-        width: 107px;
-        height: 40px;
+        width: clamp(80px, 20vw, 107px);
+        height: clamp(32px, 8vw, 40px);
         border-radius: 100px;
-        @include text-style(18px, 500, $light-gray);
+        @include text-style(clamp(14px, 4vw, 18px), 500, $light-gray);
         @include flex-center;
         justify-content: center;
         background-color: transparent;
@@ -122,24 +145,56 @@ $light-gray: #F8F9FA;
         flex-direction: column;
         align-items: flex-end;
       }
+      
+      @media (max-width: 480px) {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+      }
+      
+      @media (max-width: 320px) {
+        gap: 8px;
+        margin-bottom: 15px;
+        
+        .action-btn {
+          width: 70px;
+          height: 30px;
+          font-size: 12px;
+          box-shadow: 1px 2px 0px 0px $light-gray;
+        }
+      }
     }
     
     .next-project-btn {
       @include flex-center;
       @include button-style;
-      @include text-style(18px, 700, $light-gray);
-      gap: 12px;
+      @include text-style(clamp(14px, 4vw, 18px), 700, $light-gray);
+      gap: clamp(6px, 2vw, 12px);
       align-self: flex-end;
-      padding: 12px 0;
+      padding: clamp(8px, 2vh, 12px) 0;
       width: fit-content;
       
       .arrow-icon {
-        width: 24px;
-        height: 24px;
+        width: clamp(18px, 5vw, 24px);
+        height: clamp(18px, 5vw, 24px);
       }
       
       &:hover {
         color: $accent-color;
+      }
+      
+      @media (max-width: 480px) {
+        align-self: center;
+      }
+      
+      @media (max-width: 320px) {
+        font-size: 14px;
+        gap: 6px;
+        
+        .arrow-icon {
+          width: 16px;
+          height: 16px;
+        }
       }
     }
   }
@@ -148,64 +203,113 @@ $light-gray: #F8F9FA;
     flex: 1;
     
     .project-title {
-      @include text-style(48px, 700, $dark-text-color);
-      margin-bottom: 20px;
+      @include text-style(clamp(24px, 8vw, 48px), 700, $dark-text-color);
+      margin-bottom: clamp(10px, 3vh, 20px);
+      line-height: 1.2;
       
       @media (max-width: 768px) {
         font-size: 36px;
       }
+      
+      @media (max-width: 480px) {
+        font-size: 28px;
+        text-align: center;
+      }
+      
+      @media (max-width: 320px) {
+        font-size: 22px;
+        margin-bottom: 15px;
+      }
     }
     
     section {
-      margin-bottom: 20px;
+      margin-bottom: clamp(10px, 3vh, 20px);
       
       h2 {
-        @include text-style(22px, 700, $dark-text-color);
-        margin-bottom: 8px;
+        @include text-style(clamp(16px, 5vw, 22px), 700, $dark-text-color);
+        margin-bottom: clamp(4px, 1vh, 8px);
+        
+        @media (max-width: 320px) {
+          font-size: 16px;
+          margin-bottom: 6px;
+        }
       }
       
       p {
-        @include text-style(16px, 400, $dark-text-color);
+        @include text-style(clamp(12px, 3.5vw, 16px), 400, $dark-text-color);
         line-height: 1.4;
         text-align: justify;
-        margin-bottom: 10px;
+        margin-bottom: clamp(6px, 2vh, 10px);
+        
+        @media (max-width: 480px) {
+          text-align: left;
+        }
+        
+        @media (max-width: 320px) {
+          font-size: 12px;
+          line-height: 1.3;
+          margin-bottom: 8px;
+        }
       }
     }
     
     .project-duration {
-      margin-top: 10px;
-      font-size: 14px;
+      margin-top: clamp(6px, 2vh, 10px);
+      font-size: clamp(11px, 3vw, 14px);
       
       strong {
         font-weight: 600;
+      }
+      
+      @media (max-width: 320px) {
+        font-size: 11px;
+        margin-top: 8px;
       }
     }
     
     .project-technologies {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 15px;
+      gap: clamp(6px, 2vw, 12px);
+      margin-top: clamp(8px, 3vh, 15px);
       
       .tech-badge {
         @include flex-center;
-        gap: 8px;
+        gap: clamp(4px, 1vw, 8px);
         
         .tech-icon {
-          width: 24px;
-          height: 24px;
+          width: clamp(16px, 5vw, 24px);
+          height: clamp(16px, 5vw, 24px);
           object-fit: contain;
         }
         
         .tech-text {
-          @include text-style(16px, 400, $dark-text-color);
+          @include text-style(clamp(12px, 3.5vw, 16px), 400, $dark-text-color);
+        }
+      }
+      
+      @media (max-width: 320px) {
+        gap: 6px;
+        margin-top: 10px;
+        
+        .tech-badge {
+          gap: 4px;
+          
+          .tech-icon {
+            width: 16px;
+            height: 16px;
+          }
+          
+          .tech-text {
+            font-size: 11px;
+          }
         }
       }
     }
   }
 
   img {
-    border-radius: 20px;
+    border-radius: clamp(10px, 3vw, 20px);
   }
   
   .project-image {
@@ -216,16 +320,53 @@ $light-gray: #F8F9FA;
     
     .featured-sticker {
       position: absolute;
-      top: 140px;
-      left: 510px;
+      top: clamp(60px, 15vh, 140px);
+      left: clamp(200px, 35vw, 510px);
       z-index: 999;
       background: transparent;
       
       img {
-        width: 120px;
-        height: 120px;
+        width: clamp(60px, 15vw, 120px);
+        height: clamp(60px, 15vw, 120px);
         display: block;
         object-fit: contain;
+      }
+      
+      @media (max-width: 768px) {
+        top: 40px;
+        right: 20px;
+        left: auto;
+      }
+      
+      @media (max-width: 480px) {
+        top: 20px;
+        right: 10px;
+        
+        img {
+          width: 60px;
+          height: 60px;
+        }
+      }
+      
+      @media (max-width: 320px) {
+        top: 15px;
+        right: 8px;
+        
+        img {
+          width: 45px;
+          height: 45px;
+        }
+      }
+    }
+    
+    img:not(.featured-sticker img) {
+      width: 100%;
+      max-width: clamp(250px, 60vw, 500px);
+      height: auto;
+      object-fit: contain;
+      
+      @media (max-width: 320px) {
+        max-width: 280px;
       }
     }
   }
@@ -234,5 +375,55 @@ $light-gray: #F8F9FA;
 @media (max-width: 768px) {
   .project-detail-container {
     padding: 15px;
+    background: #1d1d1d;
+    background-image: url('./../../../../assets/img/projects-card/Note book paper.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(90deg);
+    transform-origin: center center;
+    width: 100vh;
+    height: 100vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: calc(-50vw);
+    margin-left: calc(-50vh);
+  }
+  
+  .project-main {
+    transform: rotate(-90deg);
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-detail-container {
+    padding: 10px;
+  }
+  
+  .project-main {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 310px) {
+  .project-detail-container {
+    padding: 8px;
+    min-height: 100vh;
+  }
+  
+  .project-main {
+    padding: 10px;
+    gap: 10px;
+    
+    .main-content {
+      gap: 15px;
+      
+      .project-content {
+        padding: 0 5px;
+      }
+    }
   }
 }
