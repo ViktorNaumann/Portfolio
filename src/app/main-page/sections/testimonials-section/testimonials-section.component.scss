@@ -10,7 +10,7 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .testimonials-section {
-  padding: 20px 240px 300px 20px;
+  padding: clamp(20px, 3vw, 40px) clamp(50px, 15vw, 190px) clamp(40px, 8vw, 100px) clamp(50px, 15vw, 190px);
   display: flex;
   flex-direction: column;
   max-width: 1920px;
@@ -50,15 +50,15 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   
   .cards-div {
     position: relative;
-    height: 300px;
+    height: clamp(350px, 35vw, 600px);
     display: flex;
     justify-content: center;
     align-items: center;
     
     .testimonial-card {
       position: absolute;
-      width: 512px;
-      height: 320px;
+      width: clamp(320px, 40vw, 512px);
+      height: clamp(200px, 25vw, 320px);
       border-radius: 4px;
       padding: 0; 
       color: white;
@@ -97,71 +97,68 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
       }
       
       &.card-1 {
-        transform: rotate(-4deg) translate(-350px, 50px);
+        transform: rotate(-4deg) translate(clamp(-200px, -20vw, -450px), clamp(20px, 3vw, 40px));
         z-index: 3;
         
         &:hover {
-          transform: rotate(-4deg) translate(-350px, 50px) scale(1.05);
+          transform: rotate(-4deg) translate(clamp(-200px, -20vw, -450px), clamp(20px, 3vw, 40px)) scale(1.05);
         }
       }
       
       &.card-2 {
-        transform: rotate(0deg) translate(0px, 120px);
+        transform: rotate(0deg) translate(0px, clamp(80px, 10vw, 150px));
         z-index: 2;
         
         &:hover {
-          transform: rotate(0deg) translate(0px, 120px) scale(1.05);
+          transform: rotate(0deg) translate(0px, clamp(80px, 10vw, 150px)) scale(1.05);
         }
       }
       
       &.card-3 {
-        transform: rotate(4deg) translate(350px, 80px);
+        transform: rotate(4deg) translate(clamp(160px, 16vw, 380px), clamp(30px, 5vw, 60px));
         z-index: 1;
         
         &:hover {
-          transform: rotate(4deg) translate(350px, 80px) scale(1.05);
+          transform: rotate(4deg) translate(clamp(160px, 16vw, 380px), clamp(30px, 5vw, 60px)) scale(1.05);
         }
       }
       
-      .card-content {
+        .card-content {
         display: flex;
         flex-direction: column;
         height: 100%;
         position: relative;
         z-index: 2;
-        padding: 48px 40px;
+        padding: clamp(12px, 2.5vw, 48px) clamp(10px, 2vw, 40px);
         box-sizing: border-box; // Diese Zeile hinzufügen
         
         .testimonial-text {
-          @include typography(400, 18px);
+          @include typography(400, clamp(14px, 1.2vw, 18px));
           line-height: 1.4;
-          margin-bottom: 20px;
+          margin-bottom: clamp(12px, 1.5vw, 20px);
           flex-grow: 1;
           text-shadow: $shadow;
-        }
-        
-        .author-info {
+        }        .author-info {
           display: flex;
           justify-content: space-between;
           align-items: flex-end;
-          
           .author-details {
             .author-name {
-              @include typography(700, 20px);
+              @include typography(700, clamp(16px, 1.4vw, 20px));
               margin-bottom: 2px;
               text-shadow: $shadow;
             }
             
             .author-title {
-              @include typography(500, 16px);
+              @include typography(500, clamp(13px, 1.1vw, 16px));
               opacity: 0.9;
               text-shadow: $shadow;
             }
           }
           
           .linkedin-icon {
-            width: 64px;
-            height: 18px;
+            width: clamp(45px, 4.5vw, 64px);
+            height: clamp(12px, 1.2vw, 18px);
             flex-shrink: 0;
           }
         }
@@ -172,50 +169,165 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 
 @media (max-width: 768px) {
   .testimonials-section {
-    padding: 40px 20px;
+    padding: 40px 20px 60px 20px;
     
     .header-div {
       justify-content: center;
       align-items: center;
+      margin-bottom: 40px;
       
       .header-text {
         text-align: center;
         
         .subtitle {
           justify-content: center;
+          font-size: 18px;
         }
         
         .main-title {
           font-size: 48px;
         }
       }
+      
+      .arrow-image {
+        width: 60px;
+      }
     }
     
     .cards-div {
-      height: 500px;
+      height: auto;
+      flex-direction: column;
+      position: static;
+      gap: 20px;
       
       .testimonial-card {
-        width: 300px;
+        width: 100%;
+        max-width: 320px;
         height: 200px;
+        position: static;
+        margin: 0 auto;
         
-        @mixin card-transform($rotate, $translateX, $translateY) {
-          transform: rotate($rotate) translate($translateX, $translateY);
+        &.card-1, &.card-2, &.card-3 {
+          transform: none;
+          position: static;
+          z-index: auto;
           
           &:hover {
-            transform: rotate($rotate) translate($translateX, $translateY) scale(1.05);
+            transform: scale(1.02);
           }
         }
         
-        &.card-1 {
-          @include card-transform(-10deg, -80px, -50px);
+        .card-content {
+          padding: 24px 20px;
+          
+          .testimonial-text {
+            font-size: 16px;
+            line-height: 1.3;
+            margin-bottom: 15px;
+          }
+          
+          .author-info {
+            .author-details {
+              .author-name {
+                font-size: 18px;
+              }
+              
+              .author-title {
+                font-size: 14px;
+              }
+            }
+            
+            .linkedin-icon {
+              width: 50px;
+              height: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .testimonials-section {
+    padding: 20px 15px 40px 15px;
+    
+    .header-div {
+      margin-bottom: 30px;
+      
+      .header-text {
+        .subtitle {
+          font-size: 16px;
         }
         
-        &.card-2 {
-          @include card-transform(0deg, 0px, 60px);
+        .main-title {
+          font-size: 36px;
+        }
+      }
+      
+      .arrow-image {
+        width: 50px;
+      }
+    }
+    
+    .cards-div {
+      gap: 15px;
+      
+      .testimonial-card {
+        width: 100%;
+        max-width: 290px;
+        height: 180px;
+        
+        .card-content {
+          padding: 20px 16px;
+          
+          .testimonial-text {
+            font-size: 14px;
+            line-height: 1.3;
+            margin-bottom: 12px;
+          }
+          
+          .author-info {
+            .author-details {
+              .author-name {
+                font-size: 16px;
+              }
+              
+              .author-title {
+                font-size: 13px;
+              }
+            }
+            
+            .linkedin-icon {
+              width: 45px;
+              height: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Media Query für größere Bildschirme (1180px-1920px) */
+@media (min-width: 1180px) and (max-width: 1920px) {
+  .testimonials-section {
+    .cards-div {
+      .testimonial-card {
+        &.card-1 {
+          transform: rotate(-4deg) translate(clamp(-250px, -22vw, -450px), clamp(20px, 3vw, 40px));
+          
+          &:hover {
+            transform: rotate(-4deg) translate(clamp(-250px, -22vw, -450px), clamp(20px, 3vw, 40px)) scale(1.05);
+          }
         }
         
         &.card-3 {
-          @include card-transform(8deg, 80px, -40px);
+          transform: rotate(4deg) translate(clamp(200px, 20vw, 400px), clamp(30px, 5vw, 60px));
+          
+          &:hover {
+            transform: rotate(4deg) translate(clamp(200px, 20vw, 400px), clamp(30px, 5vw, 60px)) scale(1.05);
+          }
         }
       }
     }
