@@ -77,7 +77,8 @@ section {
 .project-image {
     width: 100%;
     max-width: 560px;
-    height: clamp(250px, 50vw, 400px);
+    aspect-ratio: 16 / 9; /* Beibehaltung des Seitenverhältnisses */
+    height: auto; /* Höhe wird durch aspect-ratio bestimmt */
     border-radius: clamp(10px, 3vw, 20px);
     overflow: hidden;
     position: relative;
@@ -265,16 +266,16 @@ section {
 
 .featured-sticker {
   position: absolute;
-  top: clamp(100px, 25vw, 200px);
-  left: clamp(20px, 10vw, 80px);
+  top: 50%; /* Etwas höher platziert */
+  left: 10%;  /* Etwas mehr nach rechts verschoben */
   z-index: 999;
-  width: clamp(40px, 12vw, 80px);
-  height: clamp(40px, 12vw, 80px);
+  width: 20%; /* Relativ zur Größe des Elternelements */
+  height: auto; /* Automatische Höhenanpassung */
   background: transparent;
   
   img {
-    width: clamp(84px, 25vw, 168px);
-    height: clamp(84px, 25vw, 168px);
+    width: 100%; /* Volle Breite des Elterncontainers */
+    height: auto; /* Automatische Höhenanpassung für proportionale Skalierung */
     display: block;
     object-fit: contain;
   }
@@ -351,7 +352,7 @@ section {
     }
     
     .project-image {
-        height: 280px;
+        /* Beibehalten des aspect-ratio anstatt feste Höhe */
         border-radius: 15px;
     }
 }
@@ -391,7 +392,7 @@ section {
     }
     
     .project-image {
-        height: clamp(200px, 45vw, 300px);
+        /* Beibehalten des aspect-ratio anstatt clamp für die Höhe */
         border-radius: 12px;
     }
     
@@ -419,27 +420,17 @@ section {
         }
     }
     
-    .featured-sticker {
-        top: clamp(60px, 20vw, 120px);
-        left: clamp(10px, 5vw, 40px);
-        width: clamp(30px, 10vw, 60px);
-        height: clamp(30px, 10vw, 60px);
-        
-        img {
-            width: clamp(60px, 20vw, 120px);
-            height: clamp(60px, 20vw, 120px);
-        }
-    }
+    /* Featured sticker wird jetzt komplett über die Hauptregel gesteuert */
 }
 
 // Spezielle Anpassungen für sehr kleine Bildschirme (310px)
 @media (max-width: 350px) {
     .projects-container {
-        padding: 0 10px;
+        padding: 0 20px; // Erhöhtes Padding für sehr kleine Bildschirme
     }
     
     .header-item {
-        padding: 8px 12px;
+        padding: 8px 20px; // Konsistentes Padding für Header-Items
         
         .subtitle {
             font-size: 14px;
@@ -457,7 +448,7 @@ section {
     }
     
     .project-image {
-        height: 180px;
+        /* Beibehalten des aspect-ratio anstatt feste Höhe */
         border-radius: 10px;
     }
     
@@ -486,15 +477,5 @@ section {
         }
     }
     
-    .featured-sticker {
-        top: 50px;
-        left: 8px;
-        width: 25px;
-        height: 25px;
-        
-        img {
-            width: 50px;
-            height: 50px;
-        }
-    }
+    /* Featured sticker wird jetzt komplett über die Hauptregel gesteuert */
 }
