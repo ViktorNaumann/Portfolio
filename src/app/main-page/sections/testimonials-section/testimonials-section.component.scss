@@ -123,34 +123,37 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
         }
       }
       
-        .card-content {
+      .card-content {
         display: flex;
         flex-direction: column;
         height: 100%;
         position: relative;
         z-index: 2;
         padding: clamp(12px, 2.5vw, 48px) clamp(10px, 2vw, 40px);
-        box-sizing: border-box; // Diese Zeile hinzufügen
+        box-sizing: border-box;
         
         .testimonial-text {
-          @include typography(400, clamp(14px, 1.2vw, 18px));
+          @include typography(400, 16px);
           line-height: 1.4;
-          margin-bottom: clamp(12px, 1.5vw, 20px);
+          margin-bottom: 20px;
           flex-grow: 1;
           text-shadow: $shadow;
-        }        .author-info {
+        }
+        
+        .author-info {
           display: flex;
           justify-content: space-between;
           align-items: flex-end;
+          
           .author-details {
             .author-name {
-              @include typography(700, clamp(16px, 1.4vw, 20px));
+              @include typography(700, 18px);
               margin-bottom: 2px;
               text-shadow: $shadow;
             }
             
             .author-title {
-              @include typography(500, clamp(13px, 1.1vw, 16px));
+              @include typography(500, 14px);
               opacity: 0.9;
               text-shadow: $shadow;
             }
@@ -221,22 +224,11 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
           padding: 24px 20px;
           
           .testimonial-text {
-            font-size: 16px;
             line-height: 1.3;
             margin-bottom: 15px;
           }
           
           .author-info {
-            .author-details {
-              .author-name {
-                font-size: 18px;
-              }
-              
-              .author-title {
-                font-size: 14px;
-              }
-            }
-            
             .linkedin-icon {
               width: 50px;
               height: 14px;
@@ -282,22 +274,10 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
           padding: 20px 16px;
           
           .testimonial-text {
-            font-size: 14px;
-            line-height: 1.3;
             margin-bottom: 12px;
           }
           
-          .author-info {
-            .author-details {
-              .author-name {
-                font-size: 16px;
-              }
-              
-              .author-title {
-                font-size: 13px;
-              }
-            }
-            
+          .author-info {            
             .linkedin-icon {
               width: 45px;
               height: 12px;
@@ -309,24 +289,99 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   }
 }
 
-/* Media Query für größere Bildschirme (1180px-1920px) */
-@media (min-width: 1180px) and (max-width: 1920px) {
+/* Media Query für größere Bildschirme (1180px-1399px) - Sanfterer Übergang */
+@media (min-width: 1180px) and (max-width: 1399px) {
   .testimonials-section {
     .cards-div {
       .testimonial-card {
         &.card-1 {
-          transform: rotate(-4deg) translate(clamp(-250px, -22vw, -450px), clamp(20px, 3vw, 40px));
+          transform: rotate(-4deg) translate(clamp(-250px, -22vw, -400px), clamp(20px, 3vw, 40px));
           
           &:hover {
-            transform: rotate(-4deg) translate(clamp(-250px, -22vw, -450px), clamp(20px, 3vw, 40px)) scale(1.05);
+            transform: rotate(-4deg) translate(clamp(-250px, -22vw, -400px), clamp(20px, 3vw, 40px)) scale(1.05);
           }
         }
         
         &.card-3 {
-          transform: rotate(4deg) translate(clamp(200px, 20vw, 400px), clamp(30px, 5vw, 60px));
+          transform: rotate(4deg) translate(clamp(200px, 20vw, 350px), clamp(30px, 5vw, 60px));
           
           &:hover {
-            transform: rotate(4deg) translate(clamp(200px, 20vw, 400px), clamp(30px, 5vw, 60px)) scale(1.05);
+            transform: rotate(4deg) translate(clamp(200px, 20vw, 350px), clamp(30px, 5vw, 60px)) scale(1.05);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Media Query für größere Bildschirme (1400px-1599px) */
+@media (min-width: 1400px) and (max-width: 1599px) {
+  .testimonials-section {
+    .cards-div {
+      .testimonial-card {
+        &.card-1 {
+          transform: rotate(-4deg) translate(clamp(-300px, -25vw, -450px), clamp(20px, 3vw, 40px));
+          
+          &:hover {
+            transform: rotate(-4deg) translate(clamp(-300px, -25vw, -450px), clamp(20px, 3vw, 40px)) scale(1.05);
+          }
+        }
+        
+        &.card-3 {
+          transform: rotate(4deg) translate(clamp(250px, 22vw, 400px), clamp(30px, 5vw, 60px));
+          
+          &:hover {
+            transform: rotate(4deg) translate(clamp(250px, 22vw, 400px), clamp(30px, 5vw, 60px)) scale(1.05);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Media Query für große Bildschirme (1600px-1919px) */
+@media (min-width: 1600px) and (max-width: 1929px) {
+  .testimonials-section {
+    .cards-div {
+      .testimonial-card {
+        &.card-1 {
+          transform: rotate(-4deg) translate(-480px, 40px);
+          
+          &:hover {
+            transform: rotate(-4deg) translate(-480px, 40px) scale(1.05);
+          }
+        }
+        
+        &.card-3 {
+          transform: rotate(4deg) translate(430px, 60px);
+          
+          &:hover {
+            transform: rotate(4deg) translate(430px, 60px) scale(1.05);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Media Query für sehr große Bildschirme (1920px und größer) */
+@media (min-width: 1929px) {
+  .testimonials-section {
+    .cards-div {
+      .testimonial-card {
+        &.card-1 {
+          transform: rotate(-4deg) translate(-550px, 40px);
+          
+          &:hover {
+            transform: rotate(-4deg) translate(-550px, 40px) scale(1.05);
+          }
+        }
+        
+        &.card-3 {
+          transform: rotate(4deg) translate(500px, 60px);
+          
+          &:hover {
+            transform: rotate(4deg) translate(500px, 60px) scale(1.05);
           }
         }
       }
