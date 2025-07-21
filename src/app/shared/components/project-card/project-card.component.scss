@@ -424,7 +424,8 @@ $light-gray: #F8F9FA;
     
     img:not(.featured-sticker img) {
       width: 100%;
-      max-width: clamp(250px, 60vw, 500px);
+      max-width: 560px;
+      max-height: 400px;
       height: auto;
       object-fit: contain;
       
