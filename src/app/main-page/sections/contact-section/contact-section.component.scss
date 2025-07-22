@@ -12,7 +12,7 @@ $error-color: #FF3A00;
   margin: 0 auto;
   background-image: url('./../../../../assets/img/footer/Footer.png');
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -43,6 +43,7 @@ $error-color: #FF3A00;
 .container {
   width: 100%;
   padding: 0 clamp(15px, 12vw, 235px);
+  margin-top: 50px;
 }
 
 .contact-wrapper {
@@ -91,24 +92,6 @@ $error-color: #FF3A00;
     font-size: clamp(14px, 2.2vw, 18px);
     font-weight: 400;
   }
-  
-  .arrow-image {
-    height: 44px;
-    width: 280px;
-    margin-top: 20px;
-    align-self: flex-end;
-    opacity: 1;
-    clip-path: inset(0 100% 0 0);
-    animation: draw-line 10s ease infinite;
-    
-    @media (max-width: 978px) {
-      display: none;
-    }
-    
-    @media (max-width: 480px) {
-      display: none;
-    }
-  }
 }
 
 .contact-form {
@@ -128,7 +111,12 @@ $error-color: #FF3A00;
       height: clamp(100px, 20vw, 200px);
       display: flex;
       justify-content: center;
-      align-items: center;    .background-circle {
+      align-items: center;
+      
+      @media (min-width: 993px) and (max-width: 1200px) {
+        width: clamp(70px, 12vw, 130px);
+        height: clamp(70px, 12vw, 130px);
+      }    .background-circle {
       position: absolute;
       width: 100%;
       height: 100%;
@@ -156,9 +144,9 @@ $error-color: #FF3A00;
       .rotating-text-path {
         fill: #0E1013;
         font-family: $main-font;
-        font-size: clamp(6px, 1.2vw, 12px);
+        font-size: 12px;
         font-weight: 600;
-        letter-spacing: clamp(2px, 0.6vw, 5px);
+        letter-spacing: 5px;
         text-transform: uppercase;
       }    .logo-center {
       position: relative;
@@ -169,12 +157,22 @@ $error-color: #FF3A00;
       justify-content: center;
       align-items: center;
       
+      @media (min-width: 993px) and (max-width: 1200px) {
+        width: clamp(30px, 6vw, 60px);
+        height: clamp(30px, 6vw, 60px);
+      }
+      
       .logo {
         width: clamp(45px, 9vw, 85px);
         height: clamp(45px, 9vw, 85px);
         object-fit: contain;
         filter: brightness(0) saturate(100%) invert(4%) sepia(10%) saturate(1044%) hue-rotate(161deg) brightness(98%) contrast(90%);
         transform: rotate(15deg);
+        
+        @media (min-width: 993px) and (max-width: 1200px) {
+          width: clamp(35px, 7vw, 65px);
+          height: clamp(35px, 7vw, 65px);
+        }
       }
     }
   }
@@ -352,14 +350,14 @@ $error-color: #FF3A00;
       clip-path: inset(0 100% 0 0);
       animation: draw-line 10s ease infinite;
       flex-shrink: 0;
-      display: none;
+      display: block;
       
-      @media (max-width: 978px) {
-        display: block;
+      @media (min-width: 979px) {
+        height: 44px;
+        width: 280px;
       }
       
       @media (max-width: 480px) {
-        display: block;
         height: 25px;
         width: 150px;
       }
@@ -409,9 +407,6 @@ app-footer {
 }
 
 @media (max-width: 768px) {
-  .contact-wrapper {
-    gap: 50px;
-  }
   
   .contact-info {
     .main-heading {
