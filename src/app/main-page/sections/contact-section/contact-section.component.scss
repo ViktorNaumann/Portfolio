@@ -264,8 +264,11 @@ $error-color: #FF3A00;
       appearance: none;
       -webkit-appearance: none;
       -moz-appearance: none;
-      width: 20px;
-      height: 20px;
+      width: clamp(16px, 4vw, 20px);
+      height: clamp(16px, 4vw, 20px);
+      min-width: clamp(16px, 4vw, 20px);
+      min-height: clamp(16px, 4vw, 20px);
+      flex-shrink: 0;
       border: 1px solid $link-color;
       border-radius: 3px;
       background-color: transparent;
@@ -278,7 +281,7 @@ $error-color: #FF3A00;
         background-image: url('./../../../../assets/img/contact/Check\ 1.svg');
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 14px;
+        background-size: clamp(12px, 3vw, 14px);
       }
       
       &:focus {
