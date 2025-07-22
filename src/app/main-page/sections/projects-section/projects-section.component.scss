@@ -4,8 +4,7 @@
 }
 
 section {
-    height: auto;
-    min-height: 100vh;
+    height: 950px;
     width: 100%;
     background-position: top;
     margin-top: 0;
@@ -13,6 +12,10 @@ section {
     margin-bottom: 0;
     box-sizing: border-box;
     color: var(--text-color);
+    
+    @media (max-width: 1150px) {
+        height: 2000px;
+    }
 }
 
 .header-item {

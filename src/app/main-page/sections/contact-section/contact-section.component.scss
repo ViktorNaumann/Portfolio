@@ -6,7 +6,7 @@ $hover-color: #F87A55;
 $error-color: #FF3A00;
 
 .contact-section {
-  min-height: 100vh;
+  height: 1000px;
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
@@ -19,6 +19,18 @@ $error-color: #FF3A00;
   font-family: $main-font;
   color: $primary-text-color;
   overflow: hidden;
+  
+  @media (max-width: 993px) {
+    min-height: 1000px;
+    height: auto;
+    overflow: visible;
+  }
+  
+  @media (max-width: 480px) {
+    min-height: 950px;
+    height: auto;
+    overflow: visible;
+  }
 }
 
 .contact-content {
