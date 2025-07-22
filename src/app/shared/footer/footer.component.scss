@@ -1,14 +1,32 @@
 .footer {
-  padding: 1.5rem 0;
+  padding: 2rem 0 1rem 0;
   width: 100%;
   background: transparent;
-  margin-top: -200px;
+  margin-top: 0;
+  position: relative;
+  z-index: 10;
+  
+  @media (max-width: 480px) {
+    padding: 1rem 0 0.5rem 0;
+  }
+  
+  @media (max-width: 320px) {
+    padding: 0.8rem 0 0.3rem 0;
+  }
 }
 
 .container {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 1rem;
+  
+  @media (max-width: 480px) {
+    padding: 0 15px;
+  }
+  
+  @media (max-width: 320px) {
+    padding: 0 10px;
+  }
 }
 
 .footer-content {
@@ -17,6 +35,20 @@
   align-items: end; 
   gap: 4rem;
   width: 100%;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  @media (max-width: 480px) {
+    gap: 1rem;
+  }
+  
+  @media (max-width: 320px) {
+    gap: 0.8rem;
+  }
 }
 
 .logo-and-legal-section {
@@ -40,6 +72,14 @@
   margin-bottom: 0.5rem;
   filter: brightness(0) saturate(100%) invert(27%) sepia(99%) saturate(2234%) hue-rotate(231deg) brightness(99%) contrast(102%);
   transition: filter 0.3s ease;
+  
+  @media (max-width: 480px) {
+    height: 30px;
+  }
+  
+  @media (max-width: 320px) {
+    height: 24px;
+  }
 }
 
 .logo-img:hover {
@@ -56,6 +96,18 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 1.2;
+  
+  @media (max-width: 480px) {
+    font-size: 14px;
+    padding-bottom: 15px;
+    padding-top: 10px;
+  }
+  
+  @media (max-width: 320px) {
+    font-size: 12px;
+    padding-bottom: 10px;
+    padding-top: 8px;
+  }
 }
 
 .footer-link {
@@ -67,6 +119,18 @@
   transition: all 0.3s ease;
   padding: 8px 16px;
   border-radius: 20px;
+  
+  @media (max-width: 480px) {
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 15px;
+  }
+  
+  @media (max-width: 320px) {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 12px;
+  }
   
   &:hover:not(.legal-notice) {
     border: 2px solid #3355FF;
@@ -103,12 +167,6 @@
 }
 
 @media (max-width: 768px) {
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    text-align: center;
-  }
-  
   .logo-and-legal-section {
     align-items: center;
   }
@@ -124,12 +182,23 @@
 }
 
 @media (max-width: 480px) {
+  .copyright,
+  .footer-link {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
   .footer-content {
-    gap: 1rem;
+    gap: 0.5rem;
+  }
+  
+  .logo-and-legal-section {
+    min-height: 80px;
   }
   
   .copyright,
   .footer-link {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
