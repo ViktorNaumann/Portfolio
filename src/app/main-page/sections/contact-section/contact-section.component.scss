@@ -31,6 +31,11 @@ $error-color: #FF3A00;
     height: auto;
     overflow: visible;
   }
+  
+  @media (max-width: 360px) {
+    width: 100%;
+    overflow-x: hidden;
+  }
 }
 
 .contact-content {
@@ -436,7 +441,17 @@ app-footer {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 360px) {
+  .container {
+    padding: 0 clamp(10px, 3vw, 15px);
+  }
+  
+  .contact-wrapper {
+    gap: clamp(20px, 5vw, 30px);
+  }
+}
+
+@media (max-width: 310px) {
   .container {
     padding: 0 10px;
   }
