@@ -6,7 +6,8 @@
       </a>
     </div>
     
-    <ul class="nav-menu">
+    <!-- Desktop Navigation -->
+    <ul class="nav-menu desktop-menu">
       <li>
         <a [routerLink]="['/']" fragment="about" class="nav-link">
           {{ 'HEADER.ABOUT_ME' | translate }}
@@ -33,7 +34,8 @@
       </li>
     </ul>
     
-    <div class="language-switcher">
+    <!-- Desktop Language Switcher -->
+    <div class="language-switcher desktop-language">
       <div class="language-container" (click)="setLanguage(false)">
         <span class="language" [class.active]="!isGerman">EN</span>
         <img src="assets/img/header/Toggle.png" alt="Toggle Background" class="toggle-bg">
@@ -47,6 +49,68 @@
       <div class="language-container" (click)="setLanguage(true)">
         <span class="language" [class.active]="isGerman">DE</span>
         <img src="assets/img/header/Toggle.png" alt="Toggle Background" class="toggle-bg">
+      </div>
+    </div>
+
+    <!-- Mobile Burger Menu Button -->
+    <div class="burger-menu" (click)="toggleMobileMenu()" [class.active]="isMobileMenuOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-menu-overlay" [class.active]="isMobileMenuOpen" (click)="closeMobileMenu()">
+    <div class="mobile-menu" (click)="$event.stopPropagation()">
+      <div class="mobile-menu-content">
+        <ul class="mobile-nav-links">
+          <li>
+            <a [routerLink]="['/']" fragment="about" (click)="closeMobileMenu()">
+              {{ 'HEADER.ABOUT_ME' | translate }}
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/']" fragment="skills" (click)="closeMobileMenu()">
+              {{ 'HEADER.SKILLS' | translate }}
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/']" fragment="projects" (click)="closeMobileMenu()">
+              {{ 'HEADER.PROJECTS' | translate }}
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/']" fragment="contact" (click)="closeMobileMenu()">
+              {{ 'HEADER.CONTACT' | translate }}
+            </a>
+          </li>
+        </ul>
+
+        <!-- Mobile Language Switcher -->
+        <div class="mobile-language-switcher">
+          <div class="language-toggle-container">
+            <span class="language-label" [class.active]="!isGerman" (click)="setLanguage(false)">EN</span>
+            <div class="toggle-switch">
+              <input type="checkbox" id="mobile-language-toggle" (change)="toggleLanguage()" [checked]="isGerman">
+              <label for="mobile-language-toggle"></label>
+            </div>
+            <span class="language-label" [class.active]="isGerman" (click)="setLanguage(true)">DE</span>
+          </div>
+        </div>
+
+        <!-- Mobile Social Links -->
+        <div class="mobile-social-links">
+          <a href="https://www.linkedin.com/in/viktor-naumann" target="_blank" class="social-link">
+            <img src="assets/img/hero/contact-icons/Component 3.png" alt="LinkedIn">
+          </a>
+          <a href="https://github.com/ViktorNaumann" target="_blank" class="social-link">
+            <img src="assets/img/hero/contact-icons/Property 1=Git hub.png" alt="GitHub">
+          </a>
+          <a href="mailto:Viktor_Naumann@hotmail.de" class="social-link">
+            <img src="assets/img/hero/contact-icons/Component 3 (1).png" alt="Email">
+          </a>
+        </div>
       </div>
     </div>
   </div>
