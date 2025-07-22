@@ -63,6 +63,13 @@
   <!-- Mobile Navigation Overlay -->
   <div class="mobile-menu-overlay" [class.active]="isMobileMenuOpen" (click)="closeMobileMenu()">
     <div class="mobile-menu" (click)="$event.stopPropagation()">
+      <!-- Mobile Logo -->
+      <div class="mobile-logo">
+        <a [routerLink]="['/']" fragment="hero" (click)="closeMobileMenu()">
+          <img src="assets/img/header/logo.png" alt="Viktor Logo" class="mobile-logo-image">
+        </a>
+      </div>
+      
       <div class="mobile-menu-content">
         <ul class="mobile-nav-links">
           <li>
