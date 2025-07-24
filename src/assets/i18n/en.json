@@ -107,31 +107,92 @@
     "BACK_TO_HOME": "Back to Home",
     "DATA_CONTROLLER": {
       "TITLE": "Data Controller",
-      "CONTENT": "Viktor Naumann\nSample Street 123\n12345 Hamburg\nE-Mail: viktor@example.com"
-    },
-    "DATA_COLLECTION": {
-      "TITLE": "Data Collection",
-      "CONTENT": "This website collects personal data that you voluntarily provide through the contact form, including your name, email address, and message."
-    },
-    "CONTACT_FORM": {
-      "TITLE": "Contact Form",
-      "CONTENT": "When you use the contact form, the data you enter is used exclusively to process your request."
-    },
-    "DATA_USAGE": {
-      "TITLE": "Data Usage",
-      "CONTENT": "Your data is used exclusively to respond to your inquiries and is not shared with third parties."
-    },
-    "DATA_STORAGE": {
-      "TITLE": "Data Storage",
-      "CONTENT": "Your data is stored only as long as necessary to process your request."
+      "CONTENT": "The data controller within the meaning of data protection laws, in particular the EU General Data Protection Regulation (GDPR), is:<br><br>Viktor Naumann"
     },
     "YOUR_RIGHTS": {
-      "TITLE": "Your Rights",
-      "CONTENT": "You have the right to access, correct, delete, and restrict the processing of your personal data."
+      "TITLE": "Your Rights as Data Subject",
+      "CONTENT": "Using the contact details provided, you can exercise the following rights at any time in accordance with the EU General Data Protection Regulation (GDPR):",
+      "RIGHTS_LIST": [
+        "Access to your data stored with us and its processing (Art. 15 GDPR),",
+        "Rectification of inaccurate personal data (Art. 16 GDPR),",
+        "Deletion of your data stored with us (Art. 17 GDPR),",
+        "Restriction of data processing, provided we may not delete your data due to legal obligations (Art. 18 GDPR),",
+        "Objection to the processing of your data with us (Art. 21 GDPR) and",
+        "Data portability, provided you have consented to data processing or have concluded a contract with us (Art. 20 GDPR)."
+      ],
+      "CONSENT_WITHDRAWAL": "If you have given us consent, you can revoke it at any time with effect for the future.",
+      "COMPLAINT_RIGHT": "You can lodge a complaint with a supervisory authority at any time, e.g. with the competent supervisory authority of the federal state of your residence or with the authority responsible for us as the responsible body.",
+      "SUPERVISORY_AUTHORITIES": "A list of supervisory authorities (for the non-public sector) with addresses can be found at: <a href=\"https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html\">https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html</a>."
+    },
+    "PROCESSING_ACTIVITIES": {
+      "TITLE": "Processing Activities",
+      "GENERAL_INFO": {
+        "TITLE": "Collection of General Information When Visiting Our Website",
+        "PURPOSE_TITLE": "Type and Purpose of Processing",
+        "PURPOSE_CONTENT": "When you access our website, i.e., when you do not register or otherwise transmit information, information of a general nature is automatically collected. This information (server log files) includes the type of web browser, the operating system used, the domain name of your Internet service provider, your IP address and similar.",
+        "PURPOSE_LIST": "They are processed in particular for the following purposes:",
+        "PURPOSES": ["for the technically error-free display and optimization of the website"],
+        "NO_PROFILING": "We do not use your data to draw conclusions about your person. However, we reserve the right to subsequently check the server log files should concrete indications point to illegal use.",
+        "LEGAL_BASIS_TITLE": "Legal Basis and Legitimate Interest",
+        "LEGAL_BASIS": "The processing is carried out in accordance with Art. 6 para. 1 lit. f GDPR on the basis of our legitimate interest in improving the stability and functionality of our website as well as ensuring system security and abuse detection.",
+        "RECIPIENTS_TITLE": "Recipients",
+        "RECIPIENTS": "Recipients of the data may be technical service providers who act as processors for the operation and maintenance of our website.",
+        "STORAGE_TITLE": "Storage Duration",
+        "STORAGE": "Data is stored in server log files in a form that enables identification of the affected persons for a maximum of 14 days; unless a security-relevant event occurs (e.g. a DDoS attack).",
+        "STORAGE_EXCEPTION": "In the event of such an event, server log files are stored until the security-relevant event is eliminated and fully clarified.",
+        "PROVISION_TITLE": "Provision Required or Necessary",
+        "PROVISION": "The provision of the aforementioned personal data is neither legally nor contractually required. However, without the IP address, the service and functionality of our website is not guaranteed. In addition, individual services and services may not be available or restricted.",
+        "OBJECTION_TITLE": "Objection",
+        "OBJECTION": "Please read the information about your right to object according to Art. 21 GDPR below."
+      },
+      "CONTACT": {
+        "TITLE": "Contact",
+        "PURPOSE_TITLE": "Type and Purpose of Processing",
+        "PURPOSE_CONTENT": "A contact form is available on our website, which can be used for electronic contact. If a user takes advantage of this possibility, the data entered in the input mask is transmitted to us and stored.",
+        "TIMESTAMP": "At the time the message is sent, the following data is also stored:",
+        "TIMESTAMP_LIST": ["Date and time of the request"],
+        "EMAIL_CONTACT": "Contact is possible via the provided email addresses. In this case, the personal data of the user transmitted with the email is stored. This includes the date and time of email dispatch, email address, IP addresses as well as information about the servers involved in email communication.",
+        "PHONE_CONTACT": "You can contact us via the provided telephone numbers. In doing so, we collect log data that includes your telephone number and the duration of the call.",
+        "COMMUNICATION": "Regardless of the chosen communication method, we collect the content of your request. Your data is stored for the purpose of individual communication with you.",
+        "LEGAL_BASIS_TITLE": "Legal Basis",
+        "LEGAL_BASIS": "The processing of the data is based on a legitimate interest (Art. 6 para. 1 lit. f GDPR).",
+        "LEGITIMATE_INTEREST": "Our legitimate interest in processing your data is to enable uncomplicated contact.",
+        "CONTRACT_PROCESSING": "If you contact us to request an offer, the processing of the data is carried out for the implementation of pre-contractual measures (Art. 6 para. 1 lit. b GDPR).",
+        "RECIPIENTS_TITLE": "Recipients",
+        "RECIPIENTS": "Recipients of the data may be technical service providers who act as processors for the operation and maintenance of our website.",
+        "STORAGE_TITLE": "Storage Duration",
+        "STORAGE": "Data is deleted after the final processing of the request, provided there are no legal retention obligations.",
+        "RETENTION_PERIODS": "If a contractual relationship is established, we are subject to the legal retention periods. These are generally 6 or 10 years for reasons of proper bookkeeping and tax law requirements.",
+        "THIRD_COUNTRY_TITLE": "Third Country Transfer",
+        "THIRD_COUNTRY": "The collected data may be transferred to the following third countries:",
+        "THIRD_COUNTRY_LIST": "USA",
+        "SAFEGUARDS": "The following data protection guarantees are in place:",
+        "ADEQUACY_DECISION": "Adequacy decision of the EU Commission",
+        "PROVISION_TITLE": "Provision Required or Necessary",
+        "PROVISION": "The provision of your personal data is voluntary. However, we can only process your request if you tell us the required data and the reason for the request.",
+        "OBJECTION_TITLE": "Objection",
+        "OBJECTION": "Please read the information about your right to object according to Art. 21 GDPR below."
+      }
+    },
+    "RIGHT_TO_OBJECT": {
+      "TITLE": "Information about Your Right to Object according to Art. 21 GDPR",
+      "INDIVIDUAL_OBJECTION_TITLE": "Case-by-case Right to Object",
+      "INDIVIDUAL_OBJECTION": "You have the right to object at any time, for reasons arising from your particular situation, to the processing of personal data concerning you which is carried out on the basis of Art. 6 para. 1 lit. f GDPR (data processing on the basis of a balancing of interests); this also applies to profiling based on this provision within the meaning of Art. 4 No. 4 GDPR.",
+      "OBJECTION_CONSEQUENCE": "If you object, we will no longer process your personal data unless we can demonstrate compelling legitimate grounds for the processing which override your interests, rights and freedoms, or the processing serves the assertion, exercise or defense of legal claims.",
+      "RECIPIENT_TITLE": "Recipient of an Objection",
+      "RECIPIENT": "Viktor Naumann"
     },
     "CHANGES": {
-      "TITLE": "Changes to Privacy Policy",
-      "CONTENT": "This privacy policy may be updated occasionally. Please check this page regularly."
+      "TITLE": "Changes to Our Privacy Policy",
+      "CONTENT": "We reserve the right to adapt this privacy policy so that it always complies with current legal requirements or to implement changes to our services in the privacy policy, e.g. when introducing new services. The new privacy policy will then apply to your next visit."
+    },
+    "QUESTIONS": {
+      "TITLE": "Questions about Data Protection",
+      "CONTENT": "If you have any questions about data protection, please send us an email to the data controller mentioned above."
+    },
+    "COPYRIGHT_NOTICE": {
+      "TITLE": "Copyright Notice",
+      "CONTENT": "<em>This privacy policy was created with the help of activeMind AG – the experts for <a href=\"https://www.activemind.de/datenschutz/datenschutzbeauftragter/\" target=\"_blank\" rel=\"noopener dofollow\">external data protection officers</a> (Version #2024-10-25).</em>"
     }
   },
   "LEGAL_NOTICE": {

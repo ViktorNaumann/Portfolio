@@ -11,37 +11,114 @@
       
       <section>
         <h2>{{ 'PRIVACY_POLICY.DATA_CONTROLLER.TITLE' | translate }}</h2>
-        <p>{{ 'PRIVACY_POLICY.DATA_CONTROLLER.CONTENT' | translate }}</p>
-      </section>
-
-      <section>
-        <h2>{{ 'PRIVACY_POLICY.DATA_COLLECTION.TITLE' | translate }}</h2>
-        <p>{{ 'PRIVACY_POLICY.DATA_COLLECTION.CONTENT' | translate }}</p>
-      </section>
-
-      <section>
-        <h2>{{ 'PRIVACY_POLICY.CONTACT_FORM.TITLE' | translate }}</h2>
-        <p>{{ 'PRIVACY_POLICY.CONTACT_FORM.CONTENT' | translate }}</p>
-      </section>
-
-      <section>
-        <h2>{{ 'PRIVACY_POLICY.DATA_USAGE.TITLE' | translate }}</h2>
-        <p>{{ 'PRIVACY_POLICY.DATA_USAGE.CONTENT' | translate }}</p>
-      </section>
-
-      <section>
-        <h2>{{ 'PRIVACY_POLICY.DATA_STORAGE.TITLE' | translate }}</h2>
-        <p>{{ 'PRIVACY_POLICY.DATA_STORAGE.CONTENT' | translate }}</p>
+        <p [innerHTML]="'PRIVACY_POLICY.DATA_CONTROLLER.CONTENT' | translate"></p>
       </section>
 
       <section>
         <h2>{{ 'PRIVACY_POLICY.YOUR_RIGHTS.TITLE' | translate }}</h2>
         <p>{{ 'PRIVACY_POLICY.YOUR_RIGHTS.CONTENT' | translate }}</p>
+        <ul>
+          <li *ngFor="let right of ('PRIVACY_POLICY.YOUR_RIGHTS.RIGHTS_LIST' | translate)">{{ right }}</li>
+        </ul>
+        <p>{{ 'PRIVACY_POLICY.YOUR_RIGHTS.CONSENT_WITHDRAWAL' | translate }}</p>
+        <p>{{ 'PRIVACY_POLICY.YOUR_RIGHTS.COMPLAINT_RIGHT' | translate }}</p>
+        <p [innerHTML]="'PRIVACY_POLICY.YOUR_RIGHTS.SUPERVISORY_AUTHORITIES' | translate"></p>
+      </section>
+
+      <section>
+        <h2>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.TITLE' | translate }}</h2>
+        
+        <div class="processing-section">
+          <h3>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.GENERAL_INFO.TITLE' | translate }}</h3>
+          
+          <h4>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.GENERAL_INFO.PURPOSE_TITLE' | translate }}</h4>
+          <p>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.GENERAL_INFO.PURPOSE_CONTENT' | translate }}</p>
+          <p>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.GENERAL_INFO.PURPOSE_LIST' | translate }}</p>
+          <ul>
+            <li *ngFor="let purpose of ('PRIVACY_POLICY.PROCESSING_ACTIVITIES.GENERAL_INFO.PURPOSES' | translate)">{{ purpose }}</li>
+          </ul>
+          <p>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.GENERAL_INFO.NO_PROFILING' | translate }}</p>
+          
+          <h4>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.GENERAL_INFO.LEGAL_BASIS_TITLE' | translate }}</h4>
+          <p>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.GENERAL_INFO.LEGAL_BASIS' | translate }}</p>
+          
+          <h4>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.GENERAL_INFO.RECIPIENTS_TITLE' | translate }}</h4>
+          <p>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.GENERAL_INFO.RECIPIENTS' | translate }}</p>
+          
+          <h4>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.GENERAL_INFO.STORAGE_TITLE' | translate }}</h4>
+          <p>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.GENERAL_INFO.STORAGE' | translate }}</p>
+          <p>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.GENERAL_INFO.STORAGE_EXCEPTION' | translate }}</p>
+          
+          <h4>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.GENERAL_INFO.PROVISION_TITLE' | translate }}</h4>
+          <p>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.GENERAL_INFO.PROVISION' | translate }}</p>
+          
+          <h4>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.GENERAL_INFO.OBJECTION_TITLE' | translate }}</h4>
+          <p>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.GENERAL_INFO.OBJECTION' | translate }}</p>
+        </div>
+
+        <div class="processing-section">
+          <h3>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.CONTACT.TITLE' | translate }}</h3>
+          
+          <h4>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.CONTACT.PURPOSE_TITLE' | translate }}</h4>
+          <p>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.CONTACT.PURPOSE_CONTENT' | translate }}</p>
+          <p>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.CONTACT.TIMESTAMP' | translate }}</p>
+          <ul>
+            <li *ngFor="let item of ('PRIVACY_POLICY.PROCESSING_ACTIVITIES.CONTACT.TIMESTAMP_LIST' | translate)">{{ item }}</li>
+          </ul>
+          <p>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.CONTACT.EMAIL_CONTACT' | translate }}</p>
+          <p>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.CONTACT.PHONE_CONTACT' | translate }}</p>
+          <p>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.CONTACT.COMMUNICATION' | translate }}</p>
+          
+          <h4>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.CONTACT.LEGAL_BASIS_TITLE' | translate }}</h4>
+          <p>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.CONTACT.LEGAL_BASIS' | translate }}</p>
+          <p>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.CONTACT.LEGITIMATE_INTEREST' | translate }}</p>
+          <p>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.CONTACT.CONTRACT_PROCESSING' | translate }}</p>
+          
+          <h4>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.CONTACT.RECIPIENTS_TITLE' | translate }}</h4>
+          <p>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.CONTACT.RECIPIENTS' | translate }}</p>
+          
+          <h4>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.CONTACT.STORAGE_TITLE' | translate }}</h4>
+          <p>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.CONTACT.STORAGE' | translate }}</p>
+          <p>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.CONTACT.RETENTION_PERIODS' | translate }}</p>
+          
+          <h4>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.CONTACT.THIRD_COUNTRY_TITLE' | translate }}</h4>
+          <p>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.CONTACT.THIRD_COUNTRY' | translate }}</p>
+          <p>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.CONTACT.THIRD_COUNTRY_LIST' | translate }}</p>
+          <p>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.CONTACT.SAFEGUARDS' | translate }}</p>
+          <p>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.CONTACT.ADEQUACY_DECISION' | translate }}</p>
+          
+          <h4>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.CONTACT.PROVISION_TITLE' | translate }}</h4>
+          <p>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.CONTACT.PROVISION' | translate }}</p>
+          
+          <h4>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.CONTACT.OBJECTION_TITLE' | translate }}</h4>
+          <p>{{ 'PRIVACY_POLICY.PROCESSING_ACTIVITIES.CONTACT.OBJECTION' | translate }}</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>{{ 'PRIVACY_POLICY.RIGHT_TO_OBJECT.TITLE' | translate }}</h2>
+        
+        <h3>{{ 'PRIVACY_POLICY.RIGHT_TO_OBJECT.INDIVIDUAL_OBJECTION_TITLE' | translate }}</h3>
+        <p>{{ 'PRIVACY_POLICY.RIGHT_TO_OBJECT.INDIVIDUAL_OBJECTION' | translate }}</p>
+        <p>{{ 'PRIVACY_POLICY.RIGHT_TO_OBJECT.OBJECTION_CONSEQUENCE' | translate }}</p>
+        
+        <h3>{{ 'PRIVACY_POLICY.RIGHT_TO_OBJECT.RECIPIENT_TITLE' | translate }}</h3>
+        <p>{{ 'PRIVACY_POLICY.RIGHT_TO_OBJECT.RECIPIENT' | translate }}</p>
       </section>
 
       <section>
         <h2>{{ 'PRIVACY_POLICY.CHANGES.TITLE' | translate }}</h2>
         <p>{{ 'PRIVACY_POLICY.CHANGES.CONTENT' | translate }}</p>
+      </section>
+
+      <section>
+        <h2>{{ 'PRIVACY_POLICY.QUESTIONS.TITLE' | translate }}</h2>
+        <p>{{ 'PRIVACY_POLICY.QUESTIONS.CONTENT' | translate }}</p>
+      </section>
+
+      <section>
+        <h2>{{ 'PRIVACY_POLICY.COPYRIGHT_NOTICE.TITLE' | translate }}</h2>
+        <p [innerHTML]="'PRIVACY_POLICY.COPYRIGHT_NOTICE.CONTENT' | translate"></p>
       </section>
     </div>
   </div>

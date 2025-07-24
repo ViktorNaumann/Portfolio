@@ -103,35 +103,96 @@
     "PRIVACY_POLICY": "Datenschutzerklärung"
   },
   "PRIVACY_POLICY": {
-    "TITLE": "Datenschutzerklärung",
+    "TITLE": "Datenschutzhinweise",
     "BACK_TO_HOME": "Zurück zur Startseite",
     "DATA_CONTROLLER": {
       "TITLE": "Verantwortlicher",
-      "CONTENT": "Viktor Naumann\nMusterstraße 123\n12345 Hamburg\nE-Mail: viktor@example.com"
-    },
-    "DATA_COLLECTION": {
-      "TITLE": "Art der gesammelten Daten",
-      "CONTENT": "Diese Website sammelt personenbezogene Daten, die Sie freiwillig über das Kontaktformular bereitstellen, einschließlich Ihres Namens, Ihrer E-Mail-Adresse und Ihrer Nachricht."
-    },
-    "CONTACT_FORM": {
-      "TITLE": "Kontaktformular",
-      "CONTENT": "Wenn Sie das Kontaktformular verwenden, werden die von Ihnen eingegebenen Daten ausschließlich zur Bearbeitung Ihrer Anfrage verwendet."
-    },
-    "DATA_USAGE": {
-      "TITLE": "Verwendung der Daten",
-      "CONTENT": "Ihre Daten werden ausschließlich zur Beantwortung Ihrer Anfragen verwendet und nicht an Dritte weitergegeben."
-    },
-    "DATA_STORAGE": {
-      "TITLE": "Datenspeicherung",
-      "CONTENT": "Ihre Daten werden nur so lange gespeichert, wie es für die Bearbeitung Ihrer Anfrage erforderlich ist."
+      "CONTENT": "Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutz-Grundverordnung (DSGVO), ist:<br><br>Viktor Naumann"
     },
     "YOUR_RIGHTS": {
-      "TITLE": "Ihre Rechte",
-      "CONTENT": "Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten."
+      "TITLE": "Ihre Betroffenenrechte",
+      "CONTENT": "Unter den angegebenen Kontaktdaten können Sie gemäß EU-Datenschutz-Grundverordnung (DSGVO) jederzeit folgende Rechte ausüben:",
+      "RIGHTS_LIST": [
+        "Auskunft über Ihre bei uns gespeicherten Daten und deren Verarbeitung (Art. 15 DSGVO),",
+        "Berichtigung unrichtiger personenbezogener Daten (Art. 16 DSGVO),",
+        "Löschung Ihrer bei uns gespeicherten Daten (Art. 17 DSGVO),",
+        "Einschränkung der Datenverarbeitung, sofern wir Ihre Daten aufgrund gesetzlicher Pflichten noch nicht löschen dürfen (Art. 18 DSGVO),",
+        "Widerspruch gegen die Verarbeitung Ihrer Daten bei uns (Art. 21 DSGVO) und",
+        "Datenübertragbarkeit, sofern Sie in die Datenverarbeitung eingewilligt haben oder einen Vertrag mit uns abgeschlossen haben (Art. 20 DSGVO)."
+      ],
+      "CONSENT_WITHDRAWAL": "Sofern Sie uns eine Einwilligung erteilt haben, können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen.",
+      "COMPLAINT_RIGHT": "Sie können sich jederzeit mit einer Beschwerde an eine Aufsichtsbehörde wenden, z. B. an die zuständige Aufsichtsbehörde des Bundeslands Ihres Wohnsitzes oder an die für uns als verantwortliche Stelle zuständige Behörde.",
+      "SUPERVISORY_AUTHORITIES": "Eine Liste der Aufsichtsbehörden (für den nichtöffentlichen Bereich) mit Anschrift finden Sie unter: <a href=\"https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html\">https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html</a>."
+    },
+    "PROCESSING_ACTIVITIES": {
+      "TITLE": "Verarbeitungstätigkeiten",
+      "GENERAL_INFO": {
+        "TITLE": "Erfassung allgemeiner Informationen beim Besuch unserer Website",
+        "PURPOSE_TITLE": "Art und Zweck der Verarbeitung",
+        "PURPOSE_CONTENT": "Wenn Sie auf unsere Website zugreifen, d.h., wenn Sie sich nicht registrieren oder anderweitig Informationen übermitteln, werden automatisch Informationen allgemeiner Natur erfasst. Diese Informationen (Server-Logfiles) beinhalten etwa die Art des Webbrowsers, das verwendete Betriebssystem, den Domainnamen Ihres Internet-Service-Providers, Ihre IP-Adresse und ähnliches.",
+        "PURPOSE_LIST": "Sie werden insbesondere zu folgenden Zwecken verarbeitet:",
+        "PURPOSES": ["zur technisch fehlerfreien Darstellung und Optimierung der Website"],
+        "NO_PROFILING": "Wir verwenden Ihre Daten nicht, um Rückschlüsse auf Ihre Person zu ziehen. Allerdings behalten wir uns vor, die Server-Logfiles nachträglich zu überprüfen, sollten konkrete Anhaltspunkte auf eine rechtswidrige Nutzung hinweisen.",
+        "LEGAL_BASIS_TITLE": "Rechtsgrundlage und berechtigtes Interesse",
+        "LEGAL_BASIS": "Die Verarbeitung erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO auf Basis unseres berechtigten Interesses an der Verbesserung der Stabilität und Funktionalität unserer Website sowie der Sicherstellung der Systemsicherheit und Missbrauchserkennung.",
+        "RECIPIENTS_TITLE": "Empfänger",
+        "RECIPIENTS": "Empfänger der Daten sind ggf. technische Dienstleister, die für den Betrieb und die Wartung unserer Webseite als Auftragsverarbeiter tätig werden.",
+        "STORAGE_TITLE": "Speicherdauer",
+        "STORAGE": "Daten werden in Server-Log-Dateien in einer Form, die die Identifizierung der betroffenen Personen ermöglicht, maximal für 14 Tage gespeichert; es sei denn, dass ein sicherheitsrelevantes Ereignis auftritt (z.B. ein DDoS-Angriff).",
+        "STORAGE_EXCEPTION": "Im Falle eines solchen Ereignisses werden Server-Log-Dateien bis zur Beseitigung und vollständigen Aufklärung des sicherheitsrelevanten Ereignisses gespeichert.",
+        "PROVISION_TITLE": "Bereitstellung vorgeschrieben oder erforderlich",
+        "PROVISION": "Die Bereitstellung der vorgenannten personenbezogenen Daten ist weder gesetzlich noch vertraglich vorgeschrieben. Ohne die IP-Adresse ist jedoch der Dienst und die Funktionsfähigkeit unserer Website nicht gewährleistet. Zudem können einzelne Dienste und Services nicht verfügbar oder eingeschränkt sein.",
+        "OBJECTION_TITLE": "Widerspruch",
+        "OBJECTION": "Lesen Sie dazu die Informationen über Ihr Widerspruchsrecht nach Art. 21 DSGVO weiter unten."
+      },
+      "CONTACT": {
+        "TITLE": "Kontaktaufnahme",
+        "PURPOSE_TITLE": "Art und Zweck der Verarbeitung",
+        "PURPOSE_CONTENT": "Auf unserer Website ist ein Kontaktformular vorhanden, welches für die elektronische Kontaktaufnahme genutzt werden kann. Nimmt ein Nutzer diese Möglichkeit wahr, so werden die in der Eingabemaske eingegeben Daten an uns übermittelt und gespeichert.",
+        "TIMESTAMP": "Zum Zeitpunkt der Absendung der Nachricht werden zudem folgende Daten gespeichert:",
+        "TIMESTAMP_LIST": ["Datum und Uhrzeit der Anfrage"],
+        "EMAIL_CONTACT": "Eine Kontaktaufnahme ist über die bereitgestellten E-Mail-Adressen möglich. In diesem Fall werden die mit der E-Mail übermittelten personenbezogenen Daten des Nutzers gespeichert. Hierzu zählen Datum und Uhrzeit des E-Mailversands, E-Mailadresse, IP-Adressen sowie Informationen zu den an der E-Mail-Kommunikation beteiligten Servern.",
+        "PHONE_CONTACT": "Sie können Sie über die bereitgestellten Telefonnummern Kontakt zu uns aufnehmen. Hierbei erheben wir Protokolldaten, die Ihre Telefonnummer und die Dauer des Gesprächs beinhalten.",
+        "COMMUNICATION": "Unabhängig von der gewählten Kommunikationsart erheben wir den Inhalt Ihrer Anfrage. Ihre Daten werden zum Zweck der individuellen Kommunikation mit Ihnen gespeichert.",
+        "LEGAL_BASIS_TITLE": "Rechtsgrundlage",
+        "LEGAL_BASIS": "Die Verarbeitung der Daten erfolgt auf der Grundlage eines berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO).",
+        "LEGITIMATE_INTEREST": "Unser berechtigtes Interesse an der Verarbeitung Ihrer Daten ist die Ermöglichung einer unkomplizierten Kontaktaufnahme.",
+        "CONTRACT_PROCESSING": "Sofern Sie mit uns Kontakt aufnehmen, um ein Angebot zu erfragen, erfolgt die Verarbeitung der Daten zur Durchführung vorvertraglicher Maßnahmen (Art. 6 Abs. 1 lit. b DSGVO).",
+        "RECIPIENTS_TITLE": "Empfänger",
+        "RECIPIENTS": "Empfänger der Daten sind ggf. technische Dienstleister, die für den Betrieb und die Wartung unserer Webseite als Auftragsverarbeiter tätig werden.",
+        "STORAGE_TITLE": "Speicherdauer",
+        "STORAGE": "Die Daten werden nach abschließender Bearbeitung der Anfrage gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.",
+        "RETENTION_PERIODS": "Sofern es zu einem Vertragsverhältnis kommt, unterliegen wir den gesetzlichen Aufbewahrungsfristen. Diese betragen grundsätzlich 6 oder 10 Jahre aus Gründen der ordnungsmäßigen Buchführung und steuerrechtlichen Anforderungen.",
+        "THIRD_COUNTRY_TITLE": "Drittlandtransfer",
+        "THIRD_COUNTRY": "Die erhobenen Daten werden ggfs. in folgende Drittländer übertragen:",
+        "THIRD_COUNTRY_LIST": "USA",
+        "SAFEGUARDS": "Folgende Datenschutzgarantien liegen vor:",
+        "ADEQUACY_DECISION": "Angemessenheitsbeschluss der EU-Kommission",
+        "PROVISION_TITLE": "Bereitstellung vorgeschrieben oder erforderlich",
+        "PROVISION": "Die Bereitstellung Ihrer personenbezogenen Daten erfolgt freiwillig. Wir können Ihre Anfrage jedoch nur bearbeiten, sofern Sie uns die erforderlichen Daten und den Grund der Anfrage mitteilen.",
+        "OBJECTION_TITLE": "Widerspruch",
+        "OBJECTION": "Lesen Sie dazu die Informationen über Ihr Widerspruchsrecht nach Art. 21 DSGVO weiter unten."
+      }
+    },
+    "RIGHT_TO_OBJECT": {
+      "TITLE": "Information über Ihr Widerspruchsrecht nach Art. 21 DSGVO",
+      "INDIVIDUAL_OBJECTION_TITLE": "Einzelfallbezogenes Widerspruchsrecht",
+      "INDIVIDUAL_OBJECTION": "Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung Sie betreffender personenbezogener Daten, die aufgrund Art. 6 Abs. 1 lit. f DSGVO (Datenverarbeitung auf der Grundlage einer Interessenabwägung) erfolgt, Widerspruch einzulegen; dies gilt auch für ein auf diese Bestimmung gestütztes Profiling im Sinne von Art. 4 Nr. 4 DSGVO.",
+      "OBJECTION_CONSEQUENCE": "Legen Sie Widerspruch ein, werden wir Ihre personenbezogenen Daten nicht mehr verarbeiten, es sei denn, wir können zwingende schutzwürdige Gründe für die Verarbeitung nachweisen, die Ihre Interessen, Rechte und Freiheiten überwiegen, oder die Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.",
+      "RECIPIENT_TITLE": "Empfänger eines Widerspruchs",
+      "RECIPIENT": "Viktor Naumann"
     },
     "CHANGES": {
-      "TITLE": "Änderungen der Datenschutzerklärung",
-      "CONTENT": "Diese Datenschutzerklärung kann gelegentlich aktualisiert werden. Bitte überprüfen Sie diese Seite regelmäßig."
+      "TITLE": "Änderung unserer Datenschutzerklärung",
+      "CONTENT": "Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen, z.B. bei der Einführung neuer Services. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung."
+    },
+    "QUESTIONS": {
+      "TITLE": "Fragen zum Datenschutz",
+      "CONTENT": "Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail an den oben genannten Verantwortlichen."
+    },
+    "COPYRIGHT_NOTICE": {
+      "TITLE": "Urheberrechtliche Hinweise",
+      "CONTENT": "<em>Diese Datenschutzerklärung wurde mit Hilfe der activeMind AG erstellt – den Experten für <a href=\"https://www.activemind.de/datenschutz/datenschutzbeauftragter/\" target=\"_blank\" rel=\"noopener dofollow\">externe Datenschutzbeauftragte</a> (Version #2024-10-25).</em>"
     }
   },
   "LEGAL_NOTICE": {
