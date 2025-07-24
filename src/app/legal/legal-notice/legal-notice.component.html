@@ -8,27 +8,53 @@
 
     <div class="content-wrapper">
       <h1>{{ 'LEGAL_NOTICE.TITLE' | translate }}</h1>
+      <p>{{ 'LEGAL_NOTICE.TMG_SUBTITLE' | translate }}</p>
       
       <section>
-        <h2>{{ 'LEGAL_NOTICE.CONTACT_INFO.TITLE' | translate }}</h2>
-        <p>{{ 'LEGAL_NOTICE.CONTACT_INFO.NAME' | translate }}</p>
-        <p>{{ 'LEGAL_NOTICE.CONTACT_INFO.ADDRESS' | translate }}</p>
-        <p>{{ 'LEGAL_NOTICE.CONTACT_INFO.EMAIL' | translate }}</p>
+        <p>{{ 'LEGAL_NOTICE.CONTACT_INFO.NAME' | translate }}<br><br>
+        <span [innerHTML]="'LEGAL_NOTICE.CONTACT_INFO.ADDRESS' | translate"></span><br></p>
+        
+        <p><strong>{{ 'LEGAL_NOTICE.CONTACT_INFO.REPRESENTED_BY' | translate }}</strong><br>
+        {{ 'LEGAL_NOTICE.CONTACT_INFO.REPRESENTATIVE' | translate }}<br></p>
+        
+        <p><strong>{{ 'LEGAL_NOTICE.CONTACT_INFO.CONTACT_TITLE' | translate }}</strong><br>
+        {{ 'LEGAL_NOTICE.CONTACT_INFO.PHONE' | translate }}<br>
+        <span [innerHTML]="'LEGAL_NOTICE.CONTACT_INFO.EMAIL' | translate"></span><br></p>
       </section>
 
       <section>
-        <h2>{{ 'LEGAL_NOTICE.DISCLAIMER.TITLE' | translate }}</h2>
-        <p>{{ 'LEGAL_NOTICE.DISCLAIMER.CONTENT' | translate }}</p>
+        <p><strong>{{ 'LEGAL_NOTICE.DISCLAIMER.TITLE' | translate }}</strong><br><br>
+        <strong>{{ 'LEGAL_NOTICE.DISCLAIMER.CONTENT_LIABILITY_TITLE' | translate }}</strong><br><br>
+        {{ 'LEGAL_NOTICE.DISCLAIMER.CONTENT_LIABILITY' | translate }}<br><br></p>
       </section>
 
       <section>
-        <h2>{{ 'LEGAL_NOTICE.LIABILITY.TITLE' | translate }}</h2>
-        <p>{{ 'LEGAL_NOTICE.LIABILITY.CONTENT' | translate }}</p>
+        <p><strong>{{ 'LEGAL_NOTICE.LIABILITY.TITLE' | translate }}</strong><br><br>
+        {{ 'LEGAL_NOTICE.LIABILITY.CONTENT' | translate }}<br><br></p>
       </section>
 
       <section>
-        <h2>{{ 'LEGAL_NOTICE.COPYRIGHT.TITLE' | translate }}</h2>
-        <p>{{ 'LEGAL_NOTICE.COPYRIGHT.CONTENT' | translate }}</p>
+        <p><strong>{{ 'LEGAL_NOTICE.COPYRIGHT.TITLE' | translate }}</strong><br><br>
+        {{ 'LEGAL_NOTICE.COPYRIGHT.CONTENT' | translate }}<br><br></p>
+      </section>
+
+      <section>
+        <p><strong>{{ 'LEGAL_NOTICE.PRIVACY.TITLE' | translate }}</strong><br><br>
+        <span [innerHTML]="'LEGAL_NOTICE.PRIVACY.CONTENT' | translate"></span><br><br></p>
+      </section>
+
+      <section>
+        <p><strong>{{ 'LEGAL_NOTICE.GOOGLE_ANALYTICS.TITLE' | translate }}</strong><br><br>
+        {{ 'LEGAL_NOTICE.GOOGLE_ANALYTICS.CONTENT' | translate }}<br><br></p>
+      </section>
+
+      <section>
+        <p><strong>{{ 'LEGAL_NOTICE.GOOGLE_ADSENSE.TITLE' | translate }}</strong><br><br>
+        {{ 'LEGAL_NOTICE.GOOGLE_ADSENSE.CONTENT' | translate }}<br><br></p>
+      </section>
+
+      <section>
+        <p><span [innerHTML]="'LEGAL_NOTICE.CREDITS' | translate"></span></p>
       </section>
     </div>
   </div>

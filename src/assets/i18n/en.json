@@ -137,23 +137,41 @@
   "LEGAL_NOTICE": {
     "TITLE": "Legal Notice",
     "BACK_TO_HOME": "Back to Home",
+    "TMG_SUBTITLE": "Information according to § 5 DDG",
     "CONTACT_INFO": {
-      "TITLE": "Information according to § 5 TMG",
       "NAME": "Viktor Naumann",
-      "ADDRESS": "Sample Street 123\n12345 Hamburg",
-      "EMAIL": "E-Mail: viktor@example.com"
+      "ADDRESS": "Friedrich-Frank-Bogen 27b<br>21033 Hamburg",
+      "REPRESENTED_BY": "Represented by:",
+      "REPRESENTATIVE": "Viktor Naumann",
+      "CONTACT_TITLE": "Contact:",
+      "PHONE": "Phone: 017642970326",
+      "EMAIL": "E-Mail: <a href='mailto:Viktor_Naumann@hotmail.de'>Viktor_Naumann@hotmail.de</a>"
     },
     "DISCLAIMER": {
-      "TITLE": "Disclaimer",
-      "CONTENT": "The contents of these pages have been created with the utmost care. However, we cannot guarantee the accuracy, completeness and timeliness of the content."
+      "TITLE": "Disclaimer:",
+      "CONTENT_LIABILITY_TITLE": "Liability for Content",
+      "CONTENT_LIABILITY": "The contents of our pages have been created with the greatest care. However, we cannot guarantee the accuracy, completeness and timeliness of the content. As service providers, we are liable for our own content on these pages in accordance with § 7, para.1 of the DDG under general law. However, pursuant to §§ 8 to 10 of the DDG, we as service providers are not under obligation to monitor submitted or stored information of third parties, or investigate circumstances pointing to illegal activity. Obligations to remove or block the use of information under the general laws remain unaffected. However, liability in this regard is only possible from the point in time at which a concrete infringement of law becomes known. Upon becoming aware of corresponding violations of the law, we will remove this content immediately."
     },
     "LIABILITY": {
       "TITLE": "Liability for Links",
-      "CONTENT": "Our offer contains links to external websites of third parties, on whose contents we have no influence. Therefore, we cannot assume any liability for these external contents."
+      "CONTENT": "Our offer contains links to external websites of third parties, on whose contents we have no influence. Therefore, we cannot assume any liability for these external contents. For the content of the linked pages, the respective provider or operator of the pages is always responsible. The linked pages were checked for possible violations of law at the time of linking. Illegal contents were not detected at the time of linking. However, permanent monitoring of the content of linked pages cannot be imposed without reasonable indications that there has been a violation of law. Upon notification of violations, we will remove such links immediately."
     },
     "COPYRIGHT": {
       "TITLE": "Copyright",
-      "CONTENT": "The content and works created by the site operators on these pages are subject to German copyright law."
-    }
+      "CONTENT": "The content and works created by the site operators on these pages are subject to German copyright law. Duplication, processing, distribution, or any form of commercialization of such material beyond the scope of the copyright law shall require the prior written consent of its respective author or creator. Downloads and copies of this site are only permitted for private, non-commercial use. Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. In particular, third-party content is identified as such. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. If we become aware of any infringements, we will remove such content immediately."
+    },
+    "PRIVACY": {
+      "TITLE": "Data Privacy",
+      "CONTENT": "The use of our website is usually possible without indicating personal data. Insofar as personal data (for example name, address or email addresses) are collected on our pages, this is always done on a voluntary basis, as far as possible. These data will not be passed on to third parties without your express consent.<br>We point out that data transmission in the internet (e.g. when communicating by e-mail) may present security gaps. A complete protection of your data from access by third parties is not possible.<br>We hereby expressly prohibit the use of contact data published in the context of website legal notice requirements with regard to sending promotional and informational materials not expressly requested. The website operator reserves the right to take specific legal action if unsolicited advertising material, such as email spam, is received."
+    },
+    "GOOGLE_ANALYTICS": {
+      "TITLE": "Google Analytics",
+      "CONTENT": "This website uses Google Analytics, a web analytics service provided by Google Inc. ('Google'). Google Analytics uses so-called 'cookies', which are text files placed on your computer, to help the website analyze how users use the site. The information generated by the cookie about your use of the website will be transmitted to and stored by Google on servers in the United States. Google will use this information for the purpose of evaluating your use of the website, compiling reports on website activity for website operators and providing them other services relating to website activity and internet usage. Google may also transfer this information to third parties where required to do so by law, or where such third parties process the information on Google's behalf. Google will not associate your IP address with any other data held by Google. You may refuse the use of cookies by selecting the appropriate settings on your browser, however please note that if you do this you may not be able to use the full functionality of this website. By using this website, you consent to the processing of data about you by Google in the manner and for the purposes set out above."
+    },
+    "GOOGLE_ADSENSE": {
+      "TITLE": "Google AdSense",
+      "CONTENT": "This website uses Google AdSense, a service for including advertisements from Google Inc. ('Google'). Google AdSense uses so-called 'cookies', which are text files stored in your computer that enable an analysis of the use of the website by you. Google AdSense also uses so-called web beacons (invisible graphics). Through these web beacons, information such as the visitor traffic on these pages can be evaluated. The information generated by cookies and web beacons about your use of this website and delivery of advertising formats are transmitted to a Google server in the USA and stored there. This information can be passed on from Google to contracting parties of Google. However, Google will not merge your IP-address with other data stored by Google. You can prevent the installation of cookies by setting your browser software accordingly; however, we point out that in this case you may not be able to use all functions of this website to their full extent. By using this website, you declare your consent to the processing of data collected about you by Google in the manner described above and for the purpose specified above."
+    },
+    "CREDITS": "Created with <a href='https://impressum-generator.de' rel='dofollow'>Impressum-Generator.de</a>, the tool for legal notice and <a href='https://impressum-generator.de/datenschutz-generator' rel='dofollow'>privacy policy</a>. Based on a template from <a href='https://www.kanzlei-hasselbach.de/' rel='dofollow'>Kanzlei Hasselbach</a>."
   }
 }
