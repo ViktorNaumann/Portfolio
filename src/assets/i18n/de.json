@@ -88,6 +88,8 @@
     "NAME_ERROR_PLACEHOLDER": "Ups! Es scheint, als würde dein Name fehlen",
     "EMAIL_PLACEHOLDER": "deineemail@email.de",
     "EMAIL_ERROR_PLACEHOLDER": "Hoppla! Deine E-Mail wird benötigt",
+    "EMAIL_REQUIRED_ERROR": "E-Mail-Adresse ist erforderlich",
+    "EMAIL_INVALID_ERROR": "Gültige E-Mail-Adresse eingeben (z.B. name@domain.com)",
     "MESSAGE_PLACEHOLDER": "Hallo Viktor, ich bin interessiert an...",
     "MESSAGE_ERROR_PLACEHOLDER": "Was möchtest du entwickeln lassen?",
     "PRIVACY_POLICY_TEXT": "Ich habe die",

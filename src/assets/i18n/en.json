@@ -88,6 +88,8 @@
     "NAME_ERROR_PLACEHOLDER": "Oops! it seems your name is missing",
     "EMAIL_PLACEHOLDER": "youremail@email.com",
     "EMAIL_ERROR_PLACEHOLDER": "Hoppla! your email is required",
+    "EMAIL_REQUIRED_ERROR": "Email address is required",
+    "EMAIL_INVALID_ERROR": "Please enter a valid email address (e.g. name@domain.com)",
     "MESSAGE_PLACEHOLDER": "Hello Viktor, I am interested in...",
     "MESSAGE_ERROR_PLACEHOLDER": "What do you need to develop?",
     "PRIVACY_POLICY_TEXT": "I've read the",

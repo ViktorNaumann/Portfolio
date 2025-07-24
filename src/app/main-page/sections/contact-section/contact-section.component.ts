@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ReactiveFormsModule, FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { TranslatePipe, TranslateService } from "@ngx-translate/core";
 import { HttpClient } from '@angular/common/http';
@@ -27,10 +27,33 @@ export class ContactSectionComponent {
   ) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required, this.customEmailValidator]],
       message: ['', Validators.required],
       privacyPolicy: [false, Validators.requiredTrue]
     });
+  }
+
+  // Benutzerdefinierte E-Mail-Validierung
+  customEmailValidator(control: AbstractControl): { [key: string]: any } | null {
+    const email = control.value;
+    
+    if (!email) {
+      return null; // Leer ist ok, required validator kümmert sich darum
+    }
+
+    // Prüft auf @-Zeichen
+    if (!email.includes('@')) {
+      return { invalidEmail: { message: 'E-Mail muss ein @-Zeichen enthalten' } };
+    }
+
+    // Einfache aber effektive E-Mail-Regex mit gängigen Domain-Endungen
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|de|org|net|edu|gov|mil|int|eu|co\.uk|co|info|biz|name|museum|aero|jobs|travel|mobi|tel|asia|cat|post|xxx|berlin|hamburg|bayern|nrw|saarland|app|dev|tech|io|ai|me|ly|cc|tv|fm|am|ws|tk|ml|cf|ga)$/i;
+    
+    if (!emailPattern.test(email)) {
+      return { invalidEmail: { message: 'Ungültige E-Mail-Adresse' } };
+    }
+
+    return null; // E-Mail ist gültig
   }
 
   changeLanguage(language: string) {
@@ -46,7 +69,15 @@ export class ContactSectionComponent {
 
   getEmailPlaceholder(): string {
     if (this.formSubmitted && this.contactForm.get('email')?.errors) {
-      return this.translate.instant('CONTACT.EMAIL_ERROR_PLACEHOLDER');
+      const errors = this.contactForm.get('email')?.errors;
+      
+      if (errors?.['required']) {
+        return this.translate.instant('CONTACT.EMAIL_REQUIRED_ERROR') || 'E-Mail ist erforderlich';
+      }
+      
+      if (errors?.['invalidEmail']) {
+        return this.translate.instant('CONTACT.EMAIL_INVALID_ERROR') || 'Gültige E-Mail-Adresse eingeben (z.B. name@domain.com)';
+      }
     }
     return this.translate.instant('CONTACT.EMAIL_PLACEHOLDER');
   }
