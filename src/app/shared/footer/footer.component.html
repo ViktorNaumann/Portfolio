@@ -3,7 +3,9 @@
     <div class="footer-content">
       <div class="logo-and-legal-section">
         <div class="logo">
-          <img src="assets/img/header/logo.png" alt="Viktor Naumann Logo" class="logo-img">
+          <a [routerLink]="['/']" fragment="hero">
+            <img src="assets/img/header/logo.png" alt="Viktor Naumann Logo" class="logo-img">
+          </a>
           <p class="copyright">© Viktor Naumann 2024</p>
         </div>
         <a [routerLink]="['/legal-notice']" class="footer-link legal-notice">{{ 'FOOTER.LEGAL_NOTICE' | translate }}</a>
