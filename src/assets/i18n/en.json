@@ -94,7 +94,9 @@
     "PRIVACY_POLICY_LINK": "privacy policy",
     "PRIVACY_POLICY_AGREE": "and agree to the processing of my data as outlined.",
     "PRIVACY_POLICY_ERROR": "Please accept the privacy policy.",
-    "SEND": "Send"
+    "SEND": "Send",
+    "SUCCESS_MESSAGE": "Your message was sent successfully! I will get back to you soon.",
+    "ERROR_MESSAGE": "Error sending message. Please try again later or contact me directly via email."
   },
   "FOOTER": {
     "LEGAL_NOTICE": "Legal Notice",

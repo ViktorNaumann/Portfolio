@@ -94,7 +94,9 @@
     "PRIVACY_POLICY_LINK": "Datenschutzerklärung",
     "PRIVACY_POLICY_AGREE": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
     "PRIVACY_POLICY_ERROR": "Bitte akzeptiere die Datenschutzerklärung.",
-    "SEND": "Senden"
+    "SEND": "Senden",
+    "SUCCESS_MESSAGE": "Deine Nachricht wurde erfolgreich gesendet! Ich werde mich bald bei dir melden.",
+    "ERROR_MESSAGE": "Fehler beim Senden der Nachricht. Bitte versuche es später erneut oder kontaktiere mich direkt per E-Mail."
   },
   "FOOTER": {
     "LEGAL_NOTICE": "Impressum",

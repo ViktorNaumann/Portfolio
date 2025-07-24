@@ -89,12 +89,16 @@
               <img src="assets/img/contact/Color option 3.png" alt="Arrow decoration" class="arrow-image">
               <button 
                 type="submit" 
-                [disabled]="!contactForm.get('privacyPolicy')?.value"
-                [ngClass]="{'disabled': !contactForm.get('privacyPolicy')?.value}">
-                {{ 'CONTACT.SEND' | translate }}
+                [disabled]="!contactForm.get('privacyPolicy')?.value || isSubmitting"
+                [ngClass]="{'disabled': !contactForm.get('privacyPolicy')?.value || isSubmitting}">
+                {{ isSubmitting ? 'Senden...' : ('CONTACT.SEND' | translate) }}
               </button>
             </div>
           </form>
+
+          <div *ngIf="submitMessage" class="submit-message" [ngClass]="submitMessageType">
+            {{ submitMessage }}
+          </div>
         </div>
       </div>
     </div>

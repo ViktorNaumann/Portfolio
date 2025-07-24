@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { TranslatePipe, TranslateService } from "@ngx-translate/core";
+import { HttpClient } from '@angular/common/http';
 import { FooterComponent } from '../../../shared/footer/footer.component';
 
 @Component({
@@ -15,10 +16,14 @@ import { FooterComponent } from '../../../shared/footer/footer.component';
 export class ContactSectionComponent {
   contactForm: FormGroup;
   formSubmitted = false;
+  isSubmitting = false;
+  submitMessage = '';
+  submitMessageType: 'success' | 'error' | '' = '';
 
   constructor(
     private fb: FormBuilder,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private http: HttpClient
   ) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
@@ -55,9 +60,34 @@ export class ContactSectionComponent {
 
   onSubmit() {
     this.formSubmitted = true;
-    if (this.contactForm.valid) {
-      // Form submission logic
-      console.log(this.contactForm.value);
+    if (this.contactForm.valid && !this.isSubmitting) {
+      this.isSubmitting = true;
+      this.submitMessage = '';
+      
+      // URL zur sendMail.php auf deinem Server (Root-Verzeichnis)
+      const phpScriptUrl = 'https://viktor-naumann.de/sendMail.php'; // Passe diese URL an deine Domain an
+      
+      const formData = {
+        name: this.contactForm.get('name')?.value,
+        email: this.contactForm.get('email')?.value,
+        message: this.contactForm.get('message')?.value
+      };
+
+      this.http.post(phpScriptUrl, formData).subscribe({
+        next: (response) => {
+          this.submitMessage = this.translate.instant('CONTACT.SUCCESS_MESSAGE') || 'Nachricht erfolgreich gesendet!';
+          this.submitMessageType = 'success';
+          this.contactForm.reset();
+          this.formSubmitted = false;
+          this.isSubmitting = false;
+        },
+        error: (error) => {
+          console.error('Fehler beim Senden der E-Mail:', error);
+          this.submitMessage = this.translate.instant('CONTACT.ERROR_MESSAGE') || 'Fehler beim Senden der Nachricht. Bitte versuchen Sie es später erneut.';
+          this.submitMessageType = 'error';
+          this.isSubmitting = false;
+        }
+      });
     }
   }
 }

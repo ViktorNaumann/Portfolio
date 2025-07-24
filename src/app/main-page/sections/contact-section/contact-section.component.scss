@@ -415,6 +415,54 @@ $error-color: #FF3A00;
       }
     }
   }
+  
+  .submit-message {
+    margin-top: 1.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: $main-font;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease-in-out;
+    
+    // Standard styling (kann für beide verwendet werden)
+    background-color: rgba(248, 249, 250, 0.1);
+    color: $primary-text-color;
+    border: 1px solid rgba(248, 249, 250, 0.3);
+    
+    // Erfolgs-Stil (grün) - wird angewendet wenn die Nachricht "erfolgreich" enthält
+    &.success {
+      background-color: rgba(40, 167, 69, 0.2);
+      color: #28a745;
+      border: 1px solid rgba(40, 167, 69, 0.4);
+    }
+    
+    // Fehler-Stil (rot) - wird angewendet wenn die Nachricht "Fehler" enthält
+    &.error {
+      background-color: rgba(220, 53, 69, 0.2);
+      color: #dc3545;
+      border: 1px solid rgba(220, 53, 69, 0.4);
+    }
+    
+    @media (max-width: 768px) {
+      font-size: 12px;
+      padding: 0.8rem 1rem;
+      margin-top: 1rem;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 app-footer {
