@@ -31,7 +31,7 @@ export class ProjectDataService {
       technologies: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
       implementationDetails: 'Entwicklung eines Task-Management-Systems mit Drag-and-Drop-Funktionalität. Implementierung von Benutzerauthentifizierung, Kategorisierung und kollaborativen Features für Teamarbeit.',
       githubUrl: 'https://github.com/ViktorNaumann/join',
-      liveTestUrl: 'https://join-app.com'
+      liveTestUrl: 'https://viktor-naumann.de/Join'
     },
     {
       id: 2,
@@ -43,7 +43,7 @@ export class ProjectDataService {
       technologies: ['JavaScript', 'HTML', 'CSS'],
       implementationDetails: 'Entwicklung eines 2D-Plattformspiels mit objektorientiertem JavaScript. Implementierung von Spielphysik, Kollisionserkennung, Sound-Management und responsivem Game-Design.',
       githubUrl: 'https://github.com/ViktorNaumann/El-Pollo-Loco',
-      liveTestUrl: 'https://el-pollo-loco.com'
+      liveTestUrl: 'https://viktor-naumann.de/El-Pollo-Loco'
     },
     {
       id: 3,
