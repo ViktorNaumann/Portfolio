@@ -28,8 +28,8 @@ $light-gray: #F8F9FA;
 
 .project-detail-container {
   height: 100vh;
-  background-image: url('./../../../../assets/img/projects-card/Note book paper.png');
-  background: #1d1d1d url('./../../../../assets/img/projects-card/Note book paper.png') center/cover no-repeat;
+  background-image: url('./../../../../assets/img/projects-card/Note book paper.webp');
+  background: #1d1d1d url('./../../../../assets/img/projects-card/Note book paper.webp') center/cover no-repeat;
   @include flex-center;
   flex-direction: column;
   justify-content: center;
@@ -439,7 +439,7 @@ $light-gray: #F8F9FA;
 @media (max-width: 900px) {
   .project-detail-container {
     background: #1d1d1d;
-    background-image: url('./../../../../assets/img/projects-card/Note book paper.png');
+    background-image: url('./../../../../assets/img/projects-card/Note book paper.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

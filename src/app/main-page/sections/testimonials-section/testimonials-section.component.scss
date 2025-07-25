@@ -71,11 +71,11 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
       cursor: pointer;
       
       &.variant-a {
-        background-image: url('./../../../../assets/img/colleagues/A.png');
+        background-image: url('./../../../../assets/img/colleagues/A.webp');
       }
       
       &.variant-b {
-        background-image: url('./../../../../assets/img/colleagues/b.png');
+        background-image: url('./../../../../assets/img/colleagues/b.webp');
       }
       
       &:hover {
@@ -88,7 +88,7 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
           left: 0;
           width: 100%;
           height: 100%;
-          background-image: url('./../../../../assets/img/colleagues/Line.png');
+          background-image: url('./../../../../assets/img/colleagues/Line.webp');
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
