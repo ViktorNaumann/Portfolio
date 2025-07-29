@@ -135,9 +135,9 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
         box-sizing: border-box;
         
         .testimonial-text {
-          @include typography(400, 16px);
-          line-height: 1.4;
-          margin-bottom: 20px;
+          @include typography(400, 14px);
+          line-height: 1.3;
+          margin-bottom: 18px;
           flex-grow: 1;
           text-shadow: $shadow;
         }
@@ -165,6 +165,34 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
             width: clamp(45px, 4.5vw, 64px);
             height: clamp(12px, 1.2vw, 18px);
             flex-shrink: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1066px) {
+  .testimonials-section {
+    .cards-div {
+      .testimonial-card {
+        .card-content {
+          .testimonial-text {
+            @include typography(400, 11px);
+            line-height: 1.25;
+            margin-bottom: 14px;
+          }
+          
+          .author-info {
+            .author-details {
+              .author-name {
+                @include typography(700, 15px);
+              }
+              
+              .author-title {
+                @include typography(500, 11px);
+              }
+            }
           }
         }
       }
@@ -251,11 +279,22 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
           padding: 24px 20px;
           
           .testimonial-text {
-            line-height: 1.3;
-            margin-bottom: 15px;
+            font-size: 11px;
+            line-height: 1.25;
+            margin-bottom: 12px;
           }
           
           .author-info {
+            .author-details {
+              .author-name {
+                font-size: 15px;
+              }
+              
+              .author-title {
+                font-size: 11px;
+              }
+            }
+            
             .linkedin-icon {
               width: 50px;
               height: 14px;
@@ -302,18 +341,19 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
           padding: 22px 18px;
           
           .testimonial-text {
-            font-size: 15px;
-            margin-bottom: 14px;
+            font-size: 10px;
+            line-height: 1.2;
+            margin-bottom: 10px;
           }
           
           .author-info {
             .author-details {
               .author-name {
-                font-size: 17px;
+                font-size: 14px;
               }
               
               .author-title {
-                font-size: 13px;
+                font-size: 10px;
               }
             }
             
@@ -388,18 +428,19 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
           padding: 20px 16px;
           
           .testimonial-text {
-            font-size: 14px;
-            margin-bottom: 12px;
+            font-size: 9px;
+            line-height: 1.15;
+            margin-bottom: 8px;
           }
           
           .author-info {
             .author-details {
               .author-name {
-                font-size: 16px;
+                font-size: 13px;
               }
               
               .author-title {
-                font-size: 12px;
+                font-size: 9px;
               }
             }
             
