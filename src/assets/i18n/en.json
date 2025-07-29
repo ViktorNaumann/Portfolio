@@ -63,16 +63,16 @@
     "IN_THEIR_WORDS": "IN THEIR WORDS:",
     "COLLEAGUES_THOUGHTS": "Colleagues' Thoughts",
     "TESTIMONIAL_1": {
-      "TEXT": "Viktor is a highly skilled developer with great attention to detail. His problem-solving abilities and collaborative approach make him an excellent team member.",
+      "TEXT": "Dear Viktor, there are two keywords that immediately come to mind when I think of you: lightning-fast and harmony! :D You complete tasks in impressively short time with absolute reliability. You maintain calm and harmony at all times, which in my eyes is a real talent. Your helpful and committed nature make you a true pillar of the team, and I appreciate that tremendously. I hope we will continue to work together on more projects in the future!",
       "AUTHOR_TITLE": "Frontend Developer"
     },
     "TESTIMONIAL_2": {
-      "TEXT": "Working with Viktor has been a pleasure. He consistently delivers high-quality code and is always willing to help others learn and grow.",
-      "AUTHOR_TITLE": "Project Manager"
+      "TEXT": "Viktor, working with you on our shared business project JOIN was consistently pleasant and enriching. Your calm and composed nature brings stability to the team, and I find it impressive how you solve problems independently without losing sight of others. You are always helpful, reliable, and a true anchor of calm in the project. I greatly appreciate your dedication and look forward to working together on something again!",
+      "AUTHOR_TITLE": "Frontend Developer"
     },
     "TESTIMONIAL_3": {
       "TEXT": "Viktor's technical expertise and dedication to clean code are impressive. He brings innovative solutions to complex challenges and mentors junior developers effectively.",
-      "AUTHOR_TITLE": "Senior Software Engineer"
+      "AUTHOR_TITLE": "Frontend Developer"
     }
   },
   "CONTACT": {

@@ -23,19 +23,19 @@ export class TestimonialsSectionComponent {
   testimonials: Testimonial[] = [
     {
       id: 1,
-      text: 'Working with you was an absolute pleasure. Your attention to detail, clean code, and ability to translate complex UI/UX designs into seamless, responsive interfaces made a huge impact on our product. You always met deadlines, communicated clearly, and collaborated effectively across teams. Any frontend team would be lucky to have you.',
-      authorName: 'John Doe',
-      authorTitle: 'CEO, Example Corp',
-      profileLink: 'https://www.linkedin.com/in/johndoe',
+      text: 'Dear Viktor, there are two keywords that immediately come to mind when I think of you: lightning-fast and harmony! :D You complete tasks in impressively short time with absolute reliability. You maintain calm and harmony at all times, which in my eyes is a real talent. Your helpful and committed nature make you a true pillar of the team, and I appreciate that tremendously. I hope we will continue to work together on more projects in the future!',
+      authorName: 'Dr. Michelle Puschkarow',
+      authorTitle: 'Frontend Developer',
+      profileLink: 'https://www.linkedin.com/in/michellepuschkarow',
       cardClass: 'card-1',
       imageVariant: 'variant-a'
     },
     {
       id: 2,
-      text: 'You made our designs come to life exactly how we envisioned them—and often even better. Your deep understanding of CSS, animations, and accessibility took the user experience to the next level. I always felt like my work was in good hands with you on the frontend. Thank you for bringing such care and precision to every pixel.',
-      authorName: 'Jane Smith',
-      authorTitle: 'CTO, Another Example',
-      profileLink: 'https://www.linkedin.com/in/janesmith',
+      text: 'Viktor, working with you on our shared business project JOIN was consistently pleasant and enriching. Your calm and composed nature brings stability to the team, and I find it impressive how you solve problems independently without losing sight of others. You are always helpful, reliable, and a true anchor of calm in the project. I greatly appreciate your dedication and look forward to working together on something again!',
+      authorName: 'Marco Palummieri',
+      authorTitle: 'Frontend Developer',
+      profileLink: 'https://www.linkedin.com/in/marcopalummieri',
       cardClass: 'card-2',
       imageVariant: 'variant-b'
     },
@@ -43,7 +43,7 @@ export class TestimonialsSectionComponent {
       id: 3,
       text: 'You are one of the most reliable frontend developers I\'ve worked with. You not only write scalable and maintainable code, but also think ahead—anticipating edge cases and improving performance where it counts. I appreciated your initiative, especially when you introduced improvements to our component library.',
       authorName: 'Alice Johnson',
-      authorTitle: 'Product Manager, Tech Co.',
+      authorTitle: 'Frontend Developer',
       profileLink: 'https://www.linkedin.com/in/alicejohnson',
       cardClass: 'card-3',
       imageVariant: 'variant-a'
