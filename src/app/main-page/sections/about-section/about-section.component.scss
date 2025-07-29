@@ -68,12 +68,22 @@ section {
       justify-content: center;
       pointer-events: none;
       user-select: none;
+
+      @media (max-width: 1390px) and (min-width: 1024px) {
+        gap: clamp(4px, 1vw, 16px);
+        font-size: clamp(10px, 2.2vw, 24px);
+      }
     }
 
     .about-icon {
       width: clamp(24px, 6vw, 36px);
       height: clamp(24px, 6vw, 36px);
       filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+
+      @media (max-width: 1390px) and (min-width: 1024px) {
+        width: clamp(16px, 4vw, 36px);
+        height: clamp(16px, 4vw, 36px);
+      }
     }
   }
 
