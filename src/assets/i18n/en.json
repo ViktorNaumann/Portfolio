@@ -1,6 +1,9 @@
 {
-  "HEADER": {
-    "ABOUT_ME": "About me",
+  "HEADER": {    "WHOS_VIKTOR": "WHO'S VIKTOR?",
+    "TITLE": "About me",
+    "DESCRIPTION_PARAGRAPH_1": "Hi, I'm Viktor and I'm passionate about programming. What really appeals to me is finding clever and clean solutions – especially when things get tricky. IT excites me because I can constantly discover new technologies and develop myself further. I see challenges as an opportunity to learn something and get better. With proven methods, teamwork and a good dose of curiosity, I approach every project in such a way that the end result is something to be proud of.",
+    "DESCRIPTION_PARAGRAPH_2": "Let's have a chat and see what we can achieve together!",
+    "GET_IN_TOUCH": "Get in Touch", "ABOUT_ME": "About me",
     "SKILLS": "Skills",
     "PROJECTS": "Projects",
     "CONTACT": "Contact"
