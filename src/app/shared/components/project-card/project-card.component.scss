@@ -294,12 +294,8 @@ $light-gray: #F8F9FA;
       p {
         @include text-style(clamp(12px, 3.5vw, 16px), 400, $dark-text-color);
         line-height: 1.4;
-        text-align: justify;
+        text-align: left;
         margin-bottom: clamp(6px, 2vh, 10px);
-        
-        @media (max-width: 480px) {
-          text-align: left;
-        }
         
         @media (max-width: 320px) {
           font-size: 12px;
