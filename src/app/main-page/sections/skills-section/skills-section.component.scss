@@ -206,6 +206,76 @@ section {
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
+.hidden-logos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.2s ease 0.05s;
+}
+
+.diving-text {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+  color: #F8F9FA;
+  text-align: center;
+  width: auto;
+  min-width: max-content;
+}
+
+.text-line {
+  line-height: 1.2;
+  margin: 0;
+  display: block;
+  white-space: nowrap;
+}
+
+.logo-with-name {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.n8n-container {
+  top: 45%;
+  left: 20%;
+}
+
+.python-container {
+  top: 45%;
+  right: 20%;
+}
+
+.hidden-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 4px;
+}
+
+.logo-name {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  color: #F8F9FA;
+  text-align: center;
+}
+
+.peel-checkbox:checked + .pull-to-peel .hidden-logos {
+  opacity: 1;
+}
+
 .peel-text-container {
   position: absolute;
   top: 50%;
@@ -216,6 +286,8 @@ section {
   flex-direction: column;
   align-items: center;
   z-index: 10;
+  width: 120px;
+  padding: 10px;
 }
 
 .peel-arrow {
@@ -332,6 +404,28 @@ section {
   .peel-text {
     font-size: 32px;
   }
+
+  .hidden-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .diving-text {
+    font-size: 15px;
+  }
+
+  .text-line {
+    line-height: 1.1;
+  }
+
+  .logo-name {
+    font-size: 13px;
+  }
+
+  .peel-text-container {
+    width: 100px;
+    padding: 8px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -384,6 +478,28 @@ section {
 
   .peel-text {
     font-size: 28px;
+  }
+
+  .hidden-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .diving-text {
+    font-size: 14px;
+  }
+
+  .text-line {
+    line-height: 1.1;
+  }
+
+  .logo-name {
+    font-size: 12px;
+  }
+
+  .peel-text-container {
+    width: 90px;
+    padding: 6px;
   }
 }
 
@@ -438,6 +554,28 @@ section {
 
   .peel-text {
     font-size: 24px;
+  }
+
+  .hidden-logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .diving-text {
+    font-size: 13px;
+  }
+
+  .text-line {
+    line-height: 1.0;
+  }
+
+  .logo-name {
+    font-size: 11px;
+  }
+
+  .peel-text-container {
+    width: 80px;
+    padding: 5px;
   }
 }
 
@@ -565,6 +703,28 @@ section {
     font-size: 30px;
     line-height: 0.8;
   }
+
+  .hidden-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .diving-text {
+    font-size: 14px;
+  }
+
+  .text-line {
+    line-height: 1.0;
+  }
+
+  .logo-name {
+    font-size: 12px;
+  }
+
+  .peel-text-container {
+    width: 85px;
+    padding: 6px;
+  }
 }
 
 @media (max-width: 423px) {
@@ -602,6 +762,28 @@ section {
 
   .skill-name {
     font-size: 11px;
+  }
+
+  .hidden-logo {
+    width: 25px;
+    height: 25px;
+  }
+
+  .diving-text {
+    font-size: 10px;
+  }
+
+  .text-line {
+    line-height: 0.9;
+  }
+
+  .logo-name {
+    font-size: 9px;
+  }
+
+  .peel-text-container {
+    width: 70px;
+    padding: 4px;
   }
 }
 
@@ -666,5 +848,27 @@ section {
 
   .peel-text {
     font-size: 20px;
+  }
+
+  .hidden-logo {
+    width: 20px;
+    height: 20px;
+  }
+
+  .diving-text {
+    font-size: 9px;
+  }
+
+  .text-line {
+    line-height: 0.9;
+  }
+
+  .logo-name {
+    font-size: 8px;
+  }
+
+  .peel-text-container {
+    width: 60px;
+    padding: 3px;
   }
 }
