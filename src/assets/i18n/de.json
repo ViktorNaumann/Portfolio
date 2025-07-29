@@ -29,7 +29,7 @@
   "SKILLS": {
     "MY_STACK": "MEIN STACK",
     "SKILL_SET": "Fähigkeiten",
-    "DESCRIPTION_TEXT": "Eine kurze Einführung in deine Fähigkeiten. Hebe deine Erfahrung mit verschiedenen Frontend-Technologien hervor und betone deine Offenheit für das Erlernen und Anpassen an neue Technologien.",
+    "DESCRIPTION_TEXT": "Mein Fokus liegt auf sauberem Frontend-Code mit HTML, CSS, JavaScript und TypeScript. Mit Angular, Firebase und REST-APIs entwickle ich moderne Webanwendungen.",
     "PULL_TO": "Hier öffnen",
     "PEEL": ""
   },
