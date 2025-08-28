@@ -6,7 +6,6 @@
       </a>
     </div>
     
-    <!-- Desktop Navigation -->
     <ul class="nav-menu desktop-menu">
       <li>
         <a [routerLink]="['/']" fragment="about" class="nav-link">
@@ -21,7 +20,7 @@
         </a>
       </li>
       <li>
-        <a [routerLink]="['/']" fragment="projects">
+        <a [routerLink]="['/']" fragment="projects" class="projects-link">
           {{ 'HEADER.PROJECTS' | translate }}
           <img src="assets/img/header/4.png" alt="Projects icon" class="nav-icon">
         </a>
@@ -34,7 +33,6 @@
       </li>
     </ul>
     
-    <!-- Desktop Language Switcher -->
     <div class="language-switcher desktop-language">
       <div class="language-container" (click)="setLanguage(false)">
         <span class="language" [class.active]="!isGerman">EN</span>
@@ -52,7 +50,6 @@
       </div>
     </div>
 
-    <!-- Mobile Burger Menu Button -->
     <div class="burger-menu" (click)="toggleMobileMenu()" [class.active]="isMobileMenuOpen">
       <span></span>
       <span></span>
@@ -60,10 +57,8 @@
     </div>
   </div>
 
-  <!-- Mobile Navigation Overlay -->
   <div class="mobile-menu-overlay" [class.active]="isMobileMenuOpen" (click)="closeMobileMenu()">
     <div class="mobile-menu" (click)="$event.stopPropagation()">
-      <!-- Mobile Logo -->
       <div class="mobile-logo">
         <a [routerLink]="['/']" fragment="hero" (click)="closeMobileMenu()">
           <img src="assets/img/header/logo.png" alt="Viktor Logo" class="mobile-logo-image">
@@ -94,7 +89,6 @@
           </li>
         </ul>
 
-        <!-- Mobile Language Switcher -->
         <div class="mobile-language-switcher">
           <div class="language-toggle-container">
             <span class="language-label" [class.active]="!isGerman" (click)="setLanguage(false)">EN</span>
@@ -106,7 +100,6 @@
           </div>
         </div>
 
-        <!-- Mobile Social Links -->
         <div class="mobile-social-links">
           <a href="https://www.linkedin.com/in/viktor-naumann" target="_blank" class="social-link">
             <img src="assets/img/hero/contact-icons/Component 3.webp" alt="LinkedIn">

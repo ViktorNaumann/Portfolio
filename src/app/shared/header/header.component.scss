@@ -82,11 +82,14 @@
           opacity: 1;
         } 
       }
+      
+      &.projects-link .nav-icon {
+        bottom: clamp(-30px, -4vw, -35px);
+      }
     } 
   } 
 }
 
-// Hide desktop menu on mobile
 @media (max-width: 700px) {
   .desktop-menu {
     display: none;
@@ -187,21 +190,19 @@
   }
 }
 
-// Hide desktop language switcher on mobile
 @media (max-width: 700px) {
   .desktop-language {
     display: none;
   }
 }
 
-// Burger Menu Button
 .burger-menu {
   display: none;
   flex-direction: column;
   cursor: pointer;
   padding: 5px;
   gap: 4px;
-  z-index: 1003; // Higher than mobile menu overlay
+  z-index: 1003;
   position: relative;
   
   span {
@@ -231,21 +232,19 @@
   }
 }
 
-// Show burger menu on mobile
 @media (max-width: 700px) {
   .burger-menu {
     display: flex;
   }
 }
 
-// Mobile Menu Overlay
 .mobile-menu-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: 1002; // Higher than navbar z-index (1000)
+  z-index: 1002;
   display: flex;
   justify-content: center;
   align-items: flex-start;
