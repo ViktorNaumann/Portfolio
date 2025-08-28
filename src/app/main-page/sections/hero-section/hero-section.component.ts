@@ -34,7 +34,7 @@ export class HeroSectionComponent implements AfterViewInit {
         const timeout = setTimeout(() => {
           letter.classList.remove('hovered');
           this.hoverTimeouts.delete(letter);
-        }, 100);
+        }, 100) as unknown as number;
         
         this.hoverTimeouts.set(letter, timeout);
       });
