@@ -20,11 +20,12 @@ $transition-base: 0.3s ease;
       content: '';
       position: absolute;
       top: 0;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 0;
+      right: 0;
       width: 100%;
       max-width: 1920px;
       height: 100%;
+      margin: 0 auto;
       background-image: url('./../../../../assets/img/hero/12\ Isolated\ Paper\ Rips\ copia.webp');
       background-size: cover;
       background-repeat: no-repeat;
@@ -310,7 +311,7 @@ $transition-base: 0.3s ease;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .social-icons {
     display: none;
   }
