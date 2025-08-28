@@ -18,6 +18,7 @@ export interface Project {
 @Injectable({
   providedIn: 'root'
 })
+
 export class ProjectDataService {
   private projects: Project[] = [
     {
