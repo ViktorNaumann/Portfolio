@@ -21,7 +21,11 @@ export class AppComponent {
   ) {
     this.translate.addLangs(['de', 'en']);
     this.translate.setDefaultLang('en');
-    this.translate.use('en');
+    
+    // Gespeicherte Sprache aus localStorage laden oder Standard verwenden
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+    this.translate.use(savedLanguage);
+    
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         const fragment = this.router.routerState.root.firstChild?.snapshot.fragment;

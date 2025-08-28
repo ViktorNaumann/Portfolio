@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TranslatePipe, TranslateService } from "@ngx-translate/core";
@@ -11,13 +11,21 @@ import { TranslatePipe, TranslateService } from "@ngx-translate/core";
   styleUrl: './header.component.scss'
 })
 
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   isGerman = false;
   isMobileMenuOpen = false;
+  
   constructor(private translate: TranslateService) {}
+
+  ngOnInit() {
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+    this.isGerman = savedLanguage === 'de';
+    this.translate.use(savedLanguage);
+  }
 
   changeLanguage(language: string) {
     this.translate.use(language);
+    localStorage.setItem('selectedLanguage', language);
   }
 
   toggleLanguage() {
