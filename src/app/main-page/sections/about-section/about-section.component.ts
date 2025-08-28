@@ -10,10 +10,10 @@ import { TranslatePipe, TranslateDirective, TranslateService } from "@ngx-transl
   templateUrl: './about-section.component.html',
   styleUrl: './about-section.component.scss'
 })
+
 export class AboutSectionComponent {
 
   constructor(private translate: TranslateService) {}
-
   changeLanguage(language: string) {
     this.translate.use(language);
   }

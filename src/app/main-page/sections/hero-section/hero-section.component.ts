@@ -10,6 +10,7 @@ import { TranslatePipe, TranslateService } from "@ngx-translate/core";
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss'
 })
+
 export class HeroSectionComponent implements AfterViewInit {
   private hoverTimeouts: Map<HTMLElement, number> = new Map();
 

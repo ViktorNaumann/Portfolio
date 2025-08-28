@@ -13,6 +13,7 @@ import { FooterComponent } from '../../../shared/footer/footer.component';
   templateUrl: './contact-section.component.html',
   styleUrl: './contact-section.component.scss'
 })
+
 export class ContactSectionComponent {
   contactForm: FormGroup;
   formSubmitted = false;
@@ -33,27 +34,19 @@ export class ContactSectionComponent {
     });
   }
 
-  // Benutzerdefinierte E-Mail-Validierung
   customEmailValidator(control: AbstractControl): { [key: string]: any } | null {
     const email = control.value;
-    
     if (!email) {
-      return null; // Leer ist ok, required validator kümmert sich darum
+      return null;
     }
-
-    // Prüft auf @-Zeichen
     if (!email.includes('@')) {
       return { invalidEmail: { message: 'E-Mail muss ein @-Zeichen enthalten' } };
     }
-
-    // Einfache aber effektive E-Mail-Regex mit gängigen Domain-Endungen
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|de|org|net|edu|gov|mil|int|eu|co\.uk|co|info|biz|name|museum|aero|jobs|travel|mobi|tel|asia|cat|post|xxx|berlin|hamburg|bayern|nrw|saarland|app|dev|tech|io|ai|me|ly|cc|tv|fm|am|ws|tk|ml|cf|ga)$/i;
-    
     if (!emailPattern.test(email)) {
       return { invalidEmail: { message: 'Ungültige E-Mail-Adresse' } };
     }
-
-    return null; // E-Mail ist gültig
+    return null;
   }
 
   changeLanguage(language: string) {
@@ -94,16 +87,12 @@ export class ContactSectionComponent {
     if (this.contactForm.valid && !this.isSubmitting) {
       this.isSubmitting = true;
       this.submitMessage = '';
-      
-      // URL zur sendMail.php auf deinem Server (Root-Verzeichnis)
-      const phpScriptUrl = 'https://viktor-naumann.de/sendMail.php'; // Passe diese URL an deine Domain an
-      
+      const phpScriptUrl = 'https://viktor-naumann.de/sendMail.php';
       const formData = {
         name: this.contactForm.get('name')?.value,
         email: this.contactForm.get('email')?.value,
         message: this.contactForm.get('message')?.value
       };
-
       this.http.post(phpScriptUrl, formData).subscribe({
         next: (response) => {
           this.submitMessage = this.translate.instant('CONTACT.SUCCESS_MESSAGE') || 'Nachricht erfolgreich gesendet!';

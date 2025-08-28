@@ -9,8 +9,22 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   color: $color;
 }
 
-.testimonials-section {
+@mixin card-transform($rotation, $x, $y, $hover-scale: 1.05) {
+  transform: rotate($rotation) translate($x, $y);
+  
+  &:hover {
+    transform: rotate($rotation) translate($x, $y) scale($hover-scale);
+  }
+}
 
+@mixin responsive-text($weight, $desktop-size, $tablet-size, $mobile-size) {
+  @include typography($weight, $desktop-size);
+  
+  @media (max-width: 1066px) { font-size: $tablet-size; }
+  @media (max-width: 768px) { font-size: $mobile-size; }
+}
+
+.testimonials-section {
   padding: clamp(20px, 3vw, 40px) clamp(50px, 15vw, 190px) clamp(40px, 8vw, 100px) clamp(50px, 15vw, 190px);
   display: flex;
   flex-direction: column;
@@ -70,13 +84,8 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
       transition: all 0.3s ease;
       cursor: pointer;
       
-      &.variant-a {
-        background-image: url('./../../../../assets/img/colleagues/A.webp');
-      }
-      
-      &.variant-b {
-        background-image: url('./../../../../assets/img/colleagues/b.webp');
-      }
+      &.variant-a { background-image: url('./../../../../assets/img/colleagues/A.webp'); }
+      &.variant-b { background-image: url('./../../../../assets/img/colleagues/b.webp'); }
       
       &:hover {
         z-index: 10 !important;
@@ -99,30 +108,18 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
       }
       
       &.card-1 {
-        transform: rotate(-4deg) translate(clamp(-200px, -20vw, -450px), clamp(20px, 3vw, 40px));
+        @include card-transform(-4deg, clamp(-200px, -20vw, -450px), clamp(20px, 3vw, 40px));
         z-index: 3;
-        
-        &:hover {
-          transform: rotate(-4deg) translate(clamp(-200px, -20vw, -450px), clamp(20px, 3vw, 40px)) scale(1.05);
-        }
       }
       
       &.card-2 {
-        transform: rotate(0deg) translate(0px, clamp(80px, 10vw, 150px));
+        @include card-transform(0deg, 0px, clamp(80px, 10vw, 150px));
         z-index: 2;
-        
-        &:hover {
-          transform: rotate(0deg) translate(0px, clamp(80px, 10vw, 150px)) scale(1.05);
-        }
       }
       
       &.card-3 {
-        transform: rotate(4deg) translate(clamp(160px, 16vw, 380px), clamp(30px, 5vw, 60px));
+        @include card-transform(4deg, clamp(160px, 16vw, 380px), clamp(30px, 5vw, 60px));
         z-index: 1;
-        
-        &:hover {
-          transform: rotate(4deg) translate(clamp(160px, 16vw, 380px), clamp(30px, 5vw, 60px)) scale(1.05);
-        }
       }
       
       .card-content {
@@ -135,7 +132,7 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
         box-sizing: border-box;
         
         .testimonial-text {
-          @include typography(400, 14px);
+          @include responsive-text(400, 14px, 11px, 11px);
           line-height: 1.3;
           margin-bottom: 18px;
           flex-grow: 1;
@@ -149,13 +146,13 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
           
           .author-details {
             .author-name {
-              @include typography(700, 18px);
+              @include responsive-text(700, 18px, 15px, 15px);
               margin-bottom: 2px;
               text-shadow: $shadow;
             }
             
             .author-title {
-              @include typography(500, 14px);
+              @include responsive-text(500, 14px, 11px, 11px);
               opacity: 0.9;
               text-shadow: $shadow;
             }
@@ -165,34 +162,6 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
             width: clamp(45px, 4.5vw, 64px);
             height: clamp(12px, 1.2vw, 18px);
             flex-shrink: 0;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 1066px) {
-  .testimonials-section {
-    .cards-div {
-      .testimonial-card {
-        .card-content {
-          .testimonial-text {
-            @include typography(400, 11px);
-            line-height: 1.25;
-            margin-bottom: 14px;
-          }
-          
-          .author-info {
-            .author-details {
-              .author-name {
-                @include typography(700, 15px);
-              }
-              
-              .author-title {
-                @include typography(500, 11px);
-              }
-            }
           }
         }
       }
@@ -211,20 +180,11 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
       
       .header-text {
         text-align: center;
-        
-        .subtitle {
-          justify-content: center;
-          font-size: 18px;
-        }
-        
-        .main-title {
-          font-size: 48px;
-        }
+        .subtitle { justify-content: center; font-size: 18px; }
+        .main-title { font-size: 48px; }
       }
       
-      .arrow-image {
-        width: 60px;
-      }
+      .arrow-image { width: 60px; }
     }
     
     .cards-div {
@@ -240,65 +200,19 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
         position: static;
         margin: 0 auto;
         
-        &.card-1 {
-          transform: rotate(-4deg);
-          position: static;
-          z-index: 3;
-          margin-bottom: -15px;
-          
-          &:hover {
-            transform: rotate(-4deg) scale(1.02);
-            z-index: 10;
-          }
-        }
-        
-        &.card-2 {
-          transform: rotate(0deg);
-          position: static;
-          z-index: 2;
-          margin-bottom: -15px;
-          
-          &:hover {
-            transform: rotate(0deg) scale(1.02);
-            z-index: 10;
-          }
-        }
-        
-        &.card-3 {
-          transform: rotate(4deg);
-          position: static;
-          z-index: 1;
-          
-          &:hover {
-            transform: rotate(4deg) scale(1.02);
-            z-index: 10;
-          }
-        }
+        &.card-1 { @include card-transform(-4deg, 0, 0, 1.02); margin-bottom: -15px; z-index: 3; }
+        &.card-2 { @include card-transform(0deg, 0, 0, 1.02); margin-bottom: -15px; z-index: 2; }
+        &.card-3 { @include card-transform(4deg, 0, 0, 1.02); z-index: 1; }
         
         .card-content {
           padding: 24px 20px;
-          
-          .testimonial-text {
-            font-size: 11px;
-            line-height: 1.25;
-            margin-bottom: 12px;
-          }
-          
+          .testimonial-text { font-size: 11px; line-height: 1.25; margin-bottom: 12px; }
           .author-info {
             .author-details {
-              .author-name {
-                font-size: 15px;
-              }
-              
-              .author-title {
-                font-size: 11px;
-              }
+              .author-name { font-size: 15px; }
+              .author-title { font-size: 11px; }
             }
-            
-            .linkedin-icon {
-              width: 50px;
-              height: 14px;
-            }
+            .linkedin-icon { width: 50px; height: 14px; }
           }
         }
       }
@@ -306,88 +220,32 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   }
 }
 
-/* Media Query für mittlere mobile Bildschirme (500px-391px) */
-@media (min-width: 391px) and (max-width: 500px) {
+@media (max-width: 500px) {
   .testimonials-section {
     padding: 30px 18px 50px 18px;
     
     .header-div {
       margin-bottom: 35px;
-      
       .header-text {
-        .subtitle {
-          font-size: 17px;
-        }
-        
-        .main-title {
-          font-size: 42px;
-        }
+        .subtitle { font-size: 17px; }
+        .main-title { font-size: 42px; }
       }
-      
-      .arrow-image {
-        width: 55px;
-      }
+      .arrow-image { width: 55px; }
     }
     
-    .cards-div {
-      gap: 18px;
+    .cards-div .testimonial-card {
+      max-width: 310px;
+      height: 190px;
       
-      .testimonial-card {
-        width: 100%;
-        max-width: 310px;
-        height: 190px;
-        
-        .card-content {
-          padding: 22px 18px;
-          
-          .testimonial-text {
-            font-size: 10px;
-            line-height: 1.2;
-            margin-bottom: 10px;
+      .card-content {
+        padding: 22px 18px;
+        .testimonial-text { font-size: 10px; line-height: 1.2; margin-bottom: 10px; }
+        .author-info {
+          .author-details {
+            .author-name { font-size: 14px; }
+            .author-title { font-size: 10px; }
           }
-          
-          .author-info {
-            .author-details {
-              .author-name {
-                font-size: 14px;
-              }
-              
-              .author-title {
-                font-size: 10px;
-              }
-            }
-            
-            .linkedin-icon {
-              width: 48px;
-              height: 13px;
-            }
-          }
-        }
-      }
-      
-      .testimonial-card {
-        &.card-1 {
-          transform: rotate(-4deg);
-          
-          &:hover {
-            transform: rotate(-4deg) scale(1.02);
-          }
-        }
-        
-        &.card-2 {
-          transform: rotate(0deg);
-          
-          &:hover {
-            transform: rotate(0deg) scale(1.02);
-          }
-        }
-        
-        &.card-3 {
-          transform: rotate(4deg);
-          
-          &:hover {
-            transform: rotate(4deg) scale(1.02);
-          }
+          .linkedin-icon { width: 48px; height: 13px; }
         }
       }
     }
@@ -400,202 +258,41 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
     
     .header-div {
       margin-bottom: 30px;
-      
       .header-text {
-        .subtitle {
-          font-size: 16px;
-        }
-        
-        .main-title {
-          font-size: 36px;
-        }
+        .subtitle { font-size: 16px; }
+        .main-title { font-size: 36px; }
       }
-      
-      .arrow-image {
-        width: 50px;
-      }
+      .arrow-image { width: 50px; }
     }
     
-    .cards-div {
-      gap: 15px;
+    .cards-div .testimonial-card {
+      max-width: 290px;
+      height: 180px;
       
-      .testimonial-card {
-        width: 100%;
-        max-width: 290px;
-        height: 180px;
-        
-        .card-content {
-          padding: 20px 16px;
-          
-          .testimonial-text {
-            font-size: 9px;
-            line-height: 1.15;
-            margin-bottom: 8px;
+      .card-content {
+        padding: 20px 16px;
+        .testimonial-text { font-size: 9px; line-height: 1.15; margin-bottom: 8px; }
+        .author-info {
+          .author-details {
+            .author-name { font-size: 13px; }
+            .author-title { font-size: 9px; }
           }
-          
-          .author-info {
-            .author-details {
-              .author-name {
-                font-size: 13px;
-              }
-              
-              .author-title {
-                font-size: 9px;
-              }
-            }
-            
-            .linkedin-icon {
-              width: 45px;
-              height: 12px;
-            }
-          }
-        }
-      }
-      
-      .testimonial-card {
-        &.card-1 {
-          transform: rotate(-4deg);
-          
-          &:hover {
-            transform: rotate(-4deg) scale(1.02);
-          }
-        }
-        
-        &.card-2 {
-          transform: rotate(0deg);
-          
-          &:hover {
-            transform: rotate(0deg) scale(1.02);
-          }
-        }
-        
-        &.card-3 {
-          transform: rotate(4deg);
-          
-          &:hover {
-            transform: rotate(4deg) scale(1.02);
-          }
+          .linkedin-icon { width: 45px; height: 12px; }
         }
       }
     }
   }
 }
 
-/* Media Query für größere Bildschirme (1180px-1399px) - Sanfterer Übergang */
-@media (min-width: 1180px) and (max-width: 1399px) {
-  .testimonials-section {
-    .cards-div {
-      .testimonial-card {
-        &.card-1 {
-          transform: rotate(-4deg) translate(clamp(-250px, -22vw, -400px), clamp(20px, 3vw, 40px));
-          
-          &:hover {
-            transform: rotate(-4deg) translate(clamp(-250px, -22vw, -400px), clamp(20px, 3vw, 40px)) scale(1.05);
-          }
-        }
-        
-        &.card-3 {
-          transform: rotate(4deg) translate(clamp(200px, 20vw, 350px), clamp(30px, 5vw, 60px));
-          
-          &:hover {
-            transform: rotate(4deg) translate(clamp(200px, 20vw, 350px), clamp(30px, 5vw, 60px)) scale(1.05);
-          }
-        }
-      }
-    }
-  }
-}
-
-/* Media Query für größere Bildschirme (1400px-1599px) */
-@media (min-width: 1400px) and (max-width: 1599px) {
-  .testimonials-section {
-    .cards-div {
-      .testimonial-card {
-        &.card-1 {
-          transform: rotate(-4deg) translate(clamp(-300px, -25vw, -450px), clamp(20px, 3vw, 40px));
-          
-          &:hover {
-            transform: rotate(-4deg) translate(clamp(-300px, -25vw, -450px), clamp(20px, 3vw, 40px)) scale(1.05);
-          }
-        }
-        
-        &.card-3 {
-          transform: rotate(4deg) translate(clamp(250px, 22vw, 400px), clamp(30px, 5vw, 60px));
-          
-          &:hover {
-            transform: rotate(4deg) translate(clamp(250px, 22vw, 400px), clamp(30px, 5vw, 60px)) scale(1.05);
-          }
-        }
-      }
-    }
-  }
-}
-
-/* Media Query für große Bildschirme (1600px-1919px) */
-@media (min-width: 1600px) and (max-width: 1929px) {
-  .testimonials-section {
-    .cards-div {
-      .testimonial-card {
-        &.card-1 {
-          transform: rotate(-4deg) translate(-480px, 40px);
-          
-          &:hover {
-            transform: rotate(-4deg) translate(-480px, 40px) scale(1.05);
-          }
-        }
-        
-        &.card-3 {
-          transform: rotate(4deg) translate(430px, 60px);
-          
-          &:hover {
-            transform: rotate(4deg) translate(430px, 60px) scale(1.05);
-          }
-        }
-      }
-    }
-  }
-}
-
-/* Media Query für sehr große Bildschirme (1920px und größer) */
-@media (min-width: 1929px) {
-  .testimonials-section {
-    .cards-div {
-      .testimonial-card {
-        &.card-1 {
-          transform: rotate(-4deg) translate(-550px, 40px);
-          
-          &:hover {
-            transform: rotate(-4deg) translate(-550px, 40px) scale(1.05);
-          }
-        }
-        
-        &.card-3 {
-          transform: rotate(4deg) translate(500px, 60px);
-          
-          &:hover {
-            transform: rotate(4deg) translate(500px, 60px) scale(1.05);
-          }
-        }
-      }
-    }
+@media (min-width: 1180px) {
+  .testimonials-section .cards-div .testimonial-card {
+    &.card-1 { @include card-transform(-4deg, clamp(-300px, -25vw, -550px), clamp(20px, 3vw, 40px)); }
+    &.card-3 { @include card-transform(4deg, clamp(200px, 20vw, 500px), clamp(30px, 5vw, 60px)); }
   }
 }
 
 @keyframes drawArrow {
-  0% {
-    opacity: 0;
-    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-  }
-  20% {
-    opacity: 1;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-  80% {
-    opacity: 1;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-  100% {
-    opacity: 0;
-    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-  }
+  0% { opacity: 0; clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%); }
+  20%, 80% { opacity: 1; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+  100% { opacity: 0; clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%); }
 }

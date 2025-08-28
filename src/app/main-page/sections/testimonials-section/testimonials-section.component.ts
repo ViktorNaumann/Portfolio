@@ -19,6 +19,7 @@ interface Testimonial {
   templateUrl: './testimonials-section.component.html',
   styleUrl: './testimonials-section.component.scss'
 })
+
 export class TestimonialsSectionComponent {
   testimonials: Testimonial[] = [
     {
@@ -51,7 +52,6 @@ export class TestimonialsSectionComponent {
   ];
 
   constructor(private translate: TranslateService) {}
-
   changeLanguage(language: string) {
     this.translate.use(language);
   }

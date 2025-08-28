@@ -9,6 +9,7 @@ import { TranslatePipe, TranslateService } from "@ngx-translate/core";
   templateUrl: './skills-section.component.html',
   styleUrl: './skills-section.component.scss'
 })
+
 export class SkillsSectionComponent {
   
   constructor(private translate: TranslateService) {}
