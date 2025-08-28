@@ -16,7 +16,6 @@ import { ContactSectionComponent } from './sections/contact-section/contact-sect
   imports: [
     CommonModule,
     HeaderComponent,
-    FooterComponent,
     HeroSectionComponent,
     AboutSectionComponent,
     SkillsSectionComponent,

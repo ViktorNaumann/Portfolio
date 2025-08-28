@@ -12,6 +12,7 @@ import { TranslatePipe, TranslateDirective, TranslateService } from "@ngx-transl
   templateUrl: './project-card.component.html',
   styleUrl: './project-card.component.scss'
 })
+
 export class ProjectCardComponent implements OnInit, OnDestroy {
   project: Project | null = null;
   nextProject: Project | null = null;
@@ -36,12 +37,10 @@ export class ProjectCardComponent implements OnInit, OnDestroy {
 
   private loadProject(projectId: number) {
     this.project = this.projectDataService.getProjectById(projectId) || null;
-    
     if (!this.project) {
       this.router.navigate(['/']);
       return;
     }
-
     this.nextProject = this.projectDataService.getNextProject(projectId);
   }
 
@@ -76,7 +75,6 @@ export class ProjectCardComponent implements OnInit, OnDestroy {
       'TypeScript': 'assets/img/skills/skill.icons/Property 1=Ts.svg',
       'Firebase': 'assets/img/skills/skill.icons/Property 1=Firebase.svg'
     };
-    
     return techMap[technology] || 'assets/img/skills/skill.icons/Property 1=Default.svg';
   }
 

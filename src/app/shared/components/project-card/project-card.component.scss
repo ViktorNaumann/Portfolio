@@ -1,41 +1,13 @@
-$main-font: 'Bricolage Grotesque', sans-serif;
-$primary-text-color: #2C2C2C;
-$dark-text-color: #0E1013;
-$accent-color: #F7C518;
-$hover-color: #F87A55;
-$white: #FFFFFF;
-$light-gray: #F8F9FA;
-
-@mixin flex-center {
-  display: flex;
-  align-items: center;
-}
-
-@mixin button-style {
-  font-family: $main-font;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: none;
-  background: none;
-}
-
-@mixin text-style($size: 16px, $weight: 400, $color: $dark-text-color) {
-  font-family: $main-font;
-  font-size: $size;
-  font-weight: $weight;
-  color: $color;
-}
+@import './variables';
 
 .project-detail-container {
   height: 100vh;
-  background-image: url('./../../../../assets/img/projects-card/Note book paper.webp');
   background: #1d1d1d url('./../../../../assets/img/projects-card/Note book paper.webp') center/cover no-repeat;
   @include flex-center;
   flex-direction: column;
   justify-content: center;
   font-family: $main-font;
   color: $primary-text-color;
-  padding: 0;
   overflow: hidden;
   position: relative;
 }
@@ -56,8 +28,8 @@ $light-gray: #F8F9FA;
     left: clamp(20px, 5vw, 40px);
     @include flex-center;
     @include button-style;
-    @include text-style(clamp(14px, 4vw, 18px), 700, $dark-text-color);
-    gap: clamp(4px, 1vw, 8px);
+    @include text-style($clamp-text-medium, 700, $dark-text-color);
+    gap: $clamp-small;
     z-index: 1000;
     
     .arrow-icon {
@@ -65,24 +37,12 @@ $light-gray: #F8F9FA;
       height: clamp(18px, 5vw, 24px);
     }
     
-    &:hover {
-      color: $hover-color;
-    }
+    &:hover { color: $hover-color; }
     
-    @media (max-width: 900px) {
-      display: none;
-    }
-    
-    @media (max-width: 320px) {
-      top: 40px;
-      left: 15px;
-      font-size: 14px;
-      gap: 4px;
-      
-      .arrow-icon {
-        width: 16px;
-        height: 16px;
-      }
+    @media (max-width: $tablet) { display: none; }
+    @media (max-width: $mobile) {
+      top: 40px; left: 15px; font-size: 14px; gap: 4px;
+      .arrow-icon { width: 16px; height: 16px; }
     }
   }
   
@@ -96,23 +56,11 @@ $light-gray: #F8F9FA;
       display: flex;
       gap: clamp(20px, 15vw, 250px);
       align-items: flex-start;
-      margin-bottom: clamp(20px, 5vh, 40px);
+      margin-bottom: $clamp-large;
       
-      @media (max-width: 900px) {
-        flex-direction: column;
-        gap: 20px;
-      }
-      
-      @media (max-width: 480px) {
-        gap: 15px;
-        margin-bottom: 20px;
-      }
-      
-      @media (max-width: 320px) {
-        gap: 10px;
-        margin-bottom: 15px;
-        padding: 0 10px;
-      }
+      @media (max-width: $tablet) { flex-direction: column; gap: 20px; }
+      @media (max-width: $small) { gap: 15px; margin-bottom: 20px; }
+      @media (max-width: $mobile) { gap: 10px; margin-bottom: 15px; padding: 0 10px; }
     }
     
     .project-actions {
@@ -120,7 +68,7 @@ $light-gray: #F8F9FA;
       gap: clamp(10px, 3vw, 20px);
       justify-content: flex-end;
       width: 100%;
-      margin-bottom: clamp(10px, 3vh, 20px);
+      margin-bottom: $clamp-large;
       padding-right: clamp(10px, 3vw, 20px);
       box-sizing: border-box;
       
@@ -128,7 +76,7 @@ $light-gray: #F8F9FA;
         width: clamp(80px, 20vw, 107px);
         height: clamp(32px, 8vw, 40px);
         border-radius: 100px;
-        @include text-style(clamp(14px, 4vw, 18px), 500, $light-gray);
+        @include text-style($clamp-text-medium, 500, $light-gray);
         @include flex-center;
         justify-content: center;
         background-color: transparent;
@@ -138,40 +86,18 @@ $light-gray: #F8F9FA;
         transition: all 0.2s ease;
         text-decoration: none;
         
-        &:hover,
-        &:active {
+        &:hover, &:active {
           background-color: $hover-color;
           transform: translateY(4px);
           box-shadow: 0px 0px 0 0 $light-gray;
         }
       }
       
-      @media (max-width: 900px) {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding-right: 0;
-        gap: 15px;
-      }
-      
-      @media (max-width: 480px) {
-        flex-direction: row;
-        justify-content: center;
-        gap: 15px;
-        padding-right: 10px;
-      }
-      
+      @media (max-width: $tablet) { justify-content: center; padding-right: 0; gap: 15px; }
+      @media (max-width: $small) { padding-right: 10px; }
       @media (max-width: 310px) {
-        gap: 8px;
-        margin-bottom: 15px;
-        padding-right: 8px;
-        
-        .action-btn {
-          width: 70px;
-          height: 30px;
-          font-size: 12px;
-          box-shadow: 1px 2px 0px 0px $light-gray;
-        }
+        gap: 8px; margin-bottom: 15px; padding-right: 8px;
+        .action-btn { width: 70px; height: 30px; font-size: 12px; box-shadow: 1px 2px 0px 0px $light-gray; }
       }
     }
     
@@ -179,20 +105,15 @@ $light-gray: #F8F9FA;
       display: flex;
       align-items: center;
       width: 100%;
-      
-      // Über 900px: nur Next Project Button rechts
       justify-content: flex-end;
-      
-      // Unter 900px: beide Buttons mit space-between
-      @media (max-width: 900px) {
-        justify-content: space-between;
-      }
+
+      @media (max-width: $tablet) { justify-content: space-between; }
       
       .go-back-mobile-btn {
         @include flex-center;
         @include button-style;
-        @include text-style(clamp(14px, 4vw, 18px), 700, $light-gray);
-        gap: clamp(6px, 2vw, 12px);
+        @include text-style($clamp-text-medium, 700, $light-gray);
+        gap: $clamp-small;
         padding: clamp(8px, 2vh, 12px) 0;
         width: fit-content;
         display: none;
@@ -202,30 +123,20 @@ $light-gray: #F8F9FA;
           height: clamp(18px, 5vw, 24px);
         }
         
-        &:hover {
-          color: $accent-color;
-        }
+        &:hover { color: $accent-color; }
         
-        @media (max-width: 900px) {
-          display: flex;
-        }
-        
-        @media (max-width: 320px) {
-          font-size: 14px;
-          gap: 6px;
-          
-          .arrow-icon {
-            width: 16px;
-            height: 16px;
-          }
+        @media (max-width: $tablet) { display: flex; }
+        @media (max-width: $mobile) {
+          font-size: 14px; gap: 6px;
+          .arrow-icon { width: 16px; height: 16px; }
         }
       }
       
       .next-project-btn {
         @include flex-center;
         @include button-style;
-        @include text-style(clamp(14px, 4vw, 18px), 700, $light-gray);
-        gap: clamp(6px, 2vw, 12px);
+        @include text-style($clamp-text-medium, 700, $light-gray);
+        gap: $clamp-small;
         padding: clamp(8px, 2vh, 12px) 0;
         width: fit-content;
         
@@ -234,22 +145,12 @@ $light-gray: #F8F9FA;
           height: clamp(18px, 5vw, 24px);
         }
         
-        &:hover {
-          color: $accent-color;
-        }
+        &:hover { color: $accent-color; }
         
-        @media (max-width: 480px) {
-          align-self: center;
-        }
-        
-        @media (max-width: 320px) {
-          font-size: 14px;
-          gap: 6px;
-          
-          .arrow-icon {
-            width: 16px;
-            height: 16px;
-          }
+        @media (max-width: $small) { align-self: center; }
+        @media (max-width: $mobile) {
+          font-size: 14px; gap: 6px;
+          .arrow-icon { width: 16px; height: 16px; }
         }
       }
     }
@@ -259,49 +160,32 @@ $light-gray: #F8F9FA;
     flex: 1;
     
     .project-title {
-      @include text-style(clamp(24px, 8vw, 48px), 700, $dark-text-color);
-      margin-bottom: clamp(10px, 3vh, 20px);
+      @include text-style($clamp-title, 700, $dark-text-color);
+      margin-bottom: $clamp-large;
       line-height: 1.2;
       
-      @media (max-width: 900px) {
-        font-size: 36px;
-      }
-      
-      @media (max-width: 480px) {
-        font-size: 28px;
-        text-align: center;
-      }
-      
-      @media (max-width: 320px) {
-        font-size: 22px;
-        margin-bottom: 15px;
-      }
+      @media (max-width: $tablet) { font-size: 36px; }
+      @media (max-width: $small) { font-size: 28px; text-align: center; }
+      @media (max-width: $mobile) { font-size: 22px; margin-bottom: 15px; }
     }
     
     section {
-      margin-bottom: clamp(10px, 3vh, 20px);
+      margin-bottom: $clamp-large;
       
       h2 {
-        @include text-style(clamp(16px, 5vw, 22px), 700, $dark-text-color);
+        @include text-style($clamp-text-large, 700, $dark-text-color);
         margin-bottom: clamp(4px, 1vh, 8px);
         
-        @media (max-width: 320px) {
-          font-size: 16px;
-          margin-bottom: 6px;
-        }
+        @media (max-width: $mobile) { font-size: 16px; margin-bottom: 6px; }
       }
       
       p {
-        @include text-style(clamp(12px, 3.5vw, 16px), 400, $dark-text-color);
+        @include text-style($clamp-text-small, 400, $dark-text-color);
         line-height: 1.4;
         text-align: left;
         margin-bottom: clamp(6px, 2vh, 10px);
         
-        @media (max-width: 320px) {
-          font-size: 12px;
-          line-height: 1.3;
-          margin-bottom: 8px;
-        }
+        @media (max-width: $mobile) { font-size: 12px; line-height: 1.3; margin-bottom: 8px; }
       }
     }
     
@@ -309,21 +193,15 @@ $light-gray: #F8F9FA;
       margin-top: clamp(6px, 2vh, 10px);
       font-size: clamp(11px, 3vw, 14px);
       
-      strong {
-        font-weight: 600;
-      }
-      
-      @media (max-width: 320px) {
-        font-size: 11px;
-        margin-top: 8px;
-      }
+      strong { font-weight: 600; }
+      @media (max-width: $mobile) { font-size: 11px; margin-top: 8px; }
     }
     
     .project-technologies {
       display: flex;
       flex-wrap: wrap;
-      gap: clamp(6px, 2vw, 12px);
-      margin-top: clamp(8px, 3vh, 15px);
+      gap: $clamp-small;
+      margin-top: $clamp-medium;
       
       .tech-badge {
         @include flex-center;
@@ -336,33 +214,22 @@ $light-gray: #F8F9FA;
         }
         
         .tech-text {
-          @include text-style(clamp(12px, 3.5vw, 16px), 400, $dark-text-color);
+          @include text-style($clamp-text-small, 400, $dark-text-color);
         }
       }
       
-      @media (max-width: 320px) {
-        gap: 6px;
-        margin-top: 10px;
-        
+      @media (max-width: $mobile) {
+        gap: 6px; margin-top: 10px;
         .tech-badge {
           gap: 4px;
-          
-          .tech-icon {
-            width: 16px;
-            height: 16px;
-          }
-          
-          .tech-text {
-            font-size: 11px;
-          }
+          .tech-icon { width: 16px; height: 16px; }
+          .tech-text { font-size: 11px; }
         }
       }
     }
   }
 
-  img {
-    border-radius: clamp(10px, 3vw, 20px);
-  }
+  img { border-radius: clamp(10px, 3vw, 20px); }
   
   .project-image {
     flex: 1;
@@ -370,7 +237,7 @@ $light-gray: #F8F9FA;
     @include flex-center;
     justify-content: center;
     
-    @media (max-width: 900px) {
+    @media (max-width: $tablet) {
       align-self: center;
       width: 100%;
       max-width: 400px;
@@ -391,30 +258,14 @@ $light-gray: #F8F9FA;
         object-fit: contain;
       }
       
-      @media (max-width: 900px) {
-        top: 40px;
-        right: 20px;
-        left: auto;
+      @media (max-width: $tablet) { top: 40px; right: 20px; left: auto; }
+      @media (max-width: $small) {
+        top: 20px; right: 10px;
+        img { width: 60px; height: 60px; }
       }
-      
-      @media (max-width: 480px) {
-        top: 20px;
-        right: 10px;
-        
-        img {
-          width: 60px;
-          height: 60px;
-        }
-      }
-      
-      @media (max-width: 320px) {
-        top: 15px;
-        right: 8px;
-        
-        img {
-          width: 45px;
-          height: 45px;
-        }
+      @media (max-width: $mobile) {
+        top: 15px; right: 8px;
+        img { width: 45px; height: 45px; }
       }
     }
     
@@ -425,20 +276,14 @@ $light-gray: #F8F9FA;
       height: auto;
       object-fit: contain;
       
-      @media (max-width: 320px) {
-        max-width: 280px;
-      }
+      @media (max-width: $mobile) { max-width: 280px; }
     }
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: $tablet) {
   .project-detail-container {
-    background: #1d1d1d;
-    background-image: url('./../../../../assets/img/projects-card/Note book paper.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: #1d1d1d url('./../../../../assets/img/projects-card/Note book paper.webp') center/cover no-repeat;
     transform: rotate(90deg);
     transform-origin: center center;
     width: 100vh;
@@ -457,11 +302,8 @@ $light-gray: #F8F9FA;
   }
 }
 
-@media (max-width: 480px) {
-  
-  .project-main {
-    padding: 15px;
-  }
+@media (max-width: $small) {
+  .project-main { padding: 15px; }
 }
 
 @media (max-width: 310px) {
@@ -473,13 +315,5 @@ $light-gray: #F8F9FA;
   .project-main {
     padding: 10px;
     gap: 10px;
-    
-    .main-content {
-      gap: 15px;
-      
-      .project-content {
-        padding: 0 5px;
-      }
-    }
   }
 }
