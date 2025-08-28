@@ -10,11 +10,10 @@ import { TranslatePipe, TranslateService } from "@ngx-translate/core";
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
+
 export class HeaderComponent {
-  
   isGerman = false;
   isMobileMenuOpen = false;
-
   constructor(private translate: TranslateService) {}
 
   changeLanguage(language: string) {
@@ -35,7 +34,6 @@ export class HeaderComponent {
 
   toggleMobileMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
-    // Prevent body scroll when menu is open
     if (this.isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
     } else {
