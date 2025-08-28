@@ -351,7 +351,6 @@ section {
   100% { opacity: 0; }
 }
 
-// Responsive Styles - graduelle Verkleinerung ab 1350px
 @media (max-width: 1350px) {
   .skills-container {
     padding: 45px 0;
@@ -787,7 +786,7 @@ section {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 318px) {
   .skills-content {
 
     padding: 15px;
