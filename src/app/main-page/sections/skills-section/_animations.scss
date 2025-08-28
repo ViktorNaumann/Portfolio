@@ -1,0 +1,35 @@
+@keyframes highlight-animation {
+  0% { opacity: 1; }   
+  30% { opacity: 1; }   
+  41% { opacity: 0; }   
+  70% { opacity: 0; }   
+  91% { opacity: 1; }  
+  100% { opacity: 1; }
+}
+
+@keyframes peelLayerA {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-60%, 60%) scale(0.8) rotate(-15deg);
+    opacity: 0;
+  }
+}
+
+@keyframes peelLayerB {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-70%, 70%) scale(0.7) rotate(-20deg);
+    opacity: 0;
+  }
+}
+
+@keyframes peelTextFade {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}

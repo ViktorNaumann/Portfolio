@@ -1,0 +1,52 @@
+$main-font: 'Bricolage Grotesque', sans-serif;
+$accent-font: 'Kalam', cursive;
+$primary-text-color: #F8F9FA;
+$description-text-color: #000;
+$breakpoint-xl: 1350px;
+$breakpoint-lg: 1200px;
+$breakpoint-md: 1000px;
+$breakpoint-sm: 860px;
+$breakpoint-xs: 423px;
+$breakpoint-xxs: 318px;
+
+@mixin responsive-font-size($base, $xl: null, $lg: null, $md: null, $sm: null, $xs: null, $xxs: null) {
+  font-size: $base;
+  
+  @if $xl {
+    @media (max-width: $breakpoint-xl) { font-size: $xl; }
+  }
+  @if $lg {
+    @media (max-width: $breakpoint-lg) { font-size: $lg; }
+  }
+  @if $md {
+    @media (max-width: $breakpoint-md) { font-size: $md; }
+  }
+  @if $sm {
+    @media (max-width: $breakpoint-sm) { font-size: $sm; }
+  }
+  @if $xs {
+    @media (max-width: $breakpoint-xs) { font-size: $xs; }
+  }
+  @if $xxs {
+    @media (max-width: $breakpoint-xxs) { font-size: $xxs; }
+  }
+}
+
+@mixin responsive-dimensions($base-w, $base-h, $sizes...) {
+  width: $base-w;
+  height: $base-h;
+  
+  $breakpoints: ($breakpoint-xl, $breakpoint-lg, $breakpoint-md, $breakpoint-sm, $breakpoint-xs, $breakpoint-xxs);
+  
+  @for $i from 1 through length($sizes) {
+    $size: nth($sizes, $i);
+    $bp: nth($breakpoints, $i);
+    
+    @if $size {
+      @media (max-width: $bp) {
+        width: nth($size, 1);
+        height: nth($size, 2);
+      }
+    }
+  }
+}
