@@ -1,0 +1,46 @@
+:host {
+    --text-color: #0E1013;
+    --font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+$breakpoint-xl: 1150px;
+$breakpoint-lg: 768px; 
+$breakpoint-md: 480px;
+$breakpoint-sm: 350px;
+$text-color: #0E1013;
+$white-color: #F8F9FA;
+$accent-color: #F87A55;
+
+@mixin responsive-padding($base, $xl: null, $lg: null, $md: null, $sm: null) {
+  padding: $base;
+  
+  @if $xl {
+    @media (max-width: $breakpoint-xl) { padding: $xl; }
+  }
+  @if $lg {
+    @media (max-width: $breakpoint-lg) { padding: $lg; }
+  }
+  @if $md {
+    @media (max-width: $breakpoint-md) { padding: $md; }
+  }
+  @if $sm {
+    @media (max-width: $breakpoint-sm) { padding: $sm; }
+  }
+}
+
+@mixin responsive-margin($base, $xl: null, $lg: null, $md: null, $sm: null) {
+  margin: $base;
+  
+  @if $xl {
+    @media (max-width: $breakpoint-xl) { margin: $xl; }
+  }
+  @if $lg {
+    @media (max-width: $breakpoint-lg) { margin: $lg; }
+  }
+  @if $md {
+    @media (max-width: $breakpoint-md) { margin: $md; }
+  }
+  @if $sm {
+    @media (max-width: $breakpoint-sm) { margin: $sm; }
+  }
+}

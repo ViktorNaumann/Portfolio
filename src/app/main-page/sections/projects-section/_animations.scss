@@ -1,0 +1,16 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes draw-line {
+  0% { clip-path: inset(0 100% 0 0); }
+  20% { clip-path: inset(0 0% 0 0); }
+  70% { clip-path: inset(0 0% 0 0); }
+  90% { clip-path: inset(0 100% 0 0); }
+  100% { clip-path: inset(0 100% 0 0); }
+}
