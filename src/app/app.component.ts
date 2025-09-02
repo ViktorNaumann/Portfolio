@@ -11,6 +11,7 @@ import { TranslateService } from "@ngx-translate/core";
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
+
 export class AppComponent {
   title = 'Portfolio';
 
@@ -21,11 +22,8 @@ export class AppComponent {
   ) {
     this.translate.addLangs(['de', 'en']);
     this.translate.setDefaultLang('en');
-    
-    // Gespeicherte Sprache aus localStorage laden oder Standard verwenden
     const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
     this.translate.use(savedLanguage);
-    
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         const fragment = this.router.routerState.root.firstChild?.snapshot.fragment;

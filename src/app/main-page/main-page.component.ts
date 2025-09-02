@@ -26,6 +26,6 @@ import { ContactSectionComponent } from './sections/contact-section/contact-sect
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss'
 })
-export class MainPageComponent {
 
+export class MainPageComponent {
 }

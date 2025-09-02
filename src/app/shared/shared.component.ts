@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
   templateUrl: './shared.component.html',
   styleUrl: './shared.component.scss'
 })
+
 export class SharedComponent {
 
 }
