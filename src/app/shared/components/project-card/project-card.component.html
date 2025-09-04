@@ -12,12 +12,12 @@
           
           <section class="project-description">
             <h2>{{ 'PROJECT_CARD.DESCRIPTION' | translate }}</h2>
-            <p>{{ project.description }}</p>
+            <p>{{ getProjectDescription() | translate }}</p>
           </section>
 
           <section class="implementation-details">
             <h2>{{ 'PROJECT_CARD.IMPLEMENTATION_DETAILS' | translate }}</h2>
-            <p>{{ project.implementationDetails }}</p>
+            <p>{{ getProjectImplementationDetails() | translate }}</p>
             
             <div class="project-duration">
               <strong>{{ 'PROJECT_CARD.DURATION' | translate }}:</strong> {{ project.duration }}

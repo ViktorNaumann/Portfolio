@@ -42,15 +42,18 @@
     "PROJECT_DETAILS": "Projektdetails",
     "JOIN": {
       "TITLE": "Join",
-      "DESCRIPTION": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu."
+      "DESCRIPTION": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.",
+      "IMPLEMENTATION_DETAILS": "Entwicklung eines Task-Management-Systems mit Drag-and-Drop-Funktionalität. Implementierung von Benutzerauthentifizierung, Kategorisierung und kollaborativen Features für Teamarbeit."
     },
     "ELPOLLOLOCOGAME": {
       "TITLE": "El Pollo Loco",
-      "DESCRIPTION": "Ein einfaches Jump-and-Run-Spiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen."
+      "DESCRIPTION": "Ein einfaches Jump-and-Run-Spiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.",
+      "IMPLEMENTATION_DETAILS": "Entwicklung eines 2D-Plattformspiels mit objektorientiertem JavaScript. Implementierung von Spielphysik, Kollisionserkennung, Sound-Management und responsivem Game-Design."
     },
     "DABUBBLE": {
       "TITLE": "DaBubble",
-      "DESCRIPTION": "Diese App ist ein Slack-Klon. Sie revolutioniert die Teamkommunikation und Zusammenarbeit mit ihrer intuitiven Benutzeroberfläche, Echtzeit-Messaging und robuster Kanalorganisation."
+      "DESCRIPTION": "Diese App ist ein Slack-Klon. Sie revolutioniert die Teamkommunikation und Zusammenarbeit mit ihrer intuitiven Benutzeroberfläche, Echtzeit-Messaging und robuster Kanalorganisation.",
+      "IMPLEMENTATION_DETAILS": "Entwicklung einer umfassenden Kommunikationsplattform mit Echtzeit-Messaging, Kanal-Management und Benutzerauthentifizierung. Integration von Firebase für Backend-Services."
     }
   },
   "PROJECT_CARD": {

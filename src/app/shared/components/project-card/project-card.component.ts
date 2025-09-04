@@ -78,6 +78,26 @@ export class ProjectCardComponent implements OnInit, OnDestroy {
     return techMap[technology] || 'assets/img/skills/skill.icons/Property 1=Default.svg';
   }
 
+  getProjectImplementationDetails(): string {
+    if (!this.project) return '';
+    return `PROJECTS.${this.getProjectKey(this.project.id)}.IMPLEMENTATION_DETAILS`;
+  }
+
+  getProjectDescription(): string {
+    if (!this.project) return '';
+    return `PROJECTS.${this.getProjectKey(this.project.id)}.DESCRIPTION`;
+  }
+
+  private getProjectKey(projectId: number): string {
+    const projectKeyMap: { [key: number]: string } = {
+      1: 'JOIN',
+      2: 'ELPOLLOLOCOGAME',
+      3: 'DABUBBLE',
+    };
+    
+    return projectKeyMap[projectId] || `PROJECT_${projectId}`;
+  }
+
   changeLanguage(language: string) {
     this.translate.use(language);
   }

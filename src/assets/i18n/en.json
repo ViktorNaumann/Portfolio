@@ -45,15 +45,18 @@
     "PROJECT_DETAILS": "Project details",
     "JOIN": {
       "TITLE": "Join",
-      "DESCRIPTION": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+      "DESCRIPTION": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+      "IMPLEMENTATION_DETAILS": "Development of a task management system with drag-and-drop functionality. Implementation of user authentication, categorization and collaborative features for teamwork."
     },
     "ELPOLLOLOCOGAME": {
       "TITLE": "El Pollo Loco",
-      "DESCRIPTION": "A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+      "DESCRIPTION": "A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+      "IMPLEMENTATION_DETAILS": "Development of a 2D platform game with object-oriented JavaScript. Implementation of game physics, collision detection, sound management and responsive game design."
     },
     "DABUBBLE": {
       "TITLE": "DaBubble",
-      "DESCRIPTION": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
+      "DESCRIPTION": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
+      "IMPLEMENTATION_DETAILS": "Development of a comprehensive communication platform with real-time messaging, channel management and user authentication. Integration of Firebase for backend services."
     }
   },
   "PROJECT_CARD": {
