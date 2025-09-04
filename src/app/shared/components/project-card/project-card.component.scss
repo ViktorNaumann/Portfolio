@@ -91,6 +91,21 @@
           transform: translateY(4px);
           box-shadow: 0px 0px 0 0 $light-gray;
         }
+        
+        &.disabled {
+          background-color: #f0f0f0;
+          color: #999;
+          border-color: #ddd;
+          box-shadow: 1px 2px 0px 0px #ddd;
+          cursor: not-allowed;
+          opacity: 0.6;
+          
+          &:hover, &:active {
+            background-color: #f0f0f0;
+            transform: none;
+            box-shadow: 1px 2px 0px 0px #ddd;
+          }
+        }
       }
       
       @media (max-width: $tablet) { justify-content: center; padding-right: 0; gap: 15px; }
@@ -269,6 +284,33 @@
       }
     }
     
+    .work-in-progress-sticker {
+      position: absolute;
+      top: clamp(40px, 12vh, 100px);
+      right: clamp(20px, 5vw, 40px);
+      z-index: 999;
+      background: transparent;
+      animation: float 3s ease-in-out infinite;
+      
+      img {
+        width: clamp(80px, 18vw, 140px);
+        height: clamp(80px, 18vw, 140px);
+        display: block;
+        object-fit: contain;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+      }
+      
+      @media (max-width: $tablet) { top: 30px; right: 15px; }
+      @media (max-width: $small) {
+        top: 20px; right: 10px;
+        img { width: 70px; height: 70px; }
+      }
+      @media (max-width: $mobile) {
+        top: 15px; right: 8px;
+        img { width: 60px; height: 60px; }
+      }
+    }
+    
     img:not(.featured-sticker img) {
       width: 100%;
       max-width: 560px;
@@ -315,5 +357,15 @@
   .project-main {
     padding: 10px;
     gap: 10px;
+  }
+}
+
+// Float animation for work-in-progress sticker
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }

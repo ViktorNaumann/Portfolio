@@ -157,3 +157,42 @@
     object-fit: contain;
   }
 }
+
+.work-in-progress-sticker {
+  position: absolute;
+  top: 40%;
+  right: 5%;
+  z-index: 999;
+  width: 25%;
+  height: auto;
+  background: transparent;
+  animation: float 3s ease-in-out infinite;
+  
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  }
+  
+  @media (max-width: $breakpoint-md) {
+    width: 30%;
+    top: 35%;
+  }
+  
+  @media (max-width: $breakpoint-sm) {
+    width: 35%;
+    top: 30%;
+  }
+}
+
+// Float animation for work-in-progress sticker
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

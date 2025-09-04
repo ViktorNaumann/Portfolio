@@ -55,13 +55,13 @@ export class ProjectCardComponent implements OnInit, OnDestroy {
   }
 
   openGithub() {
-    if (this.project?.githubUrl) {
+    if (this.project?.githubUrl && !this.project?.inProgress) {
       window.open(this.project.githubUrl, '_blank');
     }
   }
 
   openLiveTest() {
-    if (this.project?.liveTestUrl) {
+    if (this.project?.liveTestUrl && !this.project?.inProgress) {
       window.open(this.project.liveTestUrl, '_blank');
     }
   }

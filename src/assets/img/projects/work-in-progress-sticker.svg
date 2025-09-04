@@ -1,0 +1,40 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="stickerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F7C518;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F87A55;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offset" />
+      <feFlood color="#000000" opacity="0.3"/>
+      <feComposite in2="offset" operator="in"/>
+      <feMerge> 
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Sticker Background Circle -->
+  <circle cx="60" cy="60" r="55" fill="url(#stickerGradient)" filter="url(#shadow)" stroke="#fff" stroke-width="2"/>
+  
+  <!-- Work Icon -->
+  <g transform="translate(60, 35)">
+    <!-- Hammer -->
+    <path d="M-8 -5 L-15 -12 L-13 -14 L-6 -7 L2 -15 L8 -9 L0 -1 L-8 -5Z" fill="#2C2C2C"/>
+    <!-- Wrench -->
+    <path d="M5 5 L12 12 L10 14 L3 7 L-5 15 L-11 9 L-3 1 L5 5Z" fill="#2C2C2C"/>
+  </g>
+  
+  <!-- Text "WORK" -->
+  <text x="60" y="70" text-anchor="middle" font-family="Bricolage Grotesque, Arial, sans-serif" font-size="11" font-weight="700" fill="#2C2C2C">WORK</text>
+  
+  <!-- Text "IN PROGRESS" -->
+  <text x="60" y="85" text-anchor="middle" font-family="Bricolage Grotesque, Arial, sans-serif" font-size="8" font-weight="600" fill="#2C2C2C">IN PROGRESS</text>
+  
+  <!-- Rotating border animation -->
+  <circle cx="60" cy="60" r="50" fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="5,5" opacity="0.7">
+    <animateTransform attributeName="transform" type="rotate" values="0 60 60;360 60 60" dur="8s" repeatCount="indefinite"/>
+  </circle>
+</svg>

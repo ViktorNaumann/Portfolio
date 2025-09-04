@@ -10,6 +10,7 @@ interface ProjectItem {
   description?: string;
   imageUrl?: string;
   featured?: boolean;
+  inProgress?: boolean;
   project?: Project;
 }
 
@@ -42,6 +43,7 @@ export class ProjectsSectionComponent implements OnInit {
       description: project.description,
       imageUrl: project.imageUrl,
       featured: project.featured,
+      inProgress: project.inProgress,
       project: project
     }));
     

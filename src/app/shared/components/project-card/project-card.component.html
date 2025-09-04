@@ -37,15 +37,26 @@
 
         <div class="project-image" *ngIf="project">
           <img [src]="project.detailImageUrl || project.imageUrl" [alt]="project.title">
+          <div class="work-in-progress-sticker" *ngIf="project.inProgress">
+            <img src="assets/img/projects/work-in-progress-sticker.svg" alt="Work in Progress">
+          </div>
         </div>
       </div>
 
       <div class="project-actions">
-        <button class="action-btn" (click)="openGithub()">
+        <button 
+          class="action-btn" 
+          [class.disabled]="project.inProgress"
+          [disabled]="project.inProgress"
+          (click)="!project.inProgress && openGithub()">
           GitHub
         </button>
-        <button class="action-btn live-test-btn" (click)="openLiveTest()">
-          {{ 'PROJECT_CARD.LIVE_TEST' | translate }}
+        <button 
+          class="action-btn live-test-btn" 
+          [class.disabled]="project.inProgress"
+          [disabled]="project.inProgress"
+          (click)="!project.inProgress && openLiveTest()">
+          {{ project.inProgress ? ('PROJECT_CARD.COMING_SOON' | translate) : ('PROJECT_CARD.LIVE_TEST' | translate) }}
         </button>
       </div>
 

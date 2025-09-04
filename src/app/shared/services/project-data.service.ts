@@ -8,6 +8,7 @@ export interface Project {
   imageUrl: string;
   detailImageUrl?: string;
   featured: boolean;
+  inProgress?: boolean;
   duration?: string;
   technologies: string[];
   implementationDetails?: string;
@@ -52,6 +53,7 @@ export class ProjectDataService {
       description: 'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
       imageUrl: 'assets/img/projects/DABubble.webp',
       featured: false,
+      inProgress: true,
       duration: '4 weeks',
       technologies: ['Angular', 'TypeScript', 'Firebase'],
       implementationDetails: 'Entwicklung einer umfassenden Kommunikationsplattform mit Echtzeit-Messaging, Kanal-Management und Benutzerauthentifizierung. Integration von Firebase für Backend-Services.',

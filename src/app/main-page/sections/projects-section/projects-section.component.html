@@ -22,6 +22,9 @@
             <div class="featured-sticker" *ngIf="item.featured">
                 <img src="assets/img/projects/Sticker.webp" alt="Featured Project">
             </div>
+            <div class="work-in-progress-sticker" *ngIf="item.inProgress">
+                <img src="assets/img/projects/work-in-progress-sticker.svg" alt="Work in Progress">
+            </div>
             <div class="project-details-button">
               <button (click)="openProjectDetails(item)">{{ 'PROJECTS.PROJECT_DETAILS' | translate }}</button>
             </div>
