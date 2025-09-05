@@ -62,6 +62,10 @@ $error-color: #FF3A00;
   width: 100%;
   padding: 0 clamp(15px, 12vw, 235px);
   margin-top: 50px;
+  
+  @media (max-width: 1000px) {
+    padding: 0 clamp(15px, 5vw, 80px);
+  }
 }
 
 .contact-wrapper {
