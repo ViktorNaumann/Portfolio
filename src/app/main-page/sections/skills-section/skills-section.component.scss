@@ -33,9 +33,9 @@ section {
   @media (max-width: $breakpoint-xl) { padding: 45px 0; }
   @media (max-width: $breakpoint-lg) { padding: 40px 0; }
   @media (max-width: $breakpoint-md) { padding: 35px 0; }
-  @media (max-width: $breakpoint-sm) { padding: 20px 0; }
+  @media (max-width: $breakpoint-sm) { padding: 80px 0 20px 0; }
   @media (max-width: $breakpoint-xs) { 
-    padding: 15px 5px;
+    padding: 70px 5px 15px 5px;
     overflow-x: hidden;
   }
 }
