@@ -69,7 +69,8 @@
       height: clamp(12px, 2vw, 16px);
       width: clamp(12px, 2vw, 16px);
       left: 0;
-      top: clamp(-3px, -0.5vw, -4px);
+      top: 50%;
+      transform: translateY(-50%);
       background-color: #3355FF;
       border: 1px solid #F8F9FA;
       border-radius: 50%;
@@ -78,7 +79,7 @@
   }
   
   input:checked + label:before {
-    transform: translateX(clamp(12px, 2vw, 16px));
+    transform: translateX(clamp(12px, 2vw, 16px)) translateY(-50%);
   }
 }
 
@@ -336,13 +337,14 @@
           height: 20px;
           width: 20px;
           left: 2px;
-          top: 2px;
+          top: 50%;
+          transform: translateY(-50%);
           border-radius: 50%;
         }
       }
       
       input:checked + label:before {
-        transform: translateX(26px);
+        transform: translateX(26px) translateY(-50%);
       }
     }
   }
