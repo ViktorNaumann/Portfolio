@@ -20,16 +20,25 @@ $error-color: #FF3A00;
   color: $primary-text-color;
   overflow: hidden;
   
+  @media (max-width: 1321px) {
+    min-height: 1000px;
+    height: auto;
+    overflow-y: visible;
+    overflow-x: hidden;
+  }
+  
   @media (max-width: 993px) {
     min-height: 1000px;
     height: auto;
-    overflow: visible;
+    overflow-y: visible;
+    overflow-x: hidden;
   }
   
   @media (max-width: 480px) {
     min-height: 950px;
     height: auto;
-    overflow: visible;
+    overflow-y: visible;
+    overflow-x: hidden;
   }
   
   @media (max-width: 360px) {

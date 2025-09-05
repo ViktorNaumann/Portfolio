@@ -1,5 +1,5 @@
 .footer {
-  padding: 2rem 0 1rem 0;
+  padding: 2rem 0 2.5rem 0;
   width: 100%;
   background: transparent;
   margin-top: 0;
@@ -7,11 +7,11 @@
   z-index: 10;
   
   @media (max-width: 480px) {
-    padding: 1rem 0 0.5rem 0;
+    padding: 1rem 0 1.5rem 0;
   }
   
   @media (max-width: 320px) {
-    padding: 0.8rem 0 0.3rem 0;
+    padding: 0.8rem 0 1rem 0;
   }
 }
 
