@@ -129,6 +129,8 @@
   transition: all 0.3s ease;
   padding: 8px 16px;
   border-radius: 20px;
+  position: relative;
+  display: inline-block;
   
   @media (max-width: 480px) {
     font-size: 14px;
@@ -145,6 +147,35 @@
   &:hover:not(.legal-notice) {
     border: 2px solid #3355FF;
     background-color: #3355FF;
+    
+    .footer-icon {
+      opacity: 1;
+      animation: footerIconAnimation 0.5s forwards;
+    }
+  }
+}
+
+.footer-icon {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  
+  @media (max-width: 480px) {
+    width: 24px;
+    height: 24px;
+    top: -25px;
+  }
+  
+  @media (max-width: 320px) {
+    width: 20px;
+    height: 20px;
+    top: -20px;
   }
 }
 
@@ -274,6 +305,32 @@
       width: 180px;
       height: 120px;
       margin-top: -75px;
+    }
+  }
+}
+
+@keyframes footerIconAnimation {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+    left: 50%;
+  }
+  
+  to {
+    transform: translateX(-50%) rotate(360deg);
+    left: calc(100% - 12px);
+  }
+}
+
+@media (max-width: 480px) {
+  @keyframes footerIconAnimation {
+    from {
+      transform: translateX(-50%) rotate(0deg);
+      left: 50%;
+    }
+    
+    to {
+      transform: translateX(-50%) rotate(360deg);
+      left: calc(100% - 10px);
     }
   }
 }
