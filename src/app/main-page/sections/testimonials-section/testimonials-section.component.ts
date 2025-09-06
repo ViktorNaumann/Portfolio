@@ -27,7 +27,7 @@ export class TestimonialsSectionComponent {
       text: 'Dear Viktor, there are two keywords that immediately come to mind when I think of you: lightning-fast and harmony! :D You complete tasks in impressively short time with absolute reliability. You maintain calm and harmony at all times, which in my eyes is a real talent. Your helpful and committed nature make you a true pillar of the team, and I appreciate that tremendously. I hope we will continue to work together on more projects in the future!',
       authorName: 'Dr. Michelle Puschkarow',
       authorTitle: 'Frontend Developer',
-      profileLink: 'https://www.linkedin.com/in/michellepuschkarow',
+      profileLink: 'https://www.linkedin.com/in/dr-michelle-puschkarow',
       cardClass: 'card-1',
       imageVariant: 'variant-a'
     },
@@ -36,7 +36,7 @@ export class TestimonialsSectionComponent {
       text: 'Viktor, working with you on our shared business project JOIN was consistently pleasant and enriching. Your calm and composed nature brings stability to the team, and I find it impressive how you solve problems independently without losing sight of others. You are always helpful, reliable, and a true anchor of calm in the project. I greatly appreciate your dedication and look forward to working together on something again!',
       authorName: 'Marco Palummieri',
       authorTitle: 'Frontend Developer',
-      profileLink: 'https://www.linkedin.com/in/marcopalummieri',
+      profileLink: 'https://www.linkedin.com/in/marco-palummieri',
       cardClass: 'card-2',
       imageVariant: 'variant-b'
     },
@@ -52,7 +52,14 @@ export class TestimonialsSectionComponent {
   ];
 
   constructor(private translate: TranslateService) {}
+  
   changeLanguage(language: string) {
     this.translate.use(language);
+  }
+
+  openLinkedInProfile(profileLink: string) {
+    if (profileLink) {
+      window.open(profileLink, '_blank', 'noopener,noreferrer');
+    }
   }
 }

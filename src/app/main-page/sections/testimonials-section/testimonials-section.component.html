@@ -20,7 +20,15 @@
             <div class="author-name">{{ testimonial.authorName }}</div>
             <div class="author-title">{{ 'TESTIMONIALS.TESTIMONIAL_' + (i + 1) + '.AUTHOR_TITLE' | translate }}</div>
           </div>
-          <img src="assets/img/colleagues/Property 1=Default.svg" alt="LinkedIn" class="linkedin-icon">
+          <img 
+            src="assets/img/colleagues/Property 1=Default.svg" 
+            alt="LinkedIn" 
+            class="linkedin-icon"
+            (click)="openLinkedInProfile(testimonial.profileLink)"
+            role="button"
+            tabindex="0"
+            (keydown.enter)="openLinkedInProfile(testimonial.profileLink)"
+            (keydown.space)="openLinkedInProfile(testimonial.profileLink)">
         </div>
       </div>
     </div>
