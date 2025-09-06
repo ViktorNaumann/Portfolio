@@ -2,14 +2,12 @@
   <div class="contact-content">
     <div class="container">
       <div class="contact-wrapper">
-
         <div class="contact-info">
           <h3 class="sub-heading">{{ 'CONTACT.CONTACT_ME' | translate }}</h3>
           <h2 class="main-heading">{{ 'CONTACT.READY_TO_WORK' | translate }}</h2>
           <p>{{ 'CONTACT.DESCRIPTION_PARAGRAPH_1' | translate }}</p>
           <p>{{ 'CONTACT.DESCRIPTION_PARAGRAPH_2' | translate }}</p>
         </div>
-
         <div class="contact-form">
           <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
             <div class="logo-container">
@@ -17,7 +15,6 @@
                 <div class="background-circle">
                   <img src="assets/img/contact/08_ Color option 3 - C.webp" alt="Background circle" class="circle-image">
                 </div>
-                
                 <div class="rotating-text">
                   <svg class="circular-text" viewBox="0 0 200 200">
                     <defs>
@@ -30,34 +27,34 @@
                     </text>
                   </svg>
                 </div>
-                
                 <div class="logo-center">
                   <img src="assets/img/header/logo.png" alt="Viktor Naumann Logo" class="logo">
                 </div>
               </div>
             </div>
-
             <div class="form-group">
               <label for="name">{{ 'CONTACT.WHATS_YOUR_NAME' | translate }}</label>
               <input 
                 type="text" 
                 id="name" 
                 formControlName="name" 
-                [ngClass]="{'error-input': formSubmitted && contactForm.get('name')?.errors}"
+                [ngClass]="{'error-input': contactForm.get('name')?.touched && contactForm.get('name')?.errors}"
                 [placeholder]="getNamePlaceholder()">
+              <div *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.errors" class="error-message visible">
+                <span *ngIf="contactForm.get('name')?.errors?.['required']">
+                  {{ 'CONTACT.NAME_REQUIRED_ERROR' | translate }}
+                </span>
+              </div>
             </div>
-
             <div class="form-group">
               <label for="email">{{ 'CONTACT.WHATS_YOUR_EMAIL' | translate }}</label>
               <input 
                 type="email" 
                 id="email" 
                 formControlName="email" 
-                [ngClass]="{'error-input': formSubmitted && contactForm.get('email')?.errors}"
+                [ngClass]="{'error-input': contactForm.get('email')?.touched && contactForm.get('email')?.errors}"
                 [placeholder]="getEmailPlaceholder()">
-              
-              <!-- E-Mail Validierungsfehler anzeigen -->
-              <div *ngIf="formSubmitted && contactForm.get('email')?.errors" class="error-message visible">
+              <div *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors" class="error-message visible">
                 <span *ngIf="contactForm.get('email')?.errors?.['required']">
                   {{ 'CONTACT.EMAIL_REQUIRED_ERROR' | translate }}
                 </span>
@@ -66,17 +63,20 @@
                 </span>
               </div>
             </div>
-
             <div class="form-group">
               <label for="message">{{ 'CONTACT.HOW_CAN_I_HELP' | translate }}</label>
               <textarea 
                 id="message" 
                 formControlName="message" 
-                [ngClass]="{'error-input': formSubmitted && contactForm.get('message')?.errors}"
+                [ngClass]="{'error-input': contactForm.get('message')?.touched && contactForm.get('message')?.errors}"
                 [placeholder]="getMessagePlaceholder()">
               </textarea>
+              <div *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.errors" class="error-message visible">
+                <span *ngIf="contactForm.get('message')?.errors?.['required']">
+                  {{ 'CONTACT.MESSAGE_REQUIRED_ERROR' | translate }}
+                </span>
+              </div>
             </div>
-
             <div class="form-check">
               <input 
                 type="checkbox" 
@@ -89,12 +89,10 @@
                 {{ 'CONTACT.PRIVACY_POLICY_AGREE' | translate }}
               </label>
             </div>
-
             <div class="error-message" 
                  [ngClass]="{'visible': formSubmitted && contactForm.get('privacyPolicy')?.errors, 'hidden': !(formSubmitted && contactForm.get('privacyPolicy')?.errors)}">
               {{ 'CONTACT.PRIVACY_POLICY_ERROR' | translate }}
             </div>
-
             <div class="form-submit">
               <img src="assets/img/contact/Color option 3.webp" alt="Arrow decoration" class="arrow-image">
               <button 
@@ -105,7 +103,6 @@
               </button>
             </div>
           </form>
-
           <div *ngIf="submitMessage" class="submit-message" [ngClass]="submitMessageType">
             {{ submitMessage }}
           </div>
