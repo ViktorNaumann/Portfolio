@@ -4,17 +4,14 @@
       <img src="assets/img/projects-card/Breadcrumb arrow 3.png" alt="Back Arrow" class="arrow-icon">
       {{ 'PROJECT_CARD.GO_BACK' | translate }}
     </button>
-    
     <div class="main-content">
       <div class="project-content">
         <div class="project-info">
           <h1 class="project-title">{{ project.title }}</h1>
-          
           <section class="project-description">
             <h2>{{ 'PROJECT_CARD.DESCRIPTION' | translate }}</h2>
             <p>{{ getProjectDescription() | translate }}</p>
           </section>
-
           <section class="implementation-details">
             <h2>{{ 'PROJECT_CARD.IMPLEMENTATION_DETAILS' | translate }}</h2>
             <p>{{ getProjectImplementationDetails() | translate }}</p>
@@ -23,7 +20,6 @@
               <strong>{{ 'PROJECT_CARD.DURATION' | translate }}:</strong> {{ project.duration }}
             </div>
           </section>
-
           <div class="project-technologies">
             <div 
               *ngFor="let tech of project.technologies" 
@@ -34,7 +30,6 @@
             </div>
           </div>
         </div>
-
         <div class="project-image" *ngIf="project">
           <img [src]="project.detailImageUrl || project.imageUrl" [alt]="project.title">
           <div class="work-in-progress-sticker" *ngIf="project.inProgress">
@@ -42,7 +37,6 @@
           </div>
         </div>
       </div>
-
       <div class="project-actions">
         <button 
           class="action-btn" 
@@ -59,13 +53,11 @@
           {{ project.inProgress ? ('PROJECT_CARD.COMING_SOON' | translate) : ('PROJECT_CARD.LIVE_TEST' | translate) }}
         </button>
       </div>
-
       <div class="navigation-buttons">
         <button class="go-back-mobile-btn" (click)="goBack()">
           <img src="assets/img/projects-card/Breadcrumb arrow 3.png" alt="Back Arrow" class="arrow-icon">
           {{ 'PROJECT_CARD.GO_BACK' | translate }}
         </button>
-        
         <button class="next-project-btn" (click)="goToNextProject()" *ngIf="nextProject">
           {{ 'PROJECT_CARD.NEXT_PROJECT' | translate }}
           <img src="assets/img/projects-card/Next project arrow 3.png" alt="Arrow" class="arrow-icon">
