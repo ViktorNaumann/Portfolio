@@ -229,7 +229,8 @@
         }
         
         .tech-text {
-          @include text-style($clamp-text-small, 400, $dark-text-color);
+          @include text-style($clamp-text-small, 400, $white);
+          text-shadow: 2px 2px 6px rgba(0, 0, 0, 1), 1px 1px 4px rgba(0, 0, 0, 0.9);
         }
       }
       
