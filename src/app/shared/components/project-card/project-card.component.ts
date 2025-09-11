@@ -4,11 +4,12 @@ import { CommonModule } from '@angular/common';
 import { ProjectDataService, Project } from '../../services/project-data.service';
 import { Subscription } from 'rxjs';
 import { TranslatePipe, TranslateDirective, TranslateService } from "@ngx-translate/core";
+import { HeaderComponent } from '../../header/header.component';
 
 @Component({
   selector: 'app-project-card',
   standalone: true,
-  imports: [CommonModule, TranslatePipe],
+  imports: [CommonModule, TranslatePipe, HeaderComponent],
   templateUrl: './project-card.component.html',
   styleUrl: './project-card.component.scss'
 })
