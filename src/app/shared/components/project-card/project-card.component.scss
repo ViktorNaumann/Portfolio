@@ -10,6 +10,10 @@
   color: $primary-text-color;
   overflow: hidden;
   position: relative;
+  
+  @media (max-width: $tablet) {
+    background: #1d1d1d url('./../../../../assets/img/projects-card/Note book paper mobile.webp') center/cover no-repeat;
+  }
 }
 
   .project-main {
@@ -46,13 +50,14 @@
     }
   }
   
-  .main-content {
-    @include flex-center;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    
-    .project-content {
+    .main-content {
+      @include flex-center;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100%;
+      overflow-y: auto;
+      max-height: 100%;
+      padding-top: 40px;    .project-content {
       display: flex;
       gap: clamp(20px, 15vw, 250px);
       align-items: flex-start;
@@ -229,8 +234,7 @@
         }
         
         .tech-text {
-          @include text-style($clamp-text-small, 400, $white);
-          text-shadow: 2px 2px 6px rgba(0, 0, 0, 1), 1px 1px 4px rgba(0, 0, 0, 0.9);
+          @include text-style($clamp-text-small, 400, #0E1013);
         }
       }
       
@@ -324,26 +328,7 @@
   }
 }
 
-@media (max-width: $tablet) {
-  .project-detail-container {
-    background: #1d1d1d url('./../../../../assets/img/projects-card/Note book paper.webp') center/cover no-repeat;
-    transform: rotate(90deg);
-    transform-origin: center center;
-    width: 100vh;
-    height: 100vw;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: calc(-50vw);
-    margin-left: calc(-50vh);
-  }
-  
-  .project-main {
-    transform: rotate(-90deg);
-    width: 100vw;
-    height: 100vh;
-  }
-}
+
 
 @media (max-width: $small) {
   .project-main { padding: 15px; }
