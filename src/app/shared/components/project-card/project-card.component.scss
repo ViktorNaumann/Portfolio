@@ -60,7 +60,7 @@
     
     @media (max-width: $tablet) { display: none; }
     @media (max-width: $mobile) {
-      top: 40px; left: 15px; font-size: 14px; gap: 4px;
+      top: 40px; left: 15px; font-size: 18px; gap: 4px;
       .arrow-icon { width: 16px; height: 16px; }
     }
   }
@@ -92,7 +92,7 @@
       box-sizing: border-box;
       
       .action-btn {
-        width: clamp(80px, 20vw, 107px);
+        width: clamp(100px, 20vw, 130px);
         height: clamp(32px, 8vw, 40px);
         border-radius: 100px;
         @include text-style($clamp-text-medium, 500, $light-gray);
@@ -133,7 +133,7 @@
       @media (max-width: $small) { padding-right: 10px; }
       @media (max-width: 310px) {
         gap: 8px; margin-bottom: 15px; padding-right: 8px;
-        .action-btn { width: 70px; height: 30px; font-size: 12px; box-shadow: 1px 2px 0px 0px $light-gray; }
+        .action-btn { width: 90px; height: 30px; font-size: 18px; box-shadow: 1px 2px 0px 0px $light-gray; }
       }
     }
     
@@ -166,7 +166,7 @@
         
         @media (max-width: $tablet) { display: flex; }
         @media (max-width: $mobile) {
-          font-size: 14px; gap: 6px;
+          font-size: 18px; gap: 6px;
           .arrow-icon { width: 16px; height: 16px; }
         }
       }
@@ -191,7 +191,7 @@
         
         @media (max-width: $small) { align-self: center; }
         @media (max-width: $mobile) {
-          font-size: 14px; gap: 6px;
+          font-size: 18px; gap: 6px;
           .arrow-icon { width: 16px; height: 16px; }
         }
       }
@@ -222,7 +222,7 @@
         mix-blend-mode: difference;
         color: white;
         
-        @media (max-width: $mobile) { font-size: 16px; margin-bottom: 6px; }
+        @media (max-width: $mobile) { font-size: 18px; margin-bottom: 6px; }
       }
       
       p {
@@ -233,18 +233,18 @@
         mix-blend-mode: difference;
         color: white;
         
-        @media (max-width: $mobile) { font-size: 12px; line-height: 1.3; margin-bottom: 8px; }
+        @media (max-width: $mobile) { font-size: 18px; line-height: 1.3; margin-bottom: 8px; }
       }
     }
     
     .project-duration {
       margin-top: clamp(6px, 2vh, 10px);
-      font-size: clamp(11px, 3vw, 14px);
+      font-size: 18px;
       mix-blend-mode: difference;
       color: white;
       
       strong { font-weight: 600; }
-      @media (max-width: $mobile) { font-size: 11px; margin-top: 8px; }
+      @media (max-width: $mobile) { font-size: 18px; margin-top: 8px; }
     }
     
     .project-technologies {
@@ -275,7 +275,7 @@
         .tech-badge {
           gap: 4px;
           .tech-icon { width: 16px; height: 16px; }
-          .tech-text { font-size: 11px; }
+          .tech-text { font-size: 18px; }
         }
       }
     }

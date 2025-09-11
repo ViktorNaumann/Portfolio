@@ -26,7 +26,7 @@
         border: 1px solid $white-color;
         border-radius: clamp(15px, 4vw, 25px);
         padding: clamp(8px, 2vw, 12px) clamp(15px, 4vw, 30px);
-        font-size: clamp(14px, 3vw, 18px);
+        font-size: 18px;
         font-weight: 500;
         font-family: 'Bricolage Grotesque', sans-serif;
         cursor: pointer;
@@ -35,13 +35,13 @@
         
         @media (max-width: $breakpoint-md) {
             padding: 6px 12px;
-            font-size: clamp(12px, 3vw, 14px);
+            font-size: 18px;
             border-radius: 12px;
         }
         
         @media (max-width: $breakpoint-sm) {
             padding: 4px 8px;
-            font-size: 11px;
+            font-size: 18px;
             border-radius: 10px;
         }
         
@@ -76,7 +76,7 @@
         border: 1px solid $text-color;
         border-radius: clamp(15px, 4vw, 25px);
         padding: clamp(8px, 2vw, 12px) clamp(15px, 4vw, 30px);
-        font-size: clamp(14px, 3vw, 18px);
+        font-size: 18px;
         font-weight: 500;
         font-family: 'Bricolage Grotesque', sans-serif;
         cursor: pointer;
