@@ -1,15 +1,21 @@
 @import './variables';
 
 .project-detail-container {
-  height: 100vh;
+  min-height: 100vh;
   background: #1d1d1d url('./../../../../assets/img/projects-card/Note book paper.webp') center/cover no-repeat;
   @include flex-center;
   flex-direction: column;
   justify-content: center;
   font-family: $main-font;
   color: $primary-text-color;
-  overflow: hidden;
+  overflow-y: auto;
   position: relative;
+  
+  @media (max-height: 800px) {
+    height: 100vh;
+    overflow-y: auto;
+    justify-content: flex-start;
+  }
   
   @media (max-width: $tablet) {
     background: #1d1d1d url('./../../../../assets/img/projects-card/Note book paper mobile.webp') center/cover no-repeat;
@@ -18,15 +24,21 @@
 
   .project-main {
     width: 100%;
-    max-width: 1440px;
-    height: 100%;
+    max-width: 1920px;
+    min-height: 100%;
     @include flex-center;
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
     margin: 0 auto;
     padding: 20px;
-    box-sizing: border-box;  .go-back-btn {
+    box-sizing: border-box;
+    
+    @media (max-height: 800px) {
+      min-height: auto;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }  .go-back-btn {
     position: fixed;
     top: clamp(60px, 10vh, 100px);
     left: clamp(20px, 5vw, 40px);
@@ -54,9 +66,8 @@
       @include flex-center;
       flex-direction: column;
       justify-content: flex-start;
-      height: 100%;
-      overflow-y: auto;
-      max-height: 100%;
+      width: 100%;
+      flex: 1;
       padding-top: 40px;    .project-content {
       display: flex;
       gap: clamp(20px, 15vw, 250px);
