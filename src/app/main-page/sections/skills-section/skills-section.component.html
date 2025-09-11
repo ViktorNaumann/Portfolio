@@ -1,7 +1,6 @@
 <section id="skills">
   <div class="skills-container">
     <div class="vertical-layout">
-
       <div class="column header-column">
         <h3 class="skills-subtitle">{{ 'SKILLS.MY_STACK' | translate }}</h3>
         <div class="skills-title-container">
@@ -11,16 +10,13 @@
           </div>
         </div>
       </div>
-
       <div class="column content-column">
-      
         <div class="skills-content">
           <img src="assets/img/skills/1.Skills description.webp" alt="Description Background" class="paper-background">
           <p class="description-text">
             {{ 'SKILLS.DESCRIPTION_TEXT' | translate }}
           </p>
         </div>
-
         <div class="skills-grid">
           <div class="skill-item" *ngFor="let skill of skills">
             <div class="skill-icon">
@@ -30,7 +26,6 @@
           </div>
         </div>
       </div>
-
       <div class="column peel-column">
         <div class="pull-to-peel-wrapper">
           <input type="checkbox" id="peelToggle" class="peel-checkbox">
