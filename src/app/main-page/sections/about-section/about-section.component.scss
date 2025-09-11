@@ -124,7 +124,7 @@ section {
   .about-subtitle {
     color: #0E1013;
     font-family: 'Bricolage Grotesque', sans-serif;
-    font-size: clamp(16px, 4vw, 20px);
+    font-size: 18px;
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -178,7 +178,7 @@ section {
 
   p {
     font-family: 'Bricolage Grotesque', sans-serif;
-    font-size: clamp(16px, 4vw, 20px);
+    font-size: 18px;
     font-weight: 400;
     line-height: 1.6;
     color: #0E1013;
@@ -202,7 +202,7 @@ section {
   border: 1px solid #0E1013;
   border-radius: 25px;
   padding: clamp(10px, 2.5vw, 12px) clamp(20px, 5vw, 30px);
-  font-size: clamp(16px, 4vw, 18px);
+  font-size: 18px;
   font-weight: 500;
   font-family: 'Bricolage Grotesque', sans-serif;
   cursor: pointer;
